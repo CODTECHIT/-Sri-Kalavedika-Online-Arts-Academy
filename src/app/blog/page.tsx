@@ -55,7 +55,7 @@ export default function BlogPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {blogPosts.map((post, i) => {
-              const blogUrls = {
+              const blogUrls: Record<string, string> = {
                 "Benefits of Classical Music for Child Development": "/blog/benefits-classical-music",
                 "How Chess Improves IQ and Strategic Thinking": "/blog/chess-strategic-thinking",
                 "The Importance of Theatre for Children's Confidence": "/blog/theatre-confidence",
