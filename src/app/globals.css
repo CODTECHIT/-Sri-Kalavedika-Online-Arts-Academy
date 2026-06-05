@@ -35,22 +35,27 @@ body {
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @keyframes float {
   0% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(1deg); }
   100% { transform: translateY(0px) rotate(0deg); }
 }
 
-@keyframes wave {
-  0% { transform: translateX(0) scaleY(1); }
-  50% { transform: translateX(-2%) scaleY(1.05); }
-  100% { transform: translateX(0) scaleY(1); }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
-}
-
-.animate-wave {
-  animation: wave 10s ease-in-out infinite;
 }

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import { Music, Brain, Users, Sparkles, Globe, ShieldCheck } from "lucide-react";
 
 const categories = [
@@ -12,7 +13,7 @@ const categories = [
       { name: "Light Music & Bhajans", desc: "Develop singing skills through devotional songs, light music, and performance-oriented training." },
       { name: "Keyboard Classes", desc: "Master keyboard playing techniques, music theory, rhythm, and performance skills suitable for beginners and advanced learners." },
       { name: "Flute Classes", desc: "Learn flute playing with proper fingering, breathing techniques, and classical compositions." },
-      { name: "Guitar & Advanced Guitar", desc: "From basics to advanced solos, master the strings with our expert guitarists." },
+      { name: "Guitar & Advanced Guitar", desc: "Master guitar playing techniques from basics to advanced solos with our expert guitarists." },
       { name: "Violin", desc: "Learn the art of violin playing with focus on posture, bowing, and classical melodies." },
       { name: "Dance (Classical & Contemporary)", desc: "Training in various dance forms focusing on expression, rhythm, coordination, and stage performance." },
       { name: "Theatre & Acting", desc: "Develop acting skills, voice modulation, expression, improvisation, and performance techniques." },
@@ -92,8 +93,34 @@ export default function ServicesPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   {category.programs.map((program, pIdx) => (
-                    <div 
+                    <Link 
                       key={pIdx}
+                      href={
+                        program.name === "Classical Vocal Music" ? "/services/carnatic-vocal" :
+                        program.name === "Guitar & Advanced Guitar" ? "/services/guitar" :
+                        program.name === "Light Music & Bhajans" ? "/services/light-music" :
+                        program.name === "Keyboard Classes" ? "/services/keyboard" :
+                        program.name === "Violin" ? "/services/violin" :
+                        program.name === "Flute Classes" ? "/services/flute" :
+                        program.name === "Dance (Classical & Contemporary)" ? "/services/dance" :
+                        program.name === "Theatre & Acting" ? "/services/theatre" :
+                        program.name === "Chess Coaching" ? "/services/chess" :
+                        program.name === "Vedic Mathematics" ? "/services/vedic-maths" :
+                        program.name === "Rubik's Cube Training" ? "/services/rubiks-cube" :
+                        program.name === "Abacus" ? "/services/abacus" :
+                        program.name === "Logical Reasoning" ? "/services/logical-reasoning" :
+                        program.name === "Memory Techniques" ? "/services/memory-techniques" :
+                        program.name === "Storytelling & Public Speaking" ? "/services/storytelling" :
+                        program.name === "Personality Development Programs" ? "/services/personality-development" :
+                        program.name === "Stage Confidence" ? "/services/stage-confidence" :
+                        program.name === "Leadership & Interview Skills" ? "/services/leadership-skills" :
+                        program.name === "Festival Celebrations & Events" ? "/services/cultural-events" :
+                        program.name === "Live Online Classes" ? "/services/online-classes" :
+                        program.name === "One-on-One Training" ? "/services/private-training" :
+                        program.name === "Summer Camps & Workshops" ? "/services/summer-camps" :
+                        program.name === "Certification Programs" ? "/services/certification" :
+                        "#"
+                      }
                       className="bg-white p-6 md:p-8 rounded-[2rem] md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all group flex flex-col"
                     >
                       <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4 group-hover:text-secondary transition-colors">
@@ -105,7 +132,7 @@ export default function ServicesPage() {
                       <div className="mt-auto flex items-center text-secondary font-bold text-xs md:text-sm cursor-pointer hover:underline">
                         Learn More →
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </section>

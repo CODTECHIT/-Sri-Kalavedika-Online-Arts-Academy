@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const courses = [
   {
     title: "Classical Vocal Music",
@@ -14,6 +16,13 @@ const courses = [
     icon: "🎹",
     bgColor: "bg-blue-50",
     iconBg: "bg-blue-100",
+  },
+  {
+    title: "Light Music & Bhajans",
+    description: "Master soulful melodies and devotional songs with our expert performance-oriented training.",
+    icon: "🎶",
+    bgColor: "bg-purple-50",
+    iconBg: "bg-purple-100",
   },
   {
     title: "Chess Coaching",
@@ -51,6 +60,13 @@ const courses = [
     iconBg: "bg-green-100",
   },
   {
+    title: "Guitar & Advanced Guitar",
+    description: "Master guitar playing techniques from basics to advanced solos with our expert guitarists.",
+    icon: "🎸",
+    bgColor: "bg-orange-50",
+    iconBg: "bg-orange-100",
+  },
+  {
     title: "Rubik's Cube Training",
     description: "Master solving methods, speed cubing techniques, and logical thinking skills.",
     icon: "🧊",
@@ -76,8 +92,22 @@ export default function PopularCourses() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {courses.map((course, i) => (
-            <div
+            <Link
               key={i}
+              href={
+                course.title === "Classical Vocal Music" ? "/services/carnatic-vocal" :
+                course.title === "Guitar & Advanced Guitar" ? "/services/guitar" :
+                course.title === "Light Music & Bhajans" ? "/services/light-music" :
+                course.title === "Keyboard & Piano" ? "/services/keyboard" :
+                course.title === "Flute Classes" ? "/services/flute" :
+                course.title === "Dance (Classical & Contemporary)" ? "/services/dance" :
+                course.title === "Theatre & Acting" ? "/services/theatre" :
+                course.title === "Chess Coaching" ? "/services/chess" :
+                course.title === "Vedic Mathematics" ? "/services/vedic-maths" :
+                course.title === "Rubik's Cube Training" ? "/services/rubiks-cube" :
+                course.title === "Storytelling & Public Speaking" ? "/services/storytelling" :
+                "#"
+              }
               className={`${course.bgColor} rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 flex flex-col items-center text-center group hover:scale-105 transition-transform duration-300 shadow-sm`}
             >
               <div className={`w-12 h-12 md:w-16 md:h-16 ${course.iconBg} rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-4 md:mb-6 shadow-inner`}>
@@ -92,7 +122,7 @@ export default function PopularCourses() {
               <button className="bg-white text-primary font-bold px-6 md:px-8 py-2 md:py-3 rounded-full border border-gray-100 shadow-sm hover:shadow-md transition-all mt-auto group-hover:bg-primary group-hover:text-white text-sm md:text-base">
                 View Details
               </button>
-            </div>
+            </Link>
           ))}
         </div>
 

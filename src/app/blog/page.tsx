@@ -54,28 +54,37 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {blogPosts.map((post, i) => (
-              <article key={i} className="flex flex-col md:flex-row gap-8 items-center md:items-start group cursor-pointer">
-                <div className="w-full md:w-64 h-64 rounded-[2rem] overflow-hidden shadow-lg shrink-0">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-xs font-bold text-secondary uppercase tracking-widest">{post.category}</span>
-                    <span className="text-xs text-gray-400 font-medium">{post.date}</span>
+            {blogPosts.map((post, i) => {
+              const blogUrls = {
+                "Benefits of Classical Music for Child Development": "/blog/benefits-classical-music",
+                "How Chess Improves IQ and Strategic Thinking": "/blog/chess-strategic-thinking",
+                "The Importance of Theatre for Children's Confidence": "/blog/theatre-confidence",
+                "5 Tips for Learning Vedic Maths Effectively": "/blog/vedic-maths-tips",
+              };
+              
+              return (
+                <Link key={i} href={blogUrls[post.title] || "#"} className="flex flex-col md:flex-row gap-8 items-center md:items-start group cursor-pointer">
+                  <div className="w-full md:w-64 h-64 rounded-[2rem] overflow-hidden shadow-lg shrink-0">
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-2 text-primary font-bold text-sm">
-                    Read Full Article <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-xs font-bold text-secondary uppercase tracking-widest">{post.category}</span>
+                      <span className="text-xs text-gray-400 font-medium">{post.date}</span>
+                    </div>
+                    <h2 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-2 text-primary font-bold text-sm">
+                      Read Full Article <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </main>

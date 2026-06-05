@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
+import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import PopularCourses from "@/components/PopularCourses";
 import Philosophy from "@/components/Philosophy";
 import StudentVideos from "@/components/StudentVideos";
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Testimonials />
+        <TestimonialsMarquee />
         <PopularCourses />
         <Philosophy />
         <StudentVideos />

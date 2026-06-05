@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Sri Kalavedika | Online Arts Academy",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {children}
+        <FloatingWhatsAppButton />
+      </body>
     </html>
   );
 }

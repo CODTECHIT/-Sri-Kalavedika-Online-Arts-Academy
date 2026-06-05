@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Award, Trophy, Star, TrendingUp, Users } from "lucide-react";
+import { Award, Trophy, Star, TrendingUp, Users, Mic2 } from "lucide-react";
 
 const achievements = [
   {
@@ -88,6 +88,68 @@ export default function AchievementsPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Featured Artist Section - Rahul Sukun */}
+          <div className="bg-secondary/5 rounded-[4rem] p-10 md:p-16 mb-32 border border-secondary/10">
+            <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-full text-sm font-bold uppercase tracking-widest">
+                  <Star size={16} />
+                  <span>Featured Artist</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Rahul Sukun</h2>
+                <p className="text-xl text-secondary font-bold">Singer • Performer • Guitarist • India's Got Talent Season 11</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Rahul Sukun is a soulful Indian singer, guitarist, and dynamic live performer who gained nationwide recognition through <strong>India's Got Talent Season 11</strong>. Known for crafting "melodies that touch the soul," Rahul brings a warm, expressive, and emotionally rich style to our academy.
+                </p>
+                <div className="bg-white p-6 rounded-2xl border-l-4 border-primary shadow-sm">
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    Whether he is singing romantic Bollywood classics, heartfelt indie tracks, or soulful unplugged covers, Rahul connects instantly with the audience through his sincerity and musical honesty.
+                  </p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                  <img 
+                    src="/WhatsApp Image 2026-06-05 at 3.33.01 PM.jpeg" 
+                    alt="Rahul Sukun - India's Got Talent Artist" 
+                    className="w-full h-full object-cover object-top aspect-[4/5]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Artist Section - Arnob Basak */}
+          <div className="bg-primary/5 rounded-[4rem] p-10 md:p-16 mb-32 border border-primary/10">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-widest">
+                  <Mic2 size={16} />
+                  <span>Renowned Composer</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Arnob Basak</h2>
+                <p className="text-xl text-secondary font-bold">M.Phil. in Comparative Literature • Music Director • Composer • Singer • Lyricist • Guitar Trainer</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Arnob Basak is a music director, composer, singer, lyricist, and guitar trainer with over <strong>16 years</strong> of experience in the music industry. He has worked on numerous Bengali and Hindi films, web series, music albums, and independent projects, collaborating with leading music labels including Saregama, Sony Vivo, Asha Audio, Amara Music, Atlantis Music, and Angel Digital, among others.
+                </p>
+                <div className="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm">
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    His achievements include winning the <strong>Anandalok Puraskar</strong>, receiving a nomination for the <strong>Mirchi Music Awards</strong>, and he was also a semifinalist in <strong>Ticket to Tollywood</strong>, a talent hunt reality show conducted by 104 Fever FM in 2014.
+                  </p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                  <img 
+                    src="/aa.jpeg" 
+                    alt="Arnob Basak - Music Director and Composer" 
+                    className="w-full h-full object-cover aspect-square"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Success Stories */}

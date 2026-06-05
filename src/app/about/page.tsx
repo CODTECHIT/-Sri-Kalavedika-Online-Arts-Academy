@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Eye, Target, Heart, Award, Shield, Users, History, Sparkles } from "lucide-react";
+import { Eye, Target, Heart, Award, Shield, Users, History, Sparkles, Star } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -20,27 +20,90 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6">
               About Sri Kalavedika
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Established in 2020, Sri Kalavedika Online Arts Academy is more than just an educational platform. We are a global community dedicated to preserving Indian heritage while empowering the next generation with modern skills.
-            </p>
-          </div>
-
-          {/* Vision & Mission */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
-            <div className="bg-blue-50 p-12 rounded-[3rem] relative overflow-hidden group hover:shadow-xl transition-all">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-              <Eye className="text-primary mb-6" size={48} />
-              <h2 className="text-3xl font-bold text-primary mb-4">Our Vision</h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                To preserve, promote, and make Indian arts, culture, and skill-based learning accessible to students across the globe through quality online education. We envision a world where every child has the opportunity to connect with their roots while building a bright future.
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-xl text-gray-700 leading-relaxed font-medium">
+                Sri Kalavedika — Connoting to SARWA KALA — is a platform for ALL the performing arts with the blessings of Devi Saraswati.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed italic">
+                "A platform to learn.. to perform.. and to get recognised all by only the 'Art'."
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Known for its excellence with renowned, highly talented, passionate and dedicated Gurus, Sri Kala Vedika stands tall in today's digital lives! We conduct quality online classes for various branches of arts by the best professionals with a minimum of a decade of experience in their respective branches, belonging to the roots of the places where the art originated.
               </p>
             </div>
-            <div className="bg-orange-50 p-12 rounded-[3rem] relative overflow-hidden group hover:shadow-xl transition-all">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-              <Target className="text-secondary mb-6" size={48} />
-              <h2 className="text-3xl font-bold text-primary mb-4">Our Mission</h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                To provide expert-led online training in performing arts, creative arts, intellectual development, and personality-building skills while nurturing talent, confidence, and cultural values. We aim to inspire excellence in every student we touch.
+          </div>
+
+          {/* Special Guru Section - Chembai Srinivas */}
+          <div className="bg-primary/5 rounded-[4rem] p-10 md:p-16 mb-20 border border-primary/10">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-widest">
+                  <Award size={16} />
+                  <span>Our Maestro</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Pujya Guru Shri Chembai Srinivas</h2>
+                <p className="text-xl text-secondary font-bold">Global Artist & Grandson of Padma Vibhushan Shri Chembai Vaidyavnath Bhagavathar</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  For Carnatic Vocal and Violin, our guru is a Maestro from the village Chembai and has unparalleled experience of more than 25 years in teaching. As a global artist and carrying the legacy of his grandfather, he brings the authentic roots of Carnatic music to our shishyas.
+                </p>
+                <div className="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm">
+                  <p className="text-primary font-bold italic">
+                    "Quality never compromised — as we believe only with a strong foundation, can be built a Condominium."
+                  </p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                  <img 
+                    src="/atrist.jpeg" 
+                    alt="Pujya Guru Shri Chembai Srinivas" 
+                    className="w-full h-full object-cover aspect-square"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Artist Section - Rahul Sukun */}
+          <div className="bg-secondary/5 rounded-[4rem] p-10 md:p-16 mb-32 border border-secondary/10">
+            <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-full text-sm font-bold uppercase tracking-widest">
+                  <Star size={16} />
+                  <span>Featured Artist</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Rahul Sukun</h2>
+                <p className="text-xl text-secondary font-bold">Singer • Performer • Guitarist • India’s Got Talent Season 11</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Rahul Sukun is a soulful Indian singer, guitarist, and dynamic live performer who gained nationwide recognition through <strong>India’s Got Talent Season 11</strong>. Known for crafting "melodies that touch the soul," Rahul brings a warm, expressive, and emotionally rich style to our academy.
+                </p>
+                <div className="bg-white p-6 rounded-2xl border-l-4 border-primary shadow-sm">
+                  <p className="text-gray-600 text-base leading-relaxed">
+                    Whether he is singing romantic Bollywood classics, heartfelt indie tracks, or soulful unplugged covers, Rahul connects instantly with the audience through his sincerity and musical honesty.
+                  </p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                  <img 
+                    src="/WhatsApp Image 2026-06-05 at 3.33.01 PM.jpeg" 
+                    alt="Rahul Sukun - India's Got Talent Artist" 
+                    className="w-full h-full object-cover object-top aspect-[4/5]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Heritage Section */}
+          <div className="text-center mb-32">
+            <div className="max-w-3xl mx-auto bg-orange-50 p-12 rounded-[3rem] border border-orange-100">
+              <div className="flex justify-center mb-6 text-secondary">
+                <Heart size={48} />
+              </div>
+              <h2 className="text-3xl font-bold text-primary mb-6">The Patriotic Nerve</h2>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Here, there are no teachers but only <span className="text-secondary font-bold">"Gurus"</span>, as per our Indian Culture to impart their skills to the shishyas, resembling our own heritage irrespective of Nation, creed or community.
               </p>
             </div>
           </div>

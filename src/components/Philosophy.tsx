@@ -5,22 +5,22 @@ import Link from "next/link";
 
 const items = [
   {
-    title: "Our Vision",
-    description: "To preserve, promote, and make Indian arts, culture, and skill-based learning accessible to students across the globe through quality online education.",
+    title: "SARWA KALA",
+    description: "Sri Kalavedika — Connoting to SARWA KALA — is a platform for ALL the performing arts with the blessings of Devi Saraswati.",
     icon: <Eye className="text-primary" size={32} />,
     bgColor: "bg-blue-50",
     iconBg: "bg-blue-100",
   },
   {
-    title: "Our Mission",
-    description: "To provide expert-led online training in performing arts, creative arts, and intellectual development while nurturing talent, confidence, and cultural values.",
+    title: "The Vision",
+    description: "A platform to learn.. to perform.. and to get recognised all by only the 'Art'. Resembling our heritage irrespective of Nation, creed or community.",
     icon: <Target className="text-secondary" size={32} />,
     bgColor: "bg-orange-50",
     iconBg: "bg-orange-100",
   },
   {
-    title: "Core Values",
-    description: "Excellence in Education, Cultural Preservation, Creativity & Innovation, Discipline & Dedication, and Student-Centric Learning.",
+    title: "The Legacy",
+    description: "Led by Maestro Guru Shri Chembai Srinivas, grandson of Padma Vibhushan Shri Chembai Vaidyavnath Bhagavathar.",
     icon: <Heart className="text-red-500" size={32} />,
     bgColor: "bg-red-50",
     iconBg: "bg-red-100",
@@ -64,14 +64,14 @@ export default function Philosophy() {
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-4">
               <History size={20} className="text-secondary" />
-              <span className="font-bold uppercase tracking-widest text-sm text-secondary">Established 2020</span>
+              <span className="font-bold uppercase tracking-widest text-sm text-secondary">Heritage & Excellence</span>
             </div>
-            <h3 className="text-3xl font-bold mb-6">A Platform for Global Talent</h3>
+            <h3 className="text-3xl font-bold mb-6">Expertise Originating from the Roots</h3>
             <p className="text-blue-100 mb-8 leading-relaxed">
-              Based in Delhi and serving students worldwide, we provide expert-led training in performing arts, intellectual skills, and personality development. Our mission is to inspire excellence while preserving cultural values.
+              We stand tall with renowned, passionate Gurus who bring a minimum of a decade of experience. Our foundation is built on the belief that only with a strong foundation can a grand condominium of art be built.
             </p>
             <Link href="/about" className="inline-block bg-white text-primary font-bold px-8 py-4 rounded-full hover:bg-secondary hover:text-white transition-all shadow-xl">
-              Learn More About Us
+              Discover Our Roots
             </Link>
           </div>
           <div className="flex-1 grid grid-cols-2 gap-6 w-full">
