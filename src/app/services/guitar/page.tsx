@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Music, Award, BookOpen, Clock, Users, CheckCircle2, Star } from "lucide-react";
+import { Music, BookOpen, Clock, Users, CheckCircle2, Star } from "lucide-react";
 
 export default function GuitarPage() {
   const guitarTypes = [
@@ -74,7 +74,7 @@ export default function GuitarPage() {
                 </p>
                 <div className="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm">
                   <p className="text-primary font-bold italic">
-                    "Experience world-class guitar training that bridges cultural boundaries and elevates your musical expression."
+                    &ldquo;Experience world-class guitar training that bridges cultural boundaries and elevates your musical expression.&rdquo;
                   </p>
                 </div>
               </div>
