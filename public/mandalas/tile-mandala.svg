@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <g stroke="#c4882a" stroke-width="0.8" opacity="0.8">
+    <circle cx="100" cy="100" r="95" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="78" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="60" stroke-width="0.8"/>
+    <circle cx="100" cy="100" r="44" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="28" stroke-width="1"/>
+    <circle cx="100" cy="100" r="12" stroke-width="0.8"/>
+    <!-- 8 outer petals -->
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(0 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(45 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(90 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(135 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(180 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(225 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(270 100 100)"/>
+    <ellipse cx="100" cy="12" rx="7" ry="22" transform="rotate(315 100 100)"/>
+    <!-- 8 inner petals -->
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(0 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(45 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(90 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(135 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(180 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(225 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(270 100 100)"/>
+    <ellipse cx="100" cy="52" rx="5" ry="18" transform="rotate(315 100 100)"/>
+    <!-- Dots -->
+    <g fill="#c4882a">
+      <circle cx="100" cy="3" r="2" transform="rotate(0 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(45 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(90 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(135 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(180 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(225 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(270 100 100)"/>
+      <circle cx="100" cy="3" r="2" transform="rotate(315 100 100)"/>
+    </g>
+    <circle cx="100" cy="100" r="6" fill="#c4882a" opacity="0.8"/>
+  </g>
+</svg>

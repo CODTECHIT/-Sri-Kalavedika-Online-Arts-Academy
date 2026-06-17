@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
-const outfit = Outfit({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-playfair",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
+  weight: ["400", "600", "700", "900"],
 });
 
 const inter = Inter({
@@ -16,8 +24,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Kalavedika | Online Arts Academy",
-  description: "Nurturing Talent, Preserving Tradition, Inspiring Excellence. Expert-led online training in Performing Arts and Intellectual Skills.",
+  title: "Sri Kalavedika | Online Arts Academy — Indian Classical Arts",
+  description:
+    "Nurturing Talent, Preserving Tradition, Inspiring Excellence. Expert-led online training in Indian Classical Music, Dance, Fine Arts & Cognitive Skills.",
+  keywords:
+    "Indian classical music, Carnatic vocal, Bharatanatyam, Kathak, online arts academy, Kalavedika",
 };
 
 export default function RootLayout({
@@ -26,8 +37,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${outfit.variable} ${inter.variable}`}>
-      <body className="min-h-full flex flex-col font-inter bg-white text-gray-900" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`h-full antialiased ${playfair.variable} ${cinzel.variable} ${inter.variable}`}
+    >
+      <body
+        className="min-h-full flex flex-col font-inter text-[#1a0a2e]"
+        style={{ background: "#fdf6e3" }}
+        suppressHydrationWarning
+      >
         {children}
         <FloatingWhatsAppButton />
       </body>

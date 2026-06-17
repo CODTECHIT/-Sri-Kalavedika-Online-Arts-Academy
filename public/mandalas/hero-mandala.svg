@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <g opacity="1" stroke="#c4882a" stroke-width="1">
+    <!-- Outer ring -->
+    <circle cx="400" cy="400" r="390" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="400" cy="400" r="370" stroke-width="0.5" opacity="0.4"/>
+    <!-- Outer petal ring (24 petals) -->
+    <g id="outer-petals">
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(0 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(15 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(30 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(45 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(60 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(75 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(90 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(105 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(120 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(135 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(150 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(165 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(180 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(195 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(210 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(225 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(240 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(255 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(270 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(285 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(300 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(315 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(330 400 400)" opacity="0.7"/>
+      <ellipse cx="400" cy="50" rx="18" ry="60" transform="rotate(345 400 400)" opacity="0.7"/>
+    </g>
+    <!-- Mid rings -->
+    <circle cx="400" cy="400" r="300" stroke-width="1" opacity="0.5"/>
+    <circle cx="400" cy="400" r="280" stroke-width="0.5" opacity="0.3"/>
+    <!-- Mid petal ring (16 petals) -->
+    <g>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(0 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(22.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(45 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(67.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(90 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(112.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(135 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(157.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(180 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(202.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(225 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(247.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(270 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(292.5 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(315 400 400)" opacity="0.6"/>
+      <ellipse cx="400" cy="130" rx="14" ry="48" transform="rotate(337.5 400 400)" opacity="0.6"/>
+    </g>
+    <!-- Inner rings -->
+    <circle cx="400" cy="400" r="200" stroke-width="1" opacity="0.5"/>
+    <circle cx="400" cy="400" r="180" stroke-width="0.5" opacity="0.3"/>
+    <!-- Inner petal ring (12 petals) -->
+    <g>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(0 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(30 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(60 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(90 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(120 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(150 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(180 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(210 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(240 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(270 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(300 400 400)" opacity="0.65"/>
+      <ellipse cx="400" cy="220" rx="12" ry="38" transform="rotate(330 400 400)" opacity="0.65"/>
+    </g>
+    <!-- Core rings -->
+    <circle cx="400" cy="400" r="120" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="400" cy="400" r="100" stroke-width="0.5" opacity="0.4"/>
+    <circle cx="400" cy="400" r="80" stroke-width="1" opacity="0.5"/>
+    <!-- Core lotus (8 petals) -->
+    <g>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(0 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(45 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(90 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(135 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(180 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(225 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(270 400 400)" opacity="0.8"/>
+      <ellipse cx="400" cy="300" rx="16" ry="52" transform="rotate(315 400 400)" opacity="0.8"/>
+    </g>
+    <!-- Decorative dots on outer ring -->
+    <g fill="#c4882a" opacity="0.6">
+      <circle cx="400" cy="10" r="4" transform="rotate(0 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(15 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(30 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(45 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(60 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(75 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(90 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(105 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(120 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(135 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(150 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(165 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(180 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(195 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(210 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(225 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(240 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(255 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(270 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(285 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(300 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(315 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(330 400 400)"/>
+      <circle cx="400" cy="10" r="4" transform="rotate(345 400 400)"/>
+    </g>
+    <!-- Center circle -->
+    <circle cx="400" cy="400" r="40" stroke-width="2" opacity="0.8"/>
+    <circle cx="400" cy="400" r="25" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="400" cy="400" r="12" fill="#c4882a" opacity="0.6"/>
+    <!-- Geometric star overlay -->
+    <polygon points="400,340 415,385 464,385 424,412 439,457 400,430 361,457 376,412 336,385 385,385" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

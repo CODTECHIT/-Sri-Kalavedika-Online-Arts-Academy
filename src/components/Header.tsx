@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,13 +19,9 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 80);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,65 +30,103 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-white/70 backdrop-blur-md border-b border-white/20 shadow-[0_8px_32px_0_rgba(11,31,94,0.05)] py-4"
-          : "bg-transparent py-6"
-      )}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      style={
+        isScrolled
+          ? {
+              background: "rgba(26, 10, 46, 0.95)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              boxShadow: "0 2px 20px rgba(0,0,0,0.3)",
+              padding: "0.75rem 0",
+            }
+          : {
+              background: "transparent",
+              padding: "1.25rem 0",
+            }
+      }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 md:gap-3 group">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <img 
-                  src="/logo/logo.jpeg" 
-                  alt="Sri Kalavedika Logo" 
-                  className="w-full h-full object-contain rounded-full shadow-sm border-2 border-white"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg md:text-xl font-extrabold text-primary tracking-tight leading-none">
-                  Sri Kalavedika
-                </span>
-                <span className="text-[8px] md:text-[10px] font-semibold text-secondary uppercase tracking-widest mt-0.5 md:mt-1">
-                  Online Arts Academy
-                </span>
-              </div>
-            </Link>
-          </div>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <div
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: "rgba(196,136,42,0.15)",
+                  border: "2px solid rgba(196,136,42,0.4)",
+                }}
+              />
+              <img
+                src="/logo/logo.jpeg"
+                alt="Sri Kalavedika Logo"
+                className="w-full h-full object-contain rounded-full relative z-10"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span
+                className="text-lg md:text-xl font-bold leading-none"
+                style={{
+                  fontFamily: "var(--font-playfair)",
+                  color: isScrolled ? "#f5c842" : "#fdf6e3",
+                  textShadow: isScrolled
+                    ? "0 0 20px rgba(245,200,66,0.3)"
+                    : "0 2px 8px rgba(0,0,0,0.5)",
+                  transition: "color 0.5s ease",
+                }}
+              >
+                Sri Kalavedika
+              </span>
+              <span
+                className="text-[8px] md:text-[9px] font-semibold uppercase tracking-[0.2em] mt-0.5"
+                style={{
+                  fontFamily: "var(--font-cinzel)",
+                  color: isScrolled
+                    ? "rgba(245,200,66,0.7)"
+                    : "rgba(253,246,227,0.7)",
+                  transition: "color 0.5s ease",
+                }}
+              >
+                Online Arts Academy
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="relative text-gray-700 hover:text-primary font-semibold transition-colors text-sm xl:text-base group"
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative font-semibold transition-all duration-300 text-sm xl:text-base group"
+                style={{ color: isScrolled ? "#fdf6e3" : "rgba(253,246,227,0.9)" }}
               >
                 {link.name}
-                <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-secondary transition-all duration-300 group-hover:w-full" />
+                <span
+                  className="absolute bottom-[-4px] left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                  style={{ background: "#f5c842" }}
+                />
               </Link>
             ))}
           </nav>
 
-          {/* Desktop Action Buttons */}
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link href="/admissions">
-              <button className="relative group px-6 py-2.5 bg-secondary text-white rounded-full font-bold hover:shadow-lg hover:shadow-secondary/20 transition-all text-sm overflow-hidden active:scale-95">
-                <span className="relative z-10">Free Demo Class</span>
-                <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out"></div>
+              <button className="btn-shimmer text-sm px-6 py-2.5">
+                Book Free Demo
               </button>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center">
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary p-2 focus:outline-none transition-transform active:scale-90"
+              className="p-2 focus:outline-none transition-transform active:scale-90"
+              style={{ color: "#f5c842" }}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -104,37 +137,58 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 bg-white/95 backdrop-blur-lg z-[100] flex flex-col h-screen w-screen"
+            className="lg:hidden fixed inset-0 z-[100] flex flex-col h-screen w-screen"
+            style={{ background: "rgba(26, 10, 46, 0.98)", backdropFilter: "blur(16px)" }}
           >
             {/* Menu Header */}
-            <div className="flex justify-between items-center h-20 px-4 border-b border-gray-100 shrink-0">
+            <div
+              className="flex justify-between items-center h-20 px-4 shrink-0"
+              style={{ borderBottom: "1px solid rgba(196,136,42,0.2)" }}
+            >
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 flex items-center justify-center">
-                  <img 
-                    src="/logo/logo.jpeg" 
-                    alt="Sri Kalavedika Logo" 
-                    className="w-full h-full object-contain rounded-full shadow-sm"
+                  <img
+                    src="/logo/logo.jpeg"
+                    alt="Sri Kalavedika Logo"
+                    className="w-full h-full object-contain rounded-full"
+                    style={{ border: "2px solid rgba(196,136,42,0.5)" }}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-base font-extrabold text-primary leading-none">
+                  <span
+                    className="text-base font-bold leading-none"
+                    style={{
+                      fontFamily: "var(--font-playfair)",
+                      color: "#f5c842",
+                    }}
+                  >
                     Sri Kalavedika
                   </span>
-                  <span className="text-[8px] font-semibold text-secondary uppercase mt-0.5">
+                  <span
+                    className="text-[8px] font-semibold uppercase mt-0.5 tracking-widest"
+                    style={{
+                      fontFamily: "var(--font-cinzel)",
+                      color: "rgba(245,200,66,0.6)",
+                    }}
+                  >
                     Online Arts Academy
                   </span>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(false)}
-                className="text-primary p-2 focus:outline-none bg-gray-50 rounded-full"
+                className="p-2 focus:outline-none rounded-full"
+                style={{
+                  background: "rgba(196,136,42,0.15)",
+                  border: "1px solid rgba(196,136,42,0.3)",
+                }}
               >
-                <X size={24} />
+                <X size={24} color="#f5c842" />
               </button>
             </div>
 
@@ -145,24 +199,37 @@ export default function Header() {
                   <motion.div
                     initial={{ opacity: 0, x: -25 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.05 }}
+                    transition={{ delay: idx * 0.07 }}
                     key={link.name}
                   >
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-2xl font-bold text-primary py-4 border-b border-gray-50 flex justify-between items-center group"
+                      className="text-2xl font-bold py-4 flex justify-between items-center group"
+                      style={{
+                        fontFamily: "var(--font-playfair)",
+                        color: "#fdf6e3",
+                        borderBottom: "1px solid rgba(196,136,42,0.15)",
+                      }}
                     >
                       {link.name}
-                      <ChevronDown className="-rotate-90 text-gray-300 group-hover:text-secondary transition-colors" size={20} />
+                      <ChevronDown
+                        className="-rotate-90 transition-colors"
+                        size={20}
+                        color="rgba(196,136,42,0.5)"
+                      />
                     </Link>
                   </motion.div>
                 ))}
               </div>
 
               <div className="flex flex-col gap-4 mt-auto pb-10">
-                <Link href="/admissions" className="w-full" onClick={() => setIsMenuOpen(false)}>
-                  <button className="w-full bg-secondary text-white py-4 rounded-full font-extrabold shadow-xl shadow-secondary/20 text-lg active:scale-95 transition-transform">
+                <Link
+                  href="/admissions"
+                  className="w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <button className="btn-shimmer w-full text-lg py-4">
                     Book Free Demo Class
                   </button>
                 </Link>
