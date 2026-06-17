@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Music, Brain, Sparkles, BookOpen, Clock, Users, CheckCircle2 } from "lucide-react";
+import { Music, Brain, BookOpen, Clock, Users, CheckCircle2 } from "lucide-react";
 
 export default function CarnaticVocalPage() {
   return (

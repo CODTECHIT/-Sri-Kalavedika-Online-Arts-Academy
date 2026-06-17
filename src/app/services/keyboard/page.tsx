@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Music, Users, CheckCircle2, BookOpen, Clock, Mic } from "lucide-react";
+import { Music, Users, CheckCircle2, BookOpen, Clock } from "lucide-react";
 
 export default function KeyboardPage() {
   return (

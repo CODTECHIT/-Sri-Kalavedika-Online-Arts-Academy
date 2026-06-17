@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-import { Send, MessageCircle, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CheckCircle2 } from "lucide-react";
 
 export default function AdmissionsPage() {
   const [formData, setFormData] = useState({

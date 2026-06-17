@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Music, Star, BookOpen, Clock, Users, CheckCircle2, Mic2 } from "lucide-react";
+import { Star, BookOpen, Clock, Users, CheckCircle2, Mic2 } from "lucide-react";
 
 export default function LightMusicPage() {
   return (
