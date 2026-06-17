@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -69,10 +72,10 @@ export default function Header() {
                 className="text-lg md:text-xl font-bold leading-none"
                 style={{
                   fontFamily: "var(--font-playfair)",
-                  color: isScrolled ? "#f5c842" : "#fdf6e3",
+                  color: isScrolled ? "#f5c842" : (isHomePage ? "#fdf6e3" : "#1a0a2e"),
                   textShadow: isScrolled
                     ? "0 0 20px rgba(245,200,66,0.3)"
-                    : "0 2px 8px rgba(0,0,0,0.5)",
+                    : (isHomePage ? "0 2px 8px rgba(0,0,0,0.5)" : "none"),
                   transition: "color 0.5s ease",
                 }}
               >
@@ -84,7 +87,7 @@ export default function Header() {
                   fontFamily: "var(--font-cinzel)",
                   color: isScrolled
                     ? "rgba(245,200,66,0.7)"
-                    : "rgba(253,246,227,0.7)",
+                    : (isHomePage ? "rgba(253,246,227,0.7)" : "rgba(26,10,46,0.7)"),
                   transition: "color 0.5s ease",
                 }}
               >
@@ -100,7 +103,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className="relative font-semibold transition-all duration-300 text-sm xl:text-base group"
-                style={{ color: isScrolled ? "#fdf6e3" : "rgba(253,246,227,0.9)" }}
+                style={{ color: isScrolled ? "#fdf6e3" : (isHomePage ? "rgba(253,246,227,0.9)" : "#1a0a2e") }}
               >
                 {link.name}
                 <span
@@ -125,7 +128,7 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 focus:outline-none transition-transform active:scale-90"
-              style={{ color: "#f5c842" }}
+              style={{ color: isScrolled ? "#f5c842" : (isHomePage ? "#f5c842" : "#1a0a2e") }}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}

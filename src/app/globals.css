@@ -113,6 +113,14 @@ body {
     color: var(--gold-text);
   }
 
+  /* Global glassmorphism override for white backgrounds to blend with mandala */
+  .bg-white {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  }
+
   /* Mandala watermark base */
   .mandala-watermark {
     position: absolute;

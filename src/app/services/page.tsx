@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="relative p-8 rounded-[2.5rem] bg-white border border-gray-150 transition-all duration-500 flex flex-col justify-between h-full group"
+                className="relative p-8 rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-white/50 shadow-sm hover:bg-white/90 transition-all duration-500 flex flex-col justify-between h-full group"
                 style={{
                   // Dynamic ambient colored shadow on hover
                   '--hover-shadow': `0 35px 60px -15px ${category.glowColor}`,

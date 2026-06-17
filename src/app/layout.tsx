@@ -45,7 +45,7 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col font-inter text-[#1a0a2e]"
         style={{ 
-          backgroundImage: `url(${bgImage.src})`,
+          backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.88), rgba(253, 246, 227, 0.88)), url(${bgImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
