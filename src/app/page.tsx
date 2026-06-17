@@ -1,25 +1,23 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import TestimonialsMarquee from "@/components/TestimonialsMarquee";
-import PopularCourses from "@/components/PopularCourses";
-import Philosophy from "@/components/Philosophy";
-import StudentVideos from "@/components/StudentVideos";
-import GalleryPreview from "@/components/GalleryPreview";
-import ReferEarn from "@/components/ReferEarn";
+import Statistics from "@/components/Statistics";
+import CourseCategories from "@/components/CourseCategories";
+import Features from "@/components/Features";
+import LearningJourney from "@/components/LearningJourney";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       <Header />
       <main className="flex-grow">
         <Hero />
-        <TestimonialsMarquee />
-        <PopularCourses />
-        <Philosophy />
-        <StudentVideos />
-        <GalleryPreview />
-        <ReferEarn />
+        <Statistics />
+        <CourseCategories />
+        <Features />
+        <LearningJourney />
+        <Testimonials />
       </main>
       <Footer />
     </div>

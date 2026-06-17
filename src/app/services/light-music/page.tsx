@@ -59,11 +59,11 @@ export default function LightMusicPage() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Rahul Sukun</h2>
                 <p className="text-xl text-secondary font-bold italic">India’s Got Talent Season 11</p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Rahul Sukun is a soulful Indian singer, guitarist, and dynamic live performer known for crafting <strong>"melodies that touch the soul."</strong> His voice carries a soothing charm, blending depth and clarity with effortless control.
+                  Rahul Sukun is a soulful Indian singer, guitarist, and dynamic live performer known for crafting <strong>&ldquo;melodies that touch the soul.&rdquo;</strong> His voice carries a soothing charm, blending depth and clarity with effortless control.
                 </p>
                 <div className="bg-white p-6 rounded-2xl border-l-4 border-primary shadow-sm">
                   <p className="text-gray-600 italic">
-                    "Whether he is singing romantic Bollywood classics, heartfelt indie tracks, or soulful unplugged covers, Rahul connects instantly through his sincerity and musical honesty."
+                    &ldquo;Whether he is singing romantic Bollywood classics, heartfelt indie tracks, or soulful unplugged covers, Rahul connects instantly through his sincerity and musical honesty.&rdquo;
                   </p>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 
@@ -6,77 +6,77 @@ const courses = [
   {
     title: "Classical Vocal Music",
     description: "Learn fundamentals and advanced techniques of Indian classical music from expert instructors.",
-    icon: "🎤",
+    icon: "ðŸŽ¤",
     bgColor: "bg-orange-50",
     iconBg: "bg-orange-100",
   },
   {
     title: "Keyboard & Piano",
     description: "Master playing techniques, music theory, and performance skills for all levels.",
-    icon: "🎹",
+    icon: "ðŸŽ¹",
     bgColor: "bg-blue-50",
     iconBg: "bg-blue-100",
   },
   {
     title: "Light Music & Bhajans",
     description: "Master soulful melodies and devotional songs with our expert performance-oriented training.",
-    icon: "🎶",
+    icon: "ðŸŽ¶",
     bgColor: "bg-purple-50",
     iconBg: "bg-purple-100",
   },
   {
     title: "Chess Coaching",
     description: "Enhance strategic thinking and problem-solving through professional chess training.",
-    icon: "♟️",
+    icon: "â™Ÿï¸",
     bgColor: "bg-gray-50",
     iconBg: "bg-gray-100",
   },
   {
     title: "Vedic Mathematics",
     description: "Fast and effective mathematical techniques to improve calculation speed and accuracy.",
-    icon: "🔢",
+    icon: "ðŸ”¢",
     bgColor: "bg-yellow-50",
     iconBg: "bg-yellow-100",
   },
   {
     title: "Dance (Classical & Contemporary)",
     description: "Training in various dance forms focusing on expression, rhythm, and coordination.",
-    icon: "💃",
+    icon: "ðŸ’ƒ",
     bgColor: "bg-pink-50",
     iconBg: "bg-pink-100",
   },
   {
     title: "Theatre & Acting",
     description: "Develop acting skills, voice modulation, expression, and performance techniques.",
-    icon: "🎭",
+    icon: "ðŸŽ­",
     bgColor: "bg-indigo-50",
     iconBg: "bg-indigo-100",
   },
   {
     title: "Flute Classes",
     description: "Learn flute playing with proper fingering, breathing techniques, and classical compositions.",
-    icon: "🪈",
+    icon: "ðŸªˆ",
     bgColor: "bg-green-50",
     iconBg: "bg-green-100",
   },
   {
     title: "Guitar & Advanced Guitar",
     description: "Master guitar playing techniques from basics to advanced solos with our expert guitarists.",
-    icon: "🎸",
+    icon: "ðŸŽ¸",
     bgColor: "bg-orange-50",
     iconBg: "bg-orange-100",
   },
   {
     title: "Rubik's Cube Training",
     description: "Master solving methods, speed cubing techniques, and logical thinking skills.",
-    icon: "🧊",
+    icon: "ðŸ§Š",
     bgColor: "bg-red-50",
     iconBg: "bg-red-100",
   },
   {
     title: "Storytelling & Public Speaking",
     description: "Build communication skills, confidence, and stage presence through engaging sessions.",
-    icon: "🗣️",
+    icon: "ðŸ—£ï¸",
     bgColor: "bg-purple-50",
     iconBg: "bg-purple-100",
   },
@@ -128,10 +128,11 @@ export default function PopularCourses() {
 
         <div className="flex justify-center mt-16">
           <a href="/services" className="border-2 border-primary text-primary font-bold px-10 py-4 rounded-full hover:bg-primary hover:text-white transition-all shadow-sm">
-            View All Services & Programs
+            View All Courses & Programs
           </a>
         </div>
       </div>
     </section>
   );
 }
+
