@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, MessageSquare, Send, Globe } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden relative">
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
       {/* Background Decorative Waves */}
       <div className="absolute top-20 left-[-5%] w-[30%] opacity-10 pointer-events-none animate-float">
         <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">

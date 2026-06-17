@@ -40,7 +40,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden relative">
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
       <Header />
       <main className="flex-grow pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

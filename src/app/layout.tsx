@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import bgImage from "../../background-template-with-mandala-designs/kvtx_cz5f_191104.jpg";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -43,7 +44,13 @@ export default function RootLayout({
     >
       <body
         className="min-h-full flex flex-col font-inter text-[#1a0a2e]"
-        style={{ background: "#fdf6e3" }}
+        style={{ 
+          backgroundImage: `url(${bgImage.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundColor: "#fdf6e3"
+        }}
         suppressHydrationWarning
       >
         {children}

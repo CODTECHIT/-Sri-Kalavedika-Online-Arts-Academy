@@ -5,7 +5,7 @@ import { Brain, Award, CheckCircle2, Users, Clock, Sparkles } from "lucide-react
 
 export default function MemoryTechniquesPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden relative">
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
       <Header />
       <main className="flex-grow pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
