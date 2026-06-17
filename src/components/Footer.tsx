@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, ArrowRight, Check, Send } from "lucide-react";
@@ -42,11 +43,12 @@ export default function Footer() {
         style={{ opacity: 0.06 }}
         aria-hidden="true"
       >
-        <img
+        <Image
           src="/mandalas/tile-mandala.svg"
           alt=""
-          className="w-full h-full"
+          fill
           style={{ filter: "sepia(1) saturate(2) hue-rotate(10deg)", objectFit: "cover" }}
+          loading="lazy"
         />
       </div>
 
@@ -57,13 +59,16 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
               <div
-                className="w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 rounded-full"
+                className="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 rounded-full"
                 style={{ border: "2px solid rgba(196,136,42,0.4)", background: "rgba(196,136,42,0.1)" }}
               >
-                <img
+                <Image
                   src="/logo/logo.jpeg"
                   alt="Sri Kalavedika Logo"
-                  className="w-full h-full object-contain rounded-full"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  className="rounded-full"
+                  loading="lazy"
                 />
               </div>
               <div className="flex flex-col">

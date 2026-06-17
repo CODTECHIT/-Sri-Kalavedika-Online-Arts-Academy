@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -61,10 +62,13 @@ export default function Header() {
                   border: "2px solid rgba(196,136,42,0.4)",
                 }}
               />
-              <img
+              <Image
                 src="/logo/logo.jpeg"
                 alt="Sri Kalavedika Logo"
-                className="w-full h-full object-contain rounded-full relative z-10"
+                fill
+                style={{ objectFit: "contain" }}
+                className="rounded-full relative z-10"
+                priority
               />
             </div>
             <div className="flex flex-col">
@@ -154,12 +158,13 @@ export default function Header() {
               style={{ borderBottom: "1px solid rgba(196,136,42,0.2)" }}
             >
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 flex items-center justify-center">
-                  <img
+                <div className="relative w-10 h-10 flex items-center justify-center">
+                  <Image
                     src="/logo/logo.jpeg"
                     alt="Sri Kalavedika Logo"
-                    className="w-full h-full object-contain rounded-full"
-                    style={{ border: "2px solid rgba(196,136,42,0.5)" }}
+                    fill
+                    style={{ objectFit: "contain", border: "2px solid rgba(196,136,42,0.5)" }}
+                    className="rounded-full"
                   />
                 </div>
                 <div className="flex flex-col">

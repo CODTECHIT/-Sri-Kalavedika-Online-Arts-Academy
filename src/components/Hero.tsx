@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
@@ -51,11 +52,11 @@ export default function Hero() {
         style={{ opacity: mandalaOpacity }}
         className="mandala-watermark right-[-5vw] top-1/2 -translate-y-1/2 w-[55vw] h-[55vw] max-w-[700px] max-h-[700px]"
       >
-        <img
+        <Image
           src="/mandalas/hero-mandala.svg"
           alt=""
           aria-hidden="true"
-          className="w-full h-full"
+          fill
           style={{ filter: "sepia(1) saturate(2) hue-rotate(10deg)", opacity: 1 }}
         />
       </motion.div>
@@ -254,14 +255,12 @@ export default function Hero() {
                 className="absolute inset-0 z-10"
                 style={{ background: "rgba(26,10,46,0.15)", mixBlendMode: "multiply" }}
               />
-              <img
+              <Image
                 src="/atrist.jpeg"
                 alt="Classical arts student"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=800";
-                }}
+                fill
+                style={{ objectFit: "cover" }}
+                priority
               />
               {/* Bottom gradient overlay */}
               <div
