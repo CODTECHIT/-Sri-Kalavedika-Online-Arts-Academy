@@ -179,8 +179,8 @@ export default function ServicesPage() {
                 className="relative p-8 rounded-[2.5rem] bg-white border border-gray-150 transition-all duration-500 flex flex-col justify-between h-full group"
                 style={{
                   // Dynamic ambient colored shadow on hover
-                  ['--hover-shadow' as any]: `0 35px 60px -15px ${category.glowColor}`,
-                }}
+                  '--hover-shadow': `0 35px 60px -15px ${category.glowColor}`,
+                } as React.CSSProperties & Record<string, string>}
               >
                 {/* CSS class mapping for custom dynamic shadow */}
                 <div className="absolute inset-0 rounded-[2.5rem] pointer-events-none transition-shadow duration-500 group-hover:shadow-[var(--hover-shadow)] border border-transparent group-hover:border-primary/10"></div>
