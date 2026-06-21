@@ -81,17 +81,32 @@ export default function CTABanner() {
           <span style={{ color: "#f5c842" }}>Artistic Journey?</span>
         </motion.h2>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg mb-10 leading-relaxed max-w-xl mx-auto"
-          style={{ color: "rgba(253,246,227,0.75)" }}
+          className="text-lg mb-8 leading-relaxed max-w-2xl mx-auto"
+          style={{ color: "rgba(253,246,227,0.85)" }}
         >
-          Join 5000+ students learning Indian classical arts from master Gurus.
-          Book your free demo class today — no commitment required.
-        </motion.p>
+          <p className="mb-6">Join Sri Kalavedika today and learn from expert Gurus from the comfort of your home.</p>
+          
+          <div className="flex flex-col items-center gap-3 text-base font-medium" style={{ fontFamily: "var(--font-sans)" }}>
+            <div className="flex items-center gap-2">
+              <span>📞</span> <span>+91 63027 49027</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📧</span> <span>skvonlinearts@gmail.com</span>
+            </div>
+            <div className="flex items-center gap-2 text-center">
+              <span>🌐</span> <span>Online Classes for India & Students Worldwide 🌍</span>
+            </div>
+          </div>
+          
+          <p className="mt-8 italic font-bold text-xl" style={{ fontFamily: "var(--font-playfair)", color: "#f5c842" }}>
+            "Where Tradition Meets Talent."
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

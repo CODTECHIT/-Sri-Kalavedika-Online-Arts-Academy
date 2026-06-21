@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Statistics from "@/components/Statistics";
 import CourseCategories from "@/components/CourseCategories";
+import ExpertGurus from "@/components/ExpertGurus";
 import Features from "@/components/Features";
 import LearningJourney from "@/components/LearningJourney";
 import Testimonials from "@/components/Testimonials";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Statistics />
         <CourseCategories />
+        <ExpertGurus />
         <Features />
         <LearningJourney />
         <Testimonials />

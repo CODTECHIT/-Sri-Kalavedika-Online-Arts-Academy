@@ -95,21 +95,21 @@ function StatCard({ value, suffix, label, description, icon }: StatItemProps) {
 export default function Statistics() {
   const stats: StatItemProps[] = [
     {
-      value: 5000,
+      value: 500,
       suffix: "+",
-      label: "Active Learners",
+      label: "Learners",
       description: "Connecting students globally with Indian culture through structured online lessons.",
       icon: <Users className="w-6 h-6" />,
     },
     {
-      value: 50,
+      value: 25,
       suffix: "+",
       label: "Expert Gurus",
       description: "Learn directly from certified artists, domain masters, and experienced instructors.",
       icon: <Award className="w-6 h-6" />,
     },
     {
-      value: 20,
+      value: 15,
       suffix: "+",
       label: "Art Forms",
       description: "Explore Classical Vocal, Carnatic, Bharatanatyam, Kathak, Instrumentals, and Painting.",

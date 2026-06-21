@@ -3,100 +3,201 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Music, Award, Keyboard, Compass, Target, BookOpen, Mic2, Heart, Sparkles, ArrowRight } from "lucide-react";
+import { Music, Award, Keyboard, Compass, Target, BookOpen, Mic2, Heart, Sparkles, ArrowRight, Palette, Brush, BrainCircuit, Users, Activity, Play, Image as ImageIcon } from "lucide-react";
 
-const categories = ["All", "Music", "Dance & Drama", "Cognitive & Speech"];
+const categories = ["All", "Vocal Music", "Dance", "Instrumental Music", "Fine Arts", "Mind games", "Cultural Programs"];
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  "Music": { bg: "rgba(196,136,42,0.12)", text: "#f5c842", border: "rgba(196,136,42,0.3)" },
-  "Dance & Drama": { bg: "rgba(92,26,26,0.15)", text: "#e8a020", border: "rgba(92,26,26,0.3)" },
-  "Cognitive & Speech": { bg: "rgba(26,10,46,0.12)", text: "#c4882a", border: "rgba(26,10,46,0.2)" },
+  "Vocal Music": { bg: "rgba(196,136,42,0.12)", text: "#c4882a", border: "rgba(196,136,42,0.3)" },
+  "Dance": { bg: "rgba(92,26,26,0.15)", text: "#e8a020", border: "rgba(92,26,26,0.3)" },
+  "Instrumental Music": { bg: "rgba(26,10,46,0.12)", text: "#1a0a2e", border: "rgba(26,10,46,0.2)" },
+  "Fine Arts": { bg: "rgba(34,139,34,0.12)", text: "#228B22", border: "rgba(34,139,34,0.3)" },
+  "Mind games": { bg: "rgba(70,130,180,0.12)", text: "#4682B4", border: "rgba(70,130,180,0.3)" },
+  "Cultural Programs": { bg: "rgba(255,140,0,0.12)", text: "#FF8C00", border: "rgba(255,140,0,0.3)" },
 };
 
 const categorySubheadings: Record<string, string> = {
-  "All": "Vocal • Instrumental • Dance • Drama • Cognitive • Speech",
-  "Music": "Classical Vocal • Instrumental • Light Music",
-  "Dance & Drama": "Classical Dance • Contemporary • Theatre & Acting",
-  "Cognitive & Speech": "Vedic Maths • Chess • Speed Cubing • Public Speaking"
+  "All": "Vocal Music • Dance • Instrumental Music • Fine Arts • Mind games • Cultural Programs",
+  "Vocal Music": "Carnatic Vocal • Hindustani Classical Vocal • Bhajans and Devotional Music • Light Music • Beat Boxing",
+  "Dance": "Bharatanatyam • Kuchipudi • Kathak • Bollywood • Semi-Classical Dance • Hip-Hop, Locking, Voguing, Waacking, Popping",
+  "Instrumental Music": "Violin • Keyboard • Mridangam • Flute • Guitar",
+  "Fine Arts": "Drawing • Painting • Creative Art",
+  "Mind games": "Chess • Rubiks' Cube (all levels) • Vedik Maths",
+  "Cultural Programs": "Cultural Programs and Workshops"
 };
 
 const courses = [
+  // Vocal Music
   {
-    title: "Classical Vocal Music",
-    category: "Music",
-    description: "Learn fundamentals and advanced techniques of Indian classical vocal music from expert gurus.",
+    title: "Carnatic Vocal",
+    category: "Vocal Music",
+    description: "Learn the traditional, structured, and deeply devotional Carnatic vocal music from expert gurus.",
     icon: <Mic2 className="w-6 h-6" />,
     href: "/services/carnatic-vocal",
   },
   {
-    title: "Keyboard & Piano",
-    category: "Music",
-    description: "Master playing techniques, music theory, and western or classical notations.",
+    title: "Hindustani Classical Vocal",
+    category: "Vocal Music",
+    description: "Master the soulful melodies and ragas of North Indian Hindustani classical vocal.",
+    icon: <Music className="w-6 h-6" />,
+    href: "/services/hindustani-vocal",
+  },
+  {
+    title: "Bhajans and Devotional Music",
+    category: "Vocal Music",
+    description: "Sing divine and spiritually uplifting bhajans and devotional songs.",
+    icon: <Heart className="w-6 h-6" />,
+    href: "/services/bhajans",
+  },
+  {
+    title: "Light Music",
+    category: "Vocal Music",
+    description: "Learn popular melodies, cinematic, and semi-classical songs with expressive singing.",
+    icon: <Play className="w-6 h-6" />,
+    href: "/services/light-music",
+  },
+  {
+    title: "Beat Boxing",
+    category: "Vocal Music",
+    description: "Master vocal percussion, rhythms, and modern beatboxing techniques.",
+    icon: <Activity className="w-6 h-6" />,
+    href: "/services/beat-boxing",
+  },
+
+  // Dance
+  {
+    title: "Bharatanatyam",
+    category: "Dance",
+    description: "Learn the ancient and graceful classical dance form from South India, focusing on expression and rhythm.",
+    icon: <Sparkles className="w-6 h-6" />,
+    href: "/services/bharatanatyam",
+  },
+  {
+    title: "Kuchipudi",
+    category: "Dance",
+    description: "Master Kuchipudi with its unique blend of expressive storytelling and vibrant footwork.",
+    icon: <Sparkles className="w-6 h-6" />,
+    href: "/services/kuchipudi",
+  },
+  {
+    title: "Kathak",
+    category: "Dance",
+    description: "Explore the rhythmic footwork, rapid spins, and storytelling of North Indian Kathak.",
+    icon: <Sparkles className="w-6 h-6" />,
+    href: "/services/kathak",
+  },
+  {
+    title: "Bollywood",
+    category: "Dance",
+    description: "Energetic and fun dance routines set to popular Bollywood tracks.",
+    icon: <Users className="w-6 h-6" />,
+    href: "/services/bollywood",
+  },
+  {
+    title: "Semi-Classical Dance",
+    category: "Dance",
+    description: "A beautiful fusion of traditional classical movements with contemporary music.",
+    icon: <Heart className="w-6 h-6" />,
+    href: "/services/semi-classical-dance",
+  },
+  {
+    title: "Hip-Hop & Urban Styles",
+    category: "Dance",
+    description: "Learn Hip-Hop, Locking, Voguing, Waacking, and Popping from dynamic instructors.",
+    icon: <Activity className="w-6 h-6" />,
+    href: "/services/hip-hop",
+  },
+
+  // Instrumental Music
+  {
+    title: "Violin",
+    category: "Instrumental Music",
+    description: "Learn bowing techniques and melodies on the violin, classical or western styles.",
+    icon: <Music className="w-6 h-6" />,
+    href: "/services/violin",
+  },
+  {
+    title: "Keyboard",
+    category: "Instrumental Music",
+    description: "Master playing techniques, music theory, and notations on the keyboard.",
     icon: <Keyboard className="w-6 h-6" />,
     href: "/services/keyboard",
   },
   {
-    title: "Light Music & Bhajans",
-    category: "Music",
-    description: "Master soulful melodies, semi-classical, and devotional songs with performance-oriented training.",
-    icon: <Music className="w-6 h-6" />,
-    href: "/services/light-music",
-  },
-  {
-    title: "Chess Coaching",
-    category: "Cognitive & Speech",
-    description: "Enhance strategic thinking, focus, and tactical problem-solving through master coaching.",
+    title: "Mridangam",
+    category: "Instrumental Music",
+    description: "Learn traditional Carnatic percussion and complex rhythmic patterns.",
     icon: <Target className="w-6 h-6" />,
-    href: "/services/chess",
+    href: "/services/mridangam",
   },
   {
-    title: "Vedic Mathematics",
-    category: "Cognitive & Speech",
-    description: "Learn ancient, rapid mathematical techniques to perform complex calculations in seconds.",
-    icon: <BookOpen className="w-6 h-6" />,
-    href: "/services/vedic-maths",
-  },
-  {
-    title: "Dance (Classical & Contemporary)",
-    category: "Dance & Drama",
-    description: "Comprehensive training in Bharatanatyam, Kathak, or contemporary, focusing on expression & rhythm.",
-    icon: <Sparkles className="w-6 h-6" />,
-    href: "/services/dance",
-  },
-  {
-    title: "Theatre & Acting",
-    category: "Dance & Drama",
-    description: "Develop acting skills, expressions, voice modulation, and stage confidence.",
-    icon: <Heart className="w-6 h-6" />,
-    href: "/services/theatre",
-  },
-  {
-    title: "Flute Classes",
-    category: "Music",
-    description: "Learn classical flute playing with proper breathing, finger control, and beautiful ragas.",
+    title: "Flute",
+    category: "Instrumental Music",
+    description: "Master breathing techniques, finger control, and beautiful ragas on the flute.",
     icon: <Compass className="w-6 h-6" />,
     href: "/services/flute",
   },
   {
-    title: "Guitar & Advanced Guitar",
-    category: "Music",
-    description: "Master acoustic or electric guitar from basic chords to advanced solos and composition.",
+    title: "Guitar",
+    category: "Instrumental Music",
+    description: "Learn acoustic or electric guitar, from basic chords to advanced solos.",
     icon: <Music className="w-6 h-6" />,
     href: "/services/guitar",
   },
+
+  // Fine Arts
   {
-    title: "Rubik's Cube Training",
-    category: "Cognitive & Speech",
+    title: "Drawing",
+    category: "Fine Arts",
+    description: "Develop foundational drawing skills using various techniques and mediums.",
+    icon: <Brush className="w-6 h-6" />,
+    href: "/services/drawing",
+  },
+  {
+    title: "Painting",
+    category: "Fine Arts",
+    description: "Explore color theory, acrylics, watercolors, and oil painting.",
+    icon: <Palette className="w-6 h-6" />,
+    href: "/services/painting",
+  },
+  {
+    title: "Creative Art",
+    category: "Fine Arts",
+    description: "Unleash your creativity with mixed media, crafts, and expressive art forms.",
+    icon: <ImageIcon className="w-6 h-6" />,
+    href: "/services/creative-art",
+  },
+
+  // Mind games
+  {
+    title: "Chess",
+    category: "Mind games",
+    description: "Enhance strategic thinking, focus, and tactical problem-solving.",
+    icon: <Target className="w-6 h-6" />,
+    href: "/services/chess",
+  },
+  {
+    title: "Rubiks' Cube (all levels)",
+    category: "Mind games",
     description: "Boost spatial memory and logical reflexes by mastering speed cubing techniques.",
     icon: <Award className="w-6 h-6" />,
     href: "/services/rubiks-cube",
   },
   {
-    title: "Storytelling & Public Speaking",
-    category: "Cognitive & Speech",
-    description: "Build exceptional communication skills, clear articulation, and compelling presentation skills.",
-    icon: <Sparkles className="w-6 h-6" />,
-    href: "/services/storytelling",
+    title: "Vedik Maths",
+    category: "Mind games",
+    description: "Learn ancient, rapid mathematical techniques to perform complex calculations in seconds.",
+    icon: <BrainCircuit className="w-6 h-6" />,
+    href: "/services/vedik-maths",
+  },
+
+  // Cultural Programs
+  {
+    title: "Cultural Programs & Workshops",
+    category: "Cultural Programs",
+    description: "Participate in special workshops and cultural programs celebrating Indian arts.",
+    icon: <Users className="w-6 h-6" />,
+    href: "/services/cultural-programs",
   },
 ];
 
@@ -303,13 +404,41 @@ export default function CourseCategories() {
           </AnimatePresence>
         </motion.div>
 
+        {/* Learning Options */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 max-w-4xl mx-auto text-center"
+        >
+          <h3 className="text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}>
+            Flexible <span style={{ color: "#c4882a" }}>Learning Options</span>
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {["Individual Classes", "Group Classes", "Weekend Batches", "NRI-Friendly Timings", "Customized Learning Plans"].map((option, idx) => (
+              <div 
+                key={idx}
+                className="px-6 py-3 rounded-full font-semibold text-sm md:text-base flex items-center gap-2"
+                style={{
+                  background: "rgba(196,136,42,0.1)",
+                  border: "1px solid rgba(196,136,42,0.25)",
+                  color: "#5c1a1a",
+                }}
+              >
+                <span style={{ color: "#c4882a" }}>✦</span> {option}
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* View All CTA */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col items-center justify-center mt-20"
+          className="flex flex-col items-center justify-center mt-12"
         >
           <Link href="/services">
             <button

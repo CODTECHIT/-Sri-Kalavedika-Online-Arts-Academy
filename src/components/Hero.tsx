@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import heroBgImage from "../../background-template-with-mandala-pattern-design/43584.jpg";
 
 const PHOTOS = [
   { src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg", name: "Dr. Devagupthapu Sai Lahari, Kuchipudi" },
@@ -70,22 +71,12 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20"
-      style={{ background: "#1a0a2e" }}
+      style={{ 
+        backgroundImage: `url(${heroBgImage.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
     >
-      {/* ── Mandala watermark (right side) ── */}
-      <motion.div
-        style={{ opacity: mandalaOpacity }}
-        className="mandala-watermark right-[-5vw] top-1/2 -translate-y-1/2 w-[55vw] h-[55vw] max-w-[700px] max-h-[700px]"
-      >
-        <Image
-          src="/mandalas/hero-mandala.svg"
-          alt=""
-          aria-hidden="true"
-          fill
-          style={{ filter: "sepia(1) saturate(2) hue-rotate(10deg)", opacity: 1 }}
-        />
-      </motion.div>
-
       {/* ── Floating particles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         {PARTICLES.map((p, i) => (
@@ -141,12 +132,12 @@ export default function Hero() {
             {/* Eyebrow */}
             <motion.div variants={item} className="mb-6 inline-flex items-center gap-2">
               <span
-                className="text-xs tracking-[0.22em] uppercase px-4 py-2 rounded-full"
+                className="text-xs tracking-[0.22em] uppercase px-4 py-2 rounded-full font-bold"
                 style={{
                   fontFamily: "var(--font-cinzel)",
-                  color: "#f5c842",
-                  background: "rgba(196,136,42,0.12)",
-                  border: "1px solid rgba(196,136,42,0.3)",
+                  color: "#1a0a2e",
+                  background: "rgba(196,136,42,0.15)",
+                  border: "1px solid rgba(196,136,42,0.6)",
                 }}
               >
                 ✦ Where Tradition Meets Creativity
@@ -158,7 +149,7 @@ export default function Hero() {
               <motion.h1
                 variants={item}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
-                style={{ fontFamily: "var(--font-playfair)", color: "#fdf6e3" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Nurturing{" "}
                 <span className="text-gold-gradient">Talent</span>
@@ -166,15 +157,15 @@ export default function Hero() {
               <motion.h1
                 variants={item}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
-                style={{ fontFamily: "var(--font-playfair)", color: "#fdf6e3" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Preserving{" "}
-                <span style={{ color: "#e8a020" }}>Tradition</span>
+                <span style={{ color: "#c4882a" }}>Tradition</span>
               </motion.h1>
               <motion.h1
                 variants={item}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
-                style={{ fontFamily: "var(--font-playfair)", color: "#fdf6e3" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Inspiring{" "}
                 <span className="text-gold-gradient">Excellence</span>
@@ -184,8 +175,8 @@ export default function Hero() {
             {/* Subtitle */}
             <motion.p
               variants={item}
-              className="text-base md:text-lg max-w-xl mb-10 leading-relaxed"
-              style={{ color: "rgba(253,246,227,0.72)" }}
+              className="text-base md:text-lg max-w-xl mb-10 leading-relaxed font-medium"
+              style={{ color: "#4a3b5c" }}
             >
               Experience India&apos;s rich cultural heritage through premium
               online education in music, dance, and fine arts. Connect with
@@ -198,12 +189,18 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <Link href="/admissions">
-                <button className="btn-shimmer text-base px-8 py-4 w-full sm:w-auto">
+                <button 
+                  className="btn-shimmer text-base px-8 py-4 w-full sm:w-auto font-bold"
+                  style={{ color: "#1a0a2e" }}
+                >
                   Book Free Demo
                 </button>
               </Link>
               <Link href="/services">
-                <button className="btn-ghost-gold text-base px-8 py-4 w-full sm:w-auto">
+                <button 
+                  className="text-base px-8 py-4 w-full sm:w-auto rounded-full font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  style={{ border: "2px solid #1a0a2e", color: "#1a0a2e" }}
+                >
                   Explore Courses
                 </button>
               </Link>
@@ -219,11 +216,11 @@ export default function Hero() {
                 <div key={badge.label} className="flex flex-col items-center lg:items-start">
                   <span
                     className="text-xl font-extrabold"
-                    style={{ fontFamily: "var(--font-playfair)", color: "#f5c842" }}
+                    style={{ fontFamily: "var(--font-playfair)", color: "#c4882a" }}
                   >
                     {badge.value}
                   </span>
-                  <span className="text-[11px]" style={{ color: "rgba(253,246,227,0.55)" }}>
+                  <span className="text-[11px] font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
                     {badge.label}
                   </span>
                 </div>
@@ -234,185 +231,17 @@ export default function Hero() {
               />
               <div className="flex items-center gap-1">
                 {[1,2,3,4,5].map((s) => (
-                  <span key={s} style={{ color: "#f5c842", fontSize: "0.9rem" }}>★</span>
+                  <span key={s} style={{ color: "#c4882a", fontSize: "0.9rem" }}>★</span>
                 ))}
-                <span className="text-xs ml-1" style={{ color: "rgba(253,246,227,0.55)" }}>
+                <span className="text-xs ml-1 font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
                   Top Rated
                 </span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right — Image with Lotus Frame */}
-          <motion.div
-            style={{ y: y1 }}
-            className="relative w-full h-[480px] lg:h-[640px] flex items-center justify-center"
-          >
-            {/* The Animated Lotus SVG */}
-            <div className="absolute inset-0 w-full h-full flex items-center justify-center z-10 pointer-events-none">
-              <motion.svg 
-                viewBox="0 0 300 300" 
-                className="w-[140%] h-[140%] max-w-[800px] max-h-[800px] drop-shadow-2xl"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
-              >
-                <defs>
-                  {/* Outer Petal Shape */}
-                  <path id="outer-petal" d="M 150 150 C 110 60, 150 5, 150 5 C 150 5, 190 60, 150 150 Z" />
-                  {/* Inner Petal Shape */}
-                  <path id="inner-petal" d="M 150 150 C 125 80, 150 35, 150 35 C 150 35, 175 80, 150 150 Z" />
-                  
-                  {/* Vibrant Pink-Orange Gradient for outer petals */}
-                  <linearGradient id="grad-outer" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#ff1493" />   {/* Deep Pink */}
-                    <stop offset="100%" stopColor="#ff8c00" /> {/* Dark Orange */}
-                  </linearGradient>
-                  
-                  {/* Bright Pink-Gold Gradient for inner petals */}
-                  <linearGradient id="grad-inner" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#ff69b4" />   {/* Hot Pink */}
-                    <stop offset="100%" stopColor="#ffd700" /> {/* Gold */}
-                  </linearGradient>
-                </defs>
-                
-                {/* Outer Petals Layer */}
-                <g className="origin-center">
-                  {[...Array(16)].map((_, i) => (
-                    <use 
-                      key={`outer-${i}`} 
-                      href="#outer-petal" 
-                      fill="url(#grad-outer)" 
-                      style={{ transform: `rotate(${i * 22.5}deg)`, transformOrigin: "150px 150px", opacity: 0.9 }} 
-                    />
-                  ))}
-                </g>
-
-                {/* Inner Petals Layer */}
-                <g className="origin-center">
-                  {[...Array(16)].map((_, i) => (
-                    <use 
-                      key={`inner-${i}`} 
-                      href="#inner-petal" 
-                      fill="url(#grad-inner)" 
-                      style={{ transform: `rotate(${i * 22.5 + 11.25}deg)`, transformOrigin: "150px 150px", opacity: 0.95 }} 
-                    />
-                  ))}
-                </g>
-              </motion.svg>
-            </div>
-
-            {/* Main image slider (Center of Lotus) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.4, type: "spring" }}
-              className="relative z-20 w-[60%] sm:w-[50%] lg:w-[55%] aspect-square rounded-full overflow-hidden"
-              style={{
-                boxShadow: "0 0 50px rgba(255,20,147,0.5), inset 0 0 20px rgba(196,136,42,0.8)",
-                border: "6px solid #f5c842",
-              }}
-            >
-              <div
-                className="absolute inset-0 z-10"
-                style={{ background: "rgba(26,10,46,0.1)", mixBlendMode: "overlay" }}
-              />
-              <div className="absolute inset-0 w-full h-full">
-                {PHOTOS.map((photo, index) => (
-                  <Image
-                    key={photo.src}
-                    src={photo.src}
-                    alt={photo.name}
-                    fill
-                    style={{ 
-                      objectFit: "cover",
-                      opacity: index === currentPhotoIndex ? 1 : 0,
-                      transition: "opacity 1.5s ease-in-out, transform 8s ease-in-out",
-                      transform: index === currentPhotoIndex ? "scale(1.1)" : "scale(1)"
-                    }}
-                    priority={index === 0}
-                  />
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Bottom badge */}
-            <div className="absolute bottom-5 z-30 w-full flex justify-center px-4">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentPhotoIndex}
-                  initial={{ opacity: 0, y: 15, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -15, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
-                  className="rounded-full px-6 py-3 flex items-center gap-3 shadow-[0_10px_30px_rgba(255,20,147,0.3)]"
-                  style={{
-                    background: "rgba(26,10,46,0.9)",
-                    backdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,105,180,0.4)",
-                  }}
-                >
-                  <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
-                    style={{
-                      background: "linear-gradient(135deg, #ff1493, #ff8c00)",
-                      color: "#fff",
-                    }}
-                  >
-                    ॐ
-                  </div>
-                  <div>
-                    <p className="font-bold text-sm line-clamp-1" style={{ color: "#fdf6e3", fontFamily: "var(--font-playfair)" }} title={PHOTOS[currentPhotoIndex].name}>
-                      {PHOTOS[currentPhotoIndex].name}
-                    </p>
-                    <p className="text-xs tracking-wider" style={{ color: "#ff69b4", textTransform: "uppercase" }}>
-                      Our Expert Guru
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Floating ornament circles */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-4 top-1/4 z-30 w-14 h-14 rounded-full flex items-center justify-center text-xl"
-              style={{
-                background: "rgba(26,10,46,0.8)",
-                border: "2px solid rgba(196,136,42,0.5)",
-                backdropFilter: "blur(8px)",
-                color: "#f5c842",
-              }}
-            >
-              ♪
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-4 top-1/3 z-30 w-12 h-12 rounded-full flex items-center justify-center text-lg"
-              style={{
-                background: "rgba(26,10,46,0.8)",
-                border: "2px solid rgba(196,136,42,0.5)",
-                backdropFilter: "blur(8px)",
-                color: "#e8a020",
-              }}
-            >
-              ॐ
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              className="absolute left-8 bottom-1/4 z-30 w-16 h-16 rounded-full flex items-center justify-center text-2xl"
-              style={{
-                background: "rgba(26,10,46,0.8)",
-                border: "2px solid rgba(196,136,42,0.5)",
-                backdropFilter: "blur(8px)",
-                color: "#f5c842",
-              }}
-            >
-              ♫
-            </motion.div>
-          </motion.div>
+          {/* Right — Mandala Art */}
+          <div className="hidden lg:block w-full h-[480px] lg:h-[640px] pointer-events-none" />
         </div>
       </div>
 
