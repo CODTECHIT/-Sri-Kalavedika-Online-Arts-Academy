@@ -208,37 +208,15 @@ export default function AboutPage() {
                   </div>
 
                   <p className="text-gray-750 text-base md:text-lg leading-relaxed font-medium">
-                    Mrs. Praveen Mehera is the Founder of Sri Kalavedika, a passionate cultural enthusiast dedicated to preserving, promoting, and sharing the rich heritage of Indian arts with learners across the globe. With a strong belief that art is a powerful medium for personal growth, cultural connection, and lifelong learning, she established Sri Kalavedika as a platform where tradition meets opportunity.
+                    Mrs. Praveen Mehera is the Founder of Sri Kalavedika, an initiative dedicated to promoting Indian arts and culture among learners across the world. A Consultant with the Government and a Cyber Law enthusiast, she is also a passionate learner of Carnatic Music and an active participant in cultural and artistic activities.
                   </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                    <div className="space-y-3">
-                      <h4 className="font-extrabold text-primary text-sm uppercase tracking-widest flex items-center gap-2">
-                        <Award className="w-4 h-4 text-secondary" />
-                        <span>Professional Excellence</span>
-                      </h4>
-                      <p className="text-sm text-gray-655 leading-relaxed">
-                        A Consultant with the Government and a Cyber Law enthusiast, Mrs. Mehera combines professional excellence with an unwavering commitment to the arts. A devoted learner of Carnatic Music, she continues to pursue her musical journey while encouraging students of all ages to embrace the beauty of Indian classical traditions.
-                      </p>
-                    </div>
-
-                    <div className="space-y-3">
-                      <h4 className="font-extrabold text-primary text-sm uppercase tracking-widest flex items-center gap-2">
-                        <Music className="w-4 h-4 text-secondary" />
-                        <span>Artistic Milestones</span>
-                      </h4>
-                      <p className="text-sm text-gray-655 leading-relaxed">
-                        As a devotional singer, she has had the privilege of performing during the Ugadi and Sri Rama Navami celebrations at AP Bhavan, New Delhi, in 2026. Her artistic pursuits extend into acting, having portrayed the role of DSP Sheetal Batra in the Doordarshan series <em>Cyber Crime Ki Duniya</em>, raising public safety awareness.
-                      </p>
-                    </div>
-                  </div>
 
                   <div className="pt-4 space-y-4">
                     <p className="text-sm text-gray-655 leading-relaxed">
-                      Fluent in Telugu, Hindi, and English, and familiar with Tamil, Punjabi, Haryanvi, and other Indian languages, she values meaningful conversations and cultural exchange. Her multilingual abilities, coupled with her love for meeting new people and sharing knowledge, have played a significant role in expanding the reach and impact of Sri Kalavedika.
+                      She has performed as a devotional singer during Ugadi and Sri Rama Navami celebrations at AP Bhavan in 2026 and portrayed DSP Sheetal Batra in the Cyber Crime Ki Duniya. She is actively associated with various cultural and community organizations as a singer, anchor, voice-over artist, and cultural coordinator.
                     </p>
                     <p className="text-sm text-gray-655 leading-relaxed">
-                      Mrs. Praveen Mehera is actively associated with several cultural, social, and community organizations in Delhi, where she contributes as an anchor, voice-over artist, singer, and cultural coordinator.
+                      Fluent in Telugu, Hindi, and English, she enjoys connecting with people through art, culture, and education. Through Sri Kalavedika, she aims to create a platform where students and Gurus come together to learn, preserve, and celebrate India's rich artistic heritage.
                     </p>
                   </div>
 
@@ -283,7 +261,7 @@ export default function AboutPage() {
                     Family & Musical Foundation
                   </h4>
                   <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">
-                    Mrs. Praveen Mehera is supported by her husband, <span className="text-primary font-bold">Mr. Ivaturi Veerendranadha Kasyap</span>, an Advocate practicing before the Supreme Court of India. A talented percussionist, he is also a State-Level Gold Medalist in Mridangam.
+                    Mrs. Praveen Mehera is supported by her husband, <span className="text-primary font-bold">Ivaturi Veerendranadha Kasyap</span>, an Advocate practicing before the Supreme Court of India and a State-Level Gold Medalist in Mridangam. Their shared passion for culture and excellence continues to inspire the vision of Sri Kalavedika.
                   </p>
                 </div>
                 <div className="flex items-center gap-2.5 px-4 py-2 bg-secondary text-white rounded-full text-xs font-bold uppercase tracking-widest shrink-0 shadow-sm">

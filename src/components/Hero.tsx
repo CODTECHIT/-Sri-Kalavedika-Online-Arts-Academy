@@ -1,10 +1,26 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+
+const PHOTOS = [
+  { src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg", name: "Dr. Devagupthapu Sai Lahari, Kuchipudi" },
+  { src: "/photos/Kum. Pakhi, Kathak.jpeg", name: "Kum. Pakhi, Kathak" },
+  { src: "/photos/Kum. Pragya Tyagi, Kathak.jpeg", name: "Kum. Pragya Tyagi, Kathak" },
+  { src: "/photos/Kum. Riya, Bollywood dance & Zumba.jpeg", name: "Kum. Riya, Bollywood dance & Zumba" },
+  { src: "/photos/Shri Chembai Srinivas, Carnatic Violin Keerthanams.jpeg", name: "Shri Chembai Srinivas, Carnatic Violin Keerthanams" },
+  { src: "/photos/Shri Dhruval Shah, Chess.jpeg", name: "Shri Dhruval Shah, Chess" },
+  { src: "/photos/Shri Ganesh Singh, Flute.jpeg", name: "Shri Ganesh Singh, Flute" },
+  { src: "/photos/Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing.jpeg", name: "Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing" },
+  { src: "/photos/Shri Venkat Narayana, Carnatic Vocal Keyboard.jpeg", name: "Shri Venkat Narayana, Carnatic Vocal Keyboard" },
+  { src: "/photos/Shri. Rahul Sukun, Guitar.jpeg", name: "Shri. Rahul Sukun, Guitar" },
+  { src: "/photos/Smt. Sandhya Saki, Kuchipudi.jpeg", name: "Smt. Sandhya Saki, Kuchipudi" },
+  { src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg", name: "Smt. Shubha Dixit, Hindustani Vocal" },
+  { src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg", name: "Smt. Vyshnavi Nambiar, Kuchipudi" },
+];
 
 // Floating particle symbols (Indian classical + music)
 const PARTICLES = [
@@ -41,6 +57,15 @@ export default function Hero() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 800], [0, 120]);
   const mandalaOpacity = useTransform(scrollY, [0, 600], [0.15, 0]);
+
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhotoIndex((prev) => (prev + 1) % PHOTOS.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -239,7 +264,7 @@ export default function Hero() {
               }}
             />
 
-            {/* Main image */}
+            {/* Main image slider */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -255,13 +280,22 @@ export default function Hero() {
                 className="absolute inset-0 z-10"
                 style={{ background: "rgba(26,10,46,0.15)", mixBlendMode: "multiply" }}
               />
-              <Image
-                src="/atrist.jpeg"
-                alt="Classical arts student"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-              />
+              <div className="absolute inset-0 w-full h-full">
+                {PHOTOS.map((photo, index) => (
+                  <Image
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.name}
+                    fill
+                    style={{ 
+                      objectFit: "cover",
+                      opacity: index === currentPhotoIndex ? 1 : 0,
+                      transition: "opacity 1s ease-in-out"
+                    }}
+                    priority={index === 0}
+                  />
+                ))}
+              </div>
               {/* Bottom gradient overlay */}
               <div
                 className="absolute inset-0 z-20"
@@ -271,32 +305,39 @@ export default function Hero() {
               />
               {/* Bottom badge */}
               <div className="absolute bottom-5 left-5 right-5 z-30">
-                <div
-                  className="rounded-xl p-3 flex items-center gap-3"
-                  style={{
-                    background: "rgba(26,10,46,0.8)",
-                    backdropFilter: "blur(8px)",
-                    border: "1px solid rgba(196,136,42,0.3)",
-                  }}
-                >
-                  <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentPhotoIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5 }}
+                    className="rounded-xl p-3 flex items-center gap-3"
                     style={{
-                      background: "linear-gradient(135deg, #c4882a, #f5c842)",
-                      color: "#fff",
+                      background: "rgba(26,10,46,0.8)",
+                      backdropFilter: "blur(8px)",
+                      border: "1px solid rgba(196,136,42,0.3)",
                     }}
                   >
-                    ★
-                  </div>
-                  <div>
-                    <p className="font-bold text-sm" style={{ color: "#f5c842", fontFamily: "var(--font-playfair)" }}>
-                      Top Rated Academy
-                    </p>
-                    <p className="text-xs" style={{ color: "rgba(253,246,227,0.6)" }}>
-                      5000+ Happy Students Worldwide
-                    </p>
-                  </div>
-                </div>
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
+                      style={{
+                        background: "linear-gradient(135deg, #c4882a, #f5c842)",
+                        color: "#fff",
+                      }}
+                    >
+                      ★
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm line-clamp-1" style={{ color: "#f5c842", fontFamily: "var(--font-playfair)" }} title={PHOTOS[currentPhotoIndex].name}>
+                        {PHOTOS[currentPhotoIndex].name}
+                      </p>
+                      <p className="text-xs" style={{ color: "rgba(253,246,227,0.6)" }}>
+                        Our Expert Guru
+                      </p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </motion.div>
 
