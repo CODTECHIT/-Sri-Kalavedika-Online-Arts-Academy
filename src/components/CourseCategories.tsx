@@ -13,6 +13,13 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
   "Cognitive & Speech": { bg: "rgba(26,10,46,0.12)", text: "#c4882a", border: "rgba(26,10,46,0.2)" },
 };
 
+const categorySubheadings: Record<string, string> = {
+  "All": "Vocal • Instrumental • Dance • Drama • Cognitive • Speech",
+  "Music": "Classical Vocal • Instrumental • Light Music",
+  "Dance & Drama": "Classical Dance • Contemporary • Theatre & Acting",
+  "Cognitive & Speech": "Vedic Maths • Chess • Speed Cubing • Public Speaking"
+};
+
 const courses = [
   {
     title: "Classical Vocal Music",
@@ -168,7 +175,7 @@ export default function CourseCategories() {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -201,6 +208,23 @@ export default function CourseCategories() {
               {cat}
             </button>
           ))}
+        </div>
+
+        {/* Subheadings */}
+        <div className="text-center mb-16 h-8">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={activeTab}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.3 }}
+              className="text-sm md:text-base font-bold tracking-wider uppercase"
+              style={{ color: "#c4882a", fontFamily: "var(--font-cinzel)" }}
+            >
+              {categorySubheadings[activeTab]}
+            </motion.p>
+          </AnimatePresence>
         </div>
 
         {/* Courses Grid */}
