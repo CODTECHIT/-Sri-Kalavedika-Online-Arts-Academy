@@ -262,9 +262,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs" style={{ color: "rgba(253,246,227,0.35)" }}>
           <p>© {new Date().getFullYear()} Sri Kalavedika Online Arts Academy. All Rights Reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-[#f5c842] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#f5c842] transition-colors">Terms of Use</Link>
+          <div className="flex items-center gap-1.5">
+            <span>Designed by</span>
+            <a href="https://codtechitsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#f5c842] transition-colors font-semibold">
+              CODTECH IT SOLUTIONS
+            </a>
           </div>
         </div>
       </div>

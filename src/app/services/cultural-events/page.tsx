@@ -24,7 +24,7 @@ export default function CulturalEventsPage() {
                 Experience the vibrance of Indian culture through our community events, festival celebrations, and annual showcases. We bring tradition to life, virtually.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/events">
+                <Link href="/services">
                   <button className="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl w-full sm:w-auto">
                     View Upcoming Events
                   </button>

@@ -24,7 +24,7 @@ export default function SummerCampsPage() {
                 Make vacations productive and fun! Our short-term intensive programs allow students to explore new skills, discover hidden talents, and build lasting friendships.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/events">
+                <Link href="/services">
                   <button className="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl w-full sm:w-auto">
                     View Camp Schedule
                   </button>
