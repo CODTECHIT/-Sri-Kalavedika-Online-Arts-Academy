@@ -40,12 +40,6 @@ const LotusPedestal = () => (
         <stop offset="0%" stopColor="#4ade80" />
         <stop offset="100%" stopColor="#14532d" />
       </linearGradient>
-      <filter id="leaf-shadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="15" stdDeviation="10" floodColor="#14532d" floodOpacity="0.25" />
-      </filter>
-      <filter id="petal-shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#4a0424" floodOpacity="0.3" />
-      </filter>
       
       {/* Slender, elegant pointed petals */}
       <path id="petal-b" d="M 300 250 C 255 160, 275 60, 300 10 C 325 60, 345 160, 300 250 Z" />
@@ -58,7 +52,7 @@ const LotusPedestal = () => (
     </defs>
 
     {/* Realistic Leaves */}
-    <g filter="url(#leaf-shadow)">
+    <g>
       <use href="#leaf-side" fill="url(#leaf-grad)" style={{ transform: "rotate(-18deg) translate(-100px, -20px)", transformOrigin: "300px 250px" }} />
       <use href="#leaf-side" fill="url(#leaf-grad)" style={{ transform: "rotate(18deg) translate(100px, -20px)", transformOrigin: "300px 250px" }} />
       <use href="#leaf" fill="url(#leaf-grad)" style={{ transform: "translateY(15px) scale(1.05)", transformOrigin: "300px 250px" }} />
@@ -71,7 +65,6 @@ const LotusPedestal = () => (
           key={`back-${i}`} 
           href="#petal-b" 
           fill="url(#petal-back)" 
-          filter="url(#petal-shadow)"
           style={{ transform: `rotate(${angle}deg) scale(1.05)`, transformOrigin: "300px 250px" }} 
         />
       ))}
@@ -84,7 +77,6 @@ const LotusPedestal = () => (
           key={`mid-${i}`} 
           href="#petal-m" 
           fill="url(#petal-mid)" 
-          filter="url(#petal-shadow)"
           style={{ transform: `rotate(${angle}deg) scale(0.9)`, transformOrigin: "300px 250px" }} 
         />
       ))}
@@ -97,7 +89,6 @@ const LotusPedestal = () => (
           key={`front-${i}`} 
           href="#petal-f" 
           fill="url(#petal-front)" 
-          filter="url(#petal-shadow)"
           style={{ transform: `rotate(${angle}deg) scale(0.75)`, transformOrigin: "300px 250px" }} 
         />
       ))}
