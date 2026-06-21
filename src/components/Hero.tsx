@@ -243,42 +243,78 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — Image with mandala frame */}
+          {/* Right — Image with Lotus Frame */}
           <motion.div
             style={{ y: y1 }}
             className="relative w-full h-[480px] lg:h-[640px] flex items-center justify-center"
           >
-            {/* Decorative gold rings */}
-            <div
-              className="absolute inset-[5%] rounded-[2rem]"
-              style={{
-                border: "1px solid rgba(196,136,42,0.3)",
-                transform: "rotate(2deg)",
-              }}
-            />
-            <div
-              className="absolute inset-[3%] rounded-[2rem]"
-              style={{
-                border: "1px solid rgba(196,136,42,0.15)",
-                transform: "rotate(-1deg)",
-              }}
-            />
+            {/* The Animated Lotus SVG */}
+            <div className="absolute inset-0 w-full h-full flex items-center justify-center z-10 pointer-events-none">
+              <motion.svg 
+                viewBox="0 0 300 300" 
+                className="w-[140%] h-[140%] max-w-[800px] max-h-[800px] drop-shadow-2xl"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
+              >
+                <defs>
+                  {/* Outer Petal Shape */}
+                  <path id="outer-petal" d="M 150 150 C 110 60, 150 5, 150 5 C 150 5, 190 60, 150 150 Z" />
+                  {/* Inner Petal Shape */}
+                  <path id="inner-petal" d="M 150 150 C 125 80, 150 35, 150 35 C 150 35, 175 80, 150 150 Z" />
+                  
+                  {/* Vibrant Pink-Orange Gradient for outer petals */}
+                  <linearGradient id="grad-outer" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#ff1493" />   {/* Deep Pink */}
+                    <stop offset="100%" stopColor="#ff8c00" /> {/* Dark Orange */}
+                  </linearGradient>
+                  
+                  {/* Bright Pink-Gold Gradient for inner petals */}
+                  <linearGradient id="grad-inner" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#ff69b4" />   {/* Hot Pink */}
+                    <stop offset="100%" stopColor="#ffd700" /> {/* Gold */}
+                  </linearGradient>
+                </defs>
+                
+                {/* Outer Petals Layer */}
+                <g className="origin-center">
+                  {[...Array(16)].map((_, i) => (
+                    <use 
+                      key={`outer-${i}`} 
+                      href="#outer-petal" 
+                      fill="url(#grad-outer)" 
+                      style={{ transform: `rotate(${i * 22.5}deg)`, transformOrigin: "150px 150px", opacity: 0.9 }} 
+                    />
+                  ))}
+                </g>
 
-            {/* Main image slider */}
+                {/* Inner Petals Layer */}
+                <g className="origin-center">
+                  {[...Array(16)].map((_, i) => (
+                    <use 
+                      key={`inner-${i}`} 
+                      href="#inner-petal" 
+                      fill="url(#grad-inner)" 
+                      style={{ transform: `rotate(${i * 22.5 + 11.25}deg)`, transformOrigin: "150px 150px", opacity: 0.95 }} 
+                    />
+                  ))}
+                </g>
+              </motion.svg>
+            </div>
+
+            {/* Main image slider (Center of Lotus) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.4, type: "spring" }}
-              className="relative z-20 w-[82%] sm:w-[70%] lg:w-[80%] aspect-[3/4] rounded-[2rem] overflow-hidden"
+              className="relative z-20 w-[60%] sm:w-[50%] lg:w-[55%] aspect-square rounded-full overflow-hidden"
               style={{
-                boxShadow: "0 24px 60px rgba(0,0,0,0.5), 0 0 0 3px rgba(196,136,42,0.3)",
-                outline: "2px solid rgba(196,136,42,0.4)",
-                outlineOffset: "8px",
+                boxShadow: "0 0 50px rgba(255,20,147,0.5), inset 0 0 20px rgba(196,136,42,0.8)",
+                border: "6px solid #f5c842",
               }}
             >
               <div
                 className="absolute inset-0 z-10"
-                style={{ background: "rgba(26,10,46,0.15)", mixBlendMode: "multiply" }}
+                style={{ background: "rgba(26,10,46,0.1)", mixBlendMode: "overlay" }}
               />
               <div className="absolute inset-0 w-full h-full">
                 {PHOTOS.map((photo, index) => (
@@ -290,56 +326,51 @@ export default function Hero() {
                     style={{ 
                       objectFit: "cover",
                       opacity: index === currentPhotoIndex ? 1 : 0,
-                      transition: "opacity 1s ease-in-out"
+                      transition: "opacity 1.5s ease-in-out, transform 8s ease-in-out",
+                      transform: index === currentPhotoIndex ? "scale(1.1)" : "scale(1)"
                     }}
                     priority={index === 0}
                   />
                 ))}
               </div>
-              {/* Bottom gradient overlay */}
-              <div
-                className="absolute inset-0 z-20"
-                style={{
-                  background: "linear-gradient(to top, rgba(26,10,46,0.85) 0%, transparent 60%)",
-                }}
-              />
-              {/* Bottom badge */}
-              <div className="absolute bottom-5 left-5 right-5 z-30">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentPhotoIndex}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.5 }}
-                    className="rounded-xl p-3 flex items-center gap-3"
+            </motion.div>
+
+            {/* Bottom badge */}
+            <div className="absolute bottom-5 z-30 w-full flex justify-center px-4">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentPhotoIndex}
+                  initial={{ opacity: 0, y: 15, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -15, scale: 0.9 }}
+                  transition={{ duration: 0.5 }}
+                  className="rounded-full px-6 py-3 flex items-center gap-3 shadow-[0_10px_30px_rgba(255,20,147,0.3)]"
+                  style={{
+                    background: "rgba(26,10,46,0.9)",
+                    backdropFilter: "blur(12px)",
+                    border: "1px solid rgba(255,105,180,0.4)",
+                  }}
+                >
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
                     style={{
-                      background: "rgba(26,10,46,0.8)",
-                      backdropFilter: "blur(8px)",
-                      border: "1px solid rgba(196,136,42,0.3)",
+                      background: "linear-gradient(135deg, #ff1493, #ff8c00)",
+                      color: "#fff",
                     }}
                   >
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
-                      style={{
-                        background: "linear-gradient(135deg, #c4882a, #f5c842)",
-                        color: "#fff",
-                      }}
-                    >
-                      ★
-                    </div>
-                    <div>
-                      <p className="font-bold text-sm line-clamp-1" style={{ color: "#f5c842", fontFamily: "var(--font-playfair)" }} title={PHOTOS[currentPhotoIndex].name}>
-                        {PHOTOS[currentPhotoIndex].name}
-                      </p>
-                      <p className="text-xs" style={{ color: "rgba(253,246,227,0.6)" }}>
-                        Our Expert Guru
-                      </p>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </motion.div>
+                    ॐ
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm line-clamp-1" style={{ color: "#fdf6e3", fontFamily: "var(--font-playfair)" }} title={PHOTOS[currentPhotoIndex].name}>
+                      {PHOTOS[currentPhotoIndex].name}
+                    </p>
+                    <p className="text-xs tracking-wider" style={{ color: "#ff69b4", textTransform: "uppercase" }}>
+                      Our Expert Guru
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
             {/* Floating ornament circles */}
             <motion.div

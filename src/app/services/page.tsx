@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Music, Brain, Users, Sparkles, Globe, Clock, BookOpen, Paintbrush, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import pageBgImage from "../../../background-template-with-mandala-pattern-design/43584.jpg";
 
 const courseCategories = [
   {
@@ -125,7 +126,15 @@ const learningOptions = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden relative">
+    <div 
+      className="min-h-screen flex flex-col overflow-x-hidden relative"
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.85), rgba(253, 246, 227, 0.95)), url(${pageBgImage.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       {/* Background blobs */}
       <div className="absolute top-20 left-0 w-[40vw] h-[40vw] bg-primary/5 rounded-full blur-[120px] -z-10 animate-blob"></div>
       <div className="absolute bottom-20 right-0 w-[35vw] h-[35vw] bg-secondary/5 rounded-full blur-[100px] -z-10 animate-blob" style={{ animationDelay: "3s" }}></div>
