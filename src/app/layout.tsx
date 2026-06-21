@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "Nurturing Talent, Preserving Tradition, Inspiring Excellence. Expert-led online training in Indian Classical Music, Dance, Fine Arts & Cognitive Skills.",
   keywords:
     "Indian classical music, Carnatic vocal, Bharatanatyam, Kathak, online arts academy, Kalavedika",
+  icons: {
+    icon: "/logo/logo.jpeg",
+  },
 };
 
 export default function RootLayout({
