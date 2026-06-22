@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Music, Brain, Users, Sparkles, Globe, Clock, BookOpen, Paintbrush, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import DecorativeDivider from "@/components/ui/DecorativeDivider";
 import pageBgImage from "../../../background-template-with-mandala-pattern-design/43584.jpg";
 
 const courseCategories = [
@@ -236,6 +237,8 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </div>
+
+          <DecorativeDivider />
 
           {/* Learning Options Header */}
           <div className="text-center max-w-3xl mx-auto mb-20">

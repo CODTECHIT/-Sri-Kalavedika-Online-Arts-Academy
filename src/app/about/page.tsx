@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Award, Shield, Users, History, Globe, Sparkles, BookOpen, Youtube, Instagram, Star, Music } from "lucide-react";
+import DecorativeDivider from "@/components/ui/DecorativeDivider";
 import pageBgImage from "../../../background-template-with-mandala-pattern-design/43584.jpg";
 
 export default function AboutPage() {
@@ -110,7 +111,7 @@ export default function AboutPage() {
             >
               <div className="rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(11,31,94,0.15)] border-8 border-white bg-white aspect-[4/3]">
                 <img 
-                  src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800" 
+                  src="/about us.jpg" 
                   alt="Traditional Indian Arts Learning" 
                   className="w-full h-full object-cover"
                 />
@@ -118,6 +119,8 @@ export default function AboutPage() {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full -z-10 animate-float opacity-30 blur-xl"></div>
             </motion.div>
           </div>
+
+          <DecorativeDivider />
 
           {/* Vision & Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-32">
@@ -173,6 +176,8 @@ export default function AboutPage() {
             </motion.div>
 
           </div>
+
+          <DecorativeDivider />
 
           {/* Meet the Founder Section */}
           <div className="mb-32">
@@ -280,6 +285,8 @@ export default function AboutPage() {
               </div>
             </motion.div>
           </div>
+
+          <DecorativeDivider />
 
           {/* Our Values */}
           <div>

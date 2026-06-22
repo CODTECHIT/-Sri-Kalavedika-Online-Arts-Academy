@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { MessageCircle, CheckCircle2 } from "lucide-react";
+import DecorativeDivider from "@/components/ui/DecorativeDivider";
 
 export default function AdmissionsPage() {
   const [formData, setFormData] = useState({
@@ -146,6 +147,7 @@ export default function AdmissionsPage() {
           </div>
         </div>
       </main>
+      <DecorativeDivider />
       <Footer />
     </div>
   );

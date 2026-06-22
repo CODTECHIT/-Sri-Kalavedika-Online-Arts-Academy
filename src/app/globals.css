@@ -6,21 +6,28 @@
    =========================== */
 
 :root {
-  /* Core palette */
-  --indigo-deep: #1a0a2e;
-  --indigo-mid: #2a1040;
-  --navy-dark: #0d0520;
-  --maroon: #5c1a1a;
-  --saffron: #c4882a;
-  --marigold: #e8a020;
-  --ivory: #fdf6e3;
-  --gold-text: #f5c842;
-  --gold-muted: #c4882a;
+  /* Core palette - Premium Indian Aesthetics */
+  --indigo-deep: #6A1B1A;
+  /* Primary: Deep Maroon */
+  --indigo-mid: #541514;
+  /* Slightly darker maroon for depth */
+  --navy-dark: #3f0f0e;
+  /* Darkest maroon */
+  --maroon: #6A1B1A;
+  --saffron: #D4AF37;
+  /* Secondary: Temple Gold */
+  --marigold: #0F4C5C;
+  /* Accent: Peacock Blue */
+  --ivory: #FFF8E7;
+  /* Background: Ivory */
+  --gold-text: #D4AF37;
+  --gold-muted: #b8962c;
   --white: #ffffff;
 
   /* Legacy compat aliases */
   --background: var(--ivory);
-  --foreground: #1a0a2e;
+  --foreground: #2d0b0b;
+  /* Dark maroonish-brown for text */
   --primary: var(--indigo-deep);
   --secondary: var(--saffron);
   --accent: var(--marigold);
@@ -42,7 +49,7 @@
   --color-marigold: var(--marigold);
   --color-ivory: var(--ivory);
   --color-gold-text: var(--gold-text);
-  
+
   --font-playfair: var(--font-playfair), Georgia, serif;
   --font-cinzel: var(--font-cinzel), "Times New Roman", serif;
   --font-inter: var(--font-inter), sans-serif;
@@ -59,7 +66,13 @@ body {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-playfair);
     color: var(--indigo-deep);
     letter-spacing: -0.01em;
@@ -71,26 +84,32 @@ body {
    =========================== */
 
 @layer utilities {
+
   /* Glass panel — updated to ivory tint */
   .glass-panel {
-    background: rgba(253, 246, 227, 0.7);
+    background: rgba(255, 248, 231, 0.7);
+    /* Ivory */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(196, 136, 42, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(26, 10, 46, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    /* Temple Gold */
+    box-shadow: 0 8px 32px 0 rgba(106, 27, 26, 0.06);
+    /* Deep Maroon */
   }
 
   /* Dark glass for indigo bg sections */
   .glass-dark {
-    background: rgba(42, 16, 64, 0.6);
+    background: rgba(106, 27, 26, 0.6);
+    /* Deep Maroon */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(196, 136, 42, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Temple Gold */
   }
 
   /* Gold gradient text */
   .text-gold-gradient {
-    background: linear-gradient(135deg, #f5c842 0%, #c4882a 50%, #e8a020 100%);
+    background: linear-gradient(135deg, #e6c86e 0%, #D4AF37 50%, #b8962c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -136,42 +155,93 @@ body {
 
 /* Shimmer sweep for CTA buttons */
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* WhatsApp pulse glow */
 @keyframes whatsapp-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 /* Floating particle for hero */
 @keyframes float-particle {
-  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
-  33% { transform: translateY(-20px) rotate(5deg); opacity: 0.6; }
-  66% { transform: translateY(-10px) rotate(-3deg); opacity: 0.5; }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+
+  33% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.6;
+  }
+
+  66% {
+    transform: translateY(-10px) rotate(-3deg);
+    opacity: 0.5;
+  }
 }
 
 /* Scroll reveal */
 @keyframes reveal-up {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Gold shimmer blob */
 @keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 /* Float (reused) */
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
 }
 
 /* Scroll-reveal classes */
@@ -210,7 +280,7 @@ body {
 
 /* Gold shimmer primary CTA */
 .btn-shimmer {
-  background: linear-gradient(90deg, #c4882a 0%, #f5c842 40%, #e8a020 60%, #c4882a 100%);
+  background: linear-gradient(90deg, #D4AF37 0%, #e6c86e 40%, #D4AF37 60%, #b8962c 100%);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
   color: #fff;
@@ -218,12 +288,12 @@ body {
   border-radius: 999px;
   padding: 0.875rem 2rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 20px rgba(196, 136, 42, 0.4);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
 .btn-shimmer:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(196, 136, 42, 0.5);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
 }
 
 .btn-shimmer:active {
@@ -233,8 +303,8 @@ body {
 /* Ghost gold button */
 .btn-ghost-gold {
   background: transparent;
-  color: #f5c842;
-  border: 2px solid #c4882a;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
   font-weight: 700;
   border-radius: 999px;
   padding: 0.875rem 2rem;
@@ -242,8 +312,8 @@ body {
 }
 
 .btn-ghost-gold:hover {
-  background: rgba(196, 136, 42, 0.15);
-  border-color: #f5c842;
+  background: rgba(212, 175, 55, 0.15);
+  border-color: #e6c86e;
   transform: translateY(-2px);
 }
 
@@ -257,7 +327,7 @@ body {
    =========================== */
 
 .course-card-gold {
-  border-top: 3px solid #c4882a;
+  border-top: 3px solid #D4AF37;
   background: #ffffff;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -265,8 +335,8 @@ body {
 
 .course-card-gold:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(196, 136, 42, 0.25);
-  border-color: #f5c842;
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25);
+  border-color: #e6c86e;
 }
 
 /* ===========================
@@ -274,10 +344,20 @@ body {
    =========================== */
 
 .ornament-divider::before,
-.ornament-divider::after {
+.ornament-divider-legacy::after {
   content: "— ❋ —";
   color: var(--saffron);
   font-family: var(--font-cinzel);
   opacity: 0.7;
   margin: 0 0.5rem;
+}
+
+@keyframes shimmer-gold {
+  0% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1); }
+  50% { filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) brightness(1.15); }
+  100% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1); }
+}
+
+.animate-shimmer-gold {
+  animation: shimmer-gold 4s infinite ease-in-out;
 }

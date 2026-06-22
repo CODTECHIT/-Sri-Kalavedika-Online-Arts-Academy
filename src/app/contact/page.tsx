@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, MessageSquare, Send, Globe } from "lucide-react";
+import DecorativeDivider from "@/components/ui/DecorativeDivider";
 
 export default function ContactPage() {
   return (
@@ -155,6 +156,7 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
+      <DecorativeDivider />
       <Footer />
     </div>
   );

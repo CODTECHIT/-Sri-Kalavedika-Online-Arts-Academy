@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20"
-      style={{ 
+      style={{
         backgroundImage: `url(${heroBgImage.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center"
@@ -189,7 +189,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <Link href="/admissions">
-                <button 
+                <button
                   className="btn-shimmer text-base px-8 py-4 w-full sm:w-auto font-bold"
                   style={{ color: "#1a0a2e" }}
                 >
@@ -197,7 +197,7 @@ export default function Hero() {
                 </button>
               </Link>
               <Link href="/services">
-                <button 
+                <button
                   className="text-base px-8 py-4 w-full sm:w-auto rounded-full font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   style={{ border: "2px solid #1a0a2e", color: "#1a0a2e" }}
                 >
@@ -230,7 +230,7 @@ export default function Hero() {
                 style={{ background: "rgba(196,136,42,0.3)" }}
               />
               <div className="flex items-center gap-1">
-                {[1,2,3,4,5].map((s) => (
+                {[1, 2, 3, 4, 5].map((s) => (
                   <span key={s} style={{ color: "#c4882a", fontSize: "0.9rem" }}>★</span>
                 ))}
                 <span className="text-xs ml-1 font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
