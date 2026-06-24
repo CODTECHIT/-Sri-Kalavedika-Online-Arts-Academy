@@ -39,7 +39,7 @@ export default function FlutePage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1573871669414-010dbf73ca84?auto=format&fit=crop&q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
                   alt="Flute Learning" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />

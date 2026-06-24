@@ -50,7 +50,7 @@ export default function GuitarPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="/Guitar & Advanced Guitar.jpeg" 
+                  src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=800"
                   alt="Guitar & Advanced Guitar Learning" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />

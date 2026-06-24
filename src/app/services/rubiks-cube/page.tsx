@@ -39,7 +39,7 @@ export default function RubiksCubePage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?auto=format&fit=crop&q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1591991564021-0662a8573199?auto=format&fit=crop&q=80&w=800"
                   alt="Rubik's Cube Training" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />

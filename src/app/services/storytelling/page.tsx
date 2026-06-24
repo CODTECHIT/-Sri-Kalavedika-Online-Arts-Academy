@@ -39,7 +39,7 @@ export default function StorytellingPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1475721025505-c315f4206588?auto=format&fit=crop&q=80&w=800"
                   alt="Storytelling and Public Speaking" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />

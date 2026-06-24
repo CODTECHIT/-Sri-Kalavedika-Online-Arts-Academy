@@ -15,11 +15,11 @@ const courseCategories = [
     icon: <Music className="w-6 h-6 text-blue-600" />,
     iconBg: "bg-blue-500/10 text-blue-600",
     courses: [
-      "Carnatic Vocal",
-      "Hindustani Classical Vocal",
-      "Bhajans and Devotional Music",
-      "Light Music",
-      "Beat Boxing"
+      { name: "Carnatic Vocal", link: "/services/carnatic-vocal" },
+      { name: "Hindustani Classical Vocal", link: "/services/hindustani-vocal" },
+      { name: "Bhajans and Devotional Music", link: "/services/bhajans" },
+      { name: "Light Music", link: "/services/light-music" },
+      { name: "Beat Boxing", link: "/services/beat-boxing" }
     ],
     bgGradient: "from-blue-500/20 to-indigo-500/10",
     glowColor: "rgba(59, 130, 246, 0.25)",
@@ -30,12 +30,12 @@ const courseCategories = [
     icon: <Sparkles className="w-6 h-6 text-rose-600" />,
     iconBg: "bg-rose-500/10 text-rose-600",
     courses: [
-      "Bharatanatyam",
-      "Kuchipudi",
-      "Kathak",
-      "Bollywood",
-      "Semi-Classical Dance",
-      "Hip-Hop, Locking, Voguing, Waacking, Popping"
+      { name: "Bharatanatyam", link: "/services/bharatanatyam" },
+      { name: "Kuchipudi", link: "/services/kuchipudi" },
+      { name: "Kathak", link: "/services/kathak" },
+      { name: "Bollywood", link: "/services/bollywood-dance" },
+      { name: "Semi-Classical Dance", link: "/services/semi-classical-dance" },
+      { name: "Hip-Hop, Locking, Voguing, Waacking, Popping", link: "/services/hip-hop-dance" }
     ],
     bgGradient: "from-rose-500/20 to-pink-500/10",
     glowColor: "rgba(244, 63, 94, 0.25)",
@@ -46,11 +46,11 @@ const courseCategories = [
     icon: <Music className="w-6 h-6 text-amber-600" />,
     iconBg: "bg-amber-500/10 text-amber-600",
     courses: [
-      "Violin",
-      "Keyboard",
-      "Mridangam",
-      "Flute",
-      "Guitar"
+      { name: "Violin", link: "/services/violin" },
+      { name: "Keyboard", link: "/services/keyboard" },
+      { name: "Mridangam", link: "/services/mridangam" },
+      { name: "Flute", link: "/services/flute" },
+      { name: "Guitar", link: "/services/guitar" }
     ],
     bgGradient: "from-amber-500/20 to-orange-500/10",
     glowColor: "rgba(245, 158, 11, 0.25)",
@@ -61,9 +61,9 @@ const courseCategories = [
     icon: <Paintbrush className="w-6 h-6 text-emerald-600" />,
     iconBg: "bg-emerald-500/10 text-emerald-600",
     courses: [
-      "Drawing",
-      "Painting",
-      "Creative Art"
+      { name: "Drawing", link: "/services/drawing" },
+      { name: "Painting", link: "/services/painting" },
+      { name: "Creative Art", link: "/services/creative-art" }
     ],
     bgGradient: "from-emerald-500/20 to-teal-500/10",
     glowColor: "rgba(16, 185, 129, 0.25)",
@@ -74,9 +74,9 @@ const courseCategories = [
     icon: <Brain className="w-6 h-6 text-purple-600" />,
     iconBg: "bg-purple-500/10 text-purple-600",
     courses: [
-      "Chess",
-      "Rubiks' Cube (all levels)",
-      "Vedik Maths"
+      { name: "Chess", link: "/services/chess" },
+      { name: "Rubiks' Cube (all levels)", link: "/services/rubiks-cube" },
+      { name: "Vedik Maths", link: "/services/vedic-maths" }
     ],
     bgGradient: "from-purple-500/20 to-pink-500/10",
     glowColor: "rgba(139, 92, 246, 0.25)",
@@ -87,10 +87,10 @@ const courseCategories = [
     icon: <Globe className="w-6 h-6 text-cyan-600" />,
     iconBg: "bg-cyan-500/10 text-cyan-600",
     courses: [
-      "Seasonal Art Camps",
-      "Special Guru Masterclasses",
-      "Art Recitals & Concerts",
-      "Annual Day Showcases"
+      { name: "Seasonal Art Camps", link: "/services/art-camps" },
+      { name: "Special Guru Masterclasses", link: "/services/masterclasses" },
+      { name: "Art Recitals & Concerts", link: "/services/recitals" },
+      { name: "Annual Day Showcases", link: "/services/annual-day" }
     ],
     bgGradient: "from-cyan-500/20 to-sky-500/10",
     glowColor: "rgba(6, 182, 212, 0.25)",
@@ -216,12 +216,12 @@ export default function ServicesPage() {
                   {/* Aesthetic Lists instead of badges */}
                   <div className="space-y-3 mb-8">
                     {category.courses.map((course, cIdx) => (
-                      <div key={cIdx} className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0 group-hover:scale-125 transition-transform duration-300" />
-                        <span className="text-sm text-gray-700 font-medium tracking-tight">
-                          {course}
+                      <Link key={cIdx} href={course.link} className="flex items-center gap-3 group/link">
+                        <div className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0 group-hover/link:scale-150 transition-transform duration-300" />
+                        <span className="text-sm text-gray-700 font-medium tracking-tight group-hover/link:text-secondary transition-colors duration-300">
+                          {course.name}
                         </span>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>

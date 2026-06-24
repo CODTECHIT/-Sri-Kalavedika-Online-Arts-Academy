@@ -39,7 +39,7 @@ export default function KeyboardPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&q=80&w=800"
                   alt="Keyboard Classes" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />

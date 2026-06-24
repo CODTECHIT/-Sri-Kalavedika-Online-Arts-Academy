@@ -91,7 +91,7 @@ const courses = [
     category: "Dance",
     description: "Energetic and fun dance routines set to popular Bollywood tracks.",
     icon: <Users className="w-6 h-6" />,
-    href: "/services/bollywood",
+    href: "/services/bollywood-dance",
   },
   {
     title: "Semi-Classical Dance",
@@ -105,7 +105,7 @@ const courses = [
     category: "Dance",
     description: "Learn Hip-Hop, Locking, Voguing, Waacking, and Popping from dynamic instructors.",
     icon: <Activity className="w-6 h-6" />,
-    href: "/services/hip-hop",
+    href: "/services/hip-hop-dance",
   },
 
   // Instrumental Music
@@ -188,7 +188,7 @@ const courses = [
     category: "Mind games",
     description: "Learn ancient, rapid mathematical techniques to perform complex calculations in seconds.",
     icon: <BrainCircuit className="w-6 h-6" />,
-    href: "/services/vedik-maths",
+    href: "/services/vedic-maths",
   },
 
   // Cultural Programs
@@ -197,7 +197,7 @@ const courses = [
     category: "Cultural Programs",
     description: "Participate in special workshops and cultural programs celebrating Indian arts.",
     icon: <Users className="w-6 h-6" />,
-    href: "/services/cultural-programs",
+    href: "/services/cultural-events",
   },
 ];
 

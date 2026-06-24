@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Brain, Users, CheckCircle2, Trophy, Target, Clock } from "lucide-react";
+import { Music, Sparkles, BookOpen, Clock, Users, CheckCircle2 } from "lucide-react";
 
-export default function ChessPage() {
+export default function HindustaniVocalPage() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden relative">
       <Header />
@@ -13,25 +13,25 @@ export default function ChessPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
-                <Brain className="text-secondary" size={24} />
-                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Strategic Mind</span>
+                <Music className="text-secondary" size={24} />
+                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Performing Arts</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 leading-tight">
-                Chess <br />
-                <span className="text-secondary">Coaching</span>
+                Hindustani Classical <br />
+                <span className="text-secondary">Vocal Music</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Master the art of strategic thinking, sharpen your mind, and develop unparalleled concentration through our comprehensive chess training program.
+                Discover the rich, melodious traditions of North Indian classical music. From deep emotional ragas to intricate vocal techniques, master the soulful art of Hindustani Vocal.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/admissions">
                   <button className="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl w-full sm:w-auto">
-                    Start Learning
+                    Book Free Demo
                   </button>
                 </Link>
                 <Link href="/services">
                   <button className="bg-white text-primary border-2 border-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-light-blue transition-all w-full sm:w-auto">
-                    View All Courses
+                    Explore Other Courses
                   </button>
                 </Link>
               </div>
@@ -39,39 +39,39 @@ export default function ChessPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?auto=format&fit=crop&q=80&w=800"
-                  alt="Chess Coaching" 
-                  className="w-full h-full object-cover aspect-[4/3]"
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/36/Ravi_Shankar_in_Concert_1968.jpg"
+                  alt="Hindustani Classical Vocal Music" 
+                  className="w-full h-full object-cover object-top aspect-[4/3]"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10 opacity-30 blur-2xl"></div>
             </div>
           </div>
 
-          {/* Why Chess Section */}
+          {/* About Section */}
           <section className="bg-blue-50 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-8">
-                <Trophy className="text-primary" size={32} />
-                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Why Learn Chess?</h2>
+                <Sparkles className="text-primary" size={32} />
+                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">The Essence of Hindustani Music</h2>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div className="space-y-6">
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    Chess is more than just a game — it&apos;s a powerful tool for cognitive development. Studies show that regular chess practice enhances critical thinking, problem-solving abilities, and mental discipline.
+                    Hindustani classical music is renowned for its profound emotional depth and expressive freedom. The tradition places a strong emphasis on improvisation (manodharma) and voice culture, allowing every artist to bring a unique dimension to their performance.
                   </p>
                   <p className="text-gray-600 text-lg leading-relaxed">
-                    At Sri Kalavedika, our chess coaching transforms beginners into confident players while nurturing existing skills to competitive levels. Our structured curriculum covers everything from basic moves to advanced tournament strategies.
+                    Under the guidance of our expert Gurus, you will be trained in the intricacies of Sur (pitch) and Laya (rhythm), exploring various Ragas that resonate with different times of the day and human emotions.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
-                    { title: "Critical Thinking", desc: "Develop logical analysis and strategic planning." },
-                    { title: "Memory Boost", desc: "Improve pattern recognition and recall." },
-                    { title: "Concentration", desc: "Build focus and attention to detail." },
-                    { title: "Sportsmanship", desc: "Learn win with grace, lose with dignity." },
+                    { title: "Voice Culture", desc: "Techniques for powerful and resonant voice." },
+                    { title: "Improvisation", desc: "Develop the skill of Alaap and Taan." },
+                    { title: "Emotional Depth", desc: "Express pure bhavas through Ragas." },
+                    { title: "Gharana Styles", desc: "Understand nuances of traditional schools." },
                   ].map((stat, i) => (
                     <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                       <h4 className="text-xl font-bold text-primary mb-2">{stat.title}</h4>
@@ -87,8 +87,8 @@ export default function ChessPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {[
               { icon: <Users />, label: "Target Age", value: "6 Years & Above" },
-              { icon: <Clock />, label: "Duration", value: "3-6 Months per Level" },
-              { icon: <Target />, label: "Focus", value: "Strategy & Tactics" },
+              { icon: <Clock />, label: "Duration", value: "6-12 Months (Levels)" },
+              { icon: <BookOpen />, label: "Sessions", value: "2 Classes / Week" },
             ].map((detail, i) => (
               <div key={i} className="flex flex-col items-center p-8 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all">
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-primary">
@@ -102,18 +102,18 @@ export default function ChessPage() {
 
           {/* What You'll Learn */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">Curriculum</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">What You'll Learn</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                "Chess Rules & Piece Movements",
-                "Opening Principles",
-                "Tactical Patterns & Combinations",
-                "Endgame Techniques",
-                "Positional Play",
-                "Tournament Preparation",
-                "Time Management",
-                "Psychology of Chess",
-                "Game Analysis & Review"
+                "Basic Swaras & Alankars",
+                "Voice Production (Kharaj Sadhana)",
+                "Introduction to Thaats",
+                "Singing Bandish with Tabla",
+                "Understanding Taals (Teentaal, Ektaal)",
+                "Improvisation with Alaap",
+                "Fast rhythmic patterns (Taans)",
+                "Semi-classical forms (Thumri, Dadra)",
+                "Concert Performance techniques"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 p-5 bg-white border border-gray-50 rounded-2xl shadow-sm text-left">
                   <CheckCircle2 className="text-secondary shrink-0" size={20} />

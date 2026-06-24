@@ -39,7 +39,7 @@ export default function LightMusicPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="/WhatsApp Image 2026-06-05 at 3.33.01 PM.jpeg" 
+                  src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800"
                   alt="Light Music and Performance" 
                   className="w-full h-full object-cover object-top aspect-[4/5]"
                 />

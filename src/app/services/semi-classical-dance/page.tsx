@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Brain, Users, CheckCircle2, Trophy, Target, Clock } from "lucide-react";
+import { Sparkles, Users, BookOpen, Clock, CheckCircle2 } from "lucide-react";
 
-export default function ChessPage() {
+export default function SemiClassicalPage() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden relative">
       <Header />
@@ -13,25 +13,25 @@ export default function ChessPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
-                <Brain className="text-secondary" size={24} />
-                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Strategic Mind</span>
+                <Sparkles className="text-secondary" size={24} />
+                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Fusion Dance</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 leading-tight">
-                Chess <br />
-                <span className="text-secondary">Coaching</span>
+                Semi-Classical <br />
+                <span className="text-secondary">Dance Classes</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Master the art of strategic thinking, sharpen your mind, and develop unparalleled concentration through our comprehensive chess training program.
+                The perfect blend of tradition and modernity. Semi-classical dance takes the grace of classical Indian forms and fuses it with the freedom and expressive style of contemporary music.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/admissions">
                   <button className="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl w-full sm:w-auto">
-                    Start Learning
+                    Book Free Demo
                   </button>
                 </Link>
                 <Link href="/services">
                   <button className="bg-white text-primary border-2 border-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-light-blue transition-all w-full sm:w-auto">
-                    View All Courses
+                    Explore Other Courses
                   </button>
                 </Link>
               </div>
@@ -39,8 +39,8 @@ export default function ChessPage() {
             <div className="flex-1 relative w-full max-w-xl">
               <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
                 <img 
-                  src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?auto=format&fit=crop&q=80&w=800"
-                  alt="Chess Coaching" 
+                  src="https://images.unsplash.com/photo-1516280440502-d2fdaa0bf5e2?auto=format&fit=crop&q=80&w=800"
+                  alt="Semi Classical Dance" 
                   className="w-full h-full object-cover aspect-[4/3]"
                 />
               </div>
@@ -48,30 +48,30 @@ export default function ChessPage() {
             </div>
           </div>
 
-          {/* Why Chess Section */}
+          {/* About Section */}
           <section className="bg-blue-50 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-8">
-                <Trophy className="text-primary" size={32} />
-                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Why Learn Chess?</h2>
+                <Sparkles className="text-primary" size={32} />
+                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Tradition Meets Contemporary</h2>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div className="space-y-6">
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    Chess is more than just a game — it&apos;s a powerful tool for cognitive development. Studies show that regular chess practice enhances critical thinking, problem-solving abilities, and mental discipline.
+                    Semi-classical dance breaks the strict boundaries of traditional classical styles like Bharatanatyam or Kathak, maintaining their aesthetic and technique but applying them to modern, lighter music forms like Ghazals, Sufi, or melodic film songs.
                   </p>
                   <p className="text-gray-600 text-lg leading-relaxed">
-                    At Sri Kalavedika, our chess coaching transforms beginners into confident players while nurturing existing skills to competitive levels. Our structured curriculum covers everything from basic moves to advanced tournament strategies.
+                    This style is incredibly popular as it offers the elegance, posture, and facial expressions of classical dance without the requirement of rigorous, multi-year traditional training.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
-                    { title: "Critical Thinking", desc: "Develop logical analysis and strategic planning." },
-                    { title: "Memory Boost", desc: "Improve pattern recognition and recall." },
-                    { title: "Concentration", desc: "Build focus and attention to detail." },
-                    { title: "Sportsmanship", desc: "Learn win with grace, lose with dignity." },
+                    { title: "Grace & Poise", desc: "Learn the elegant postures of classical dance." },
+                    { title: "Accessible", desc: "Easier to learn compared to pure classical forms." },
+                    { title: "Expressive", desc: "Focuses heavily on Abhinaya (facial expressions)." },
+                    { title: "Versatile", desc: "Perform to a wide variety of Indian music." },
                   ].map((stat, i) => (
                     <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                       <h4 className="text-xl font-bold text-primary mb-2">{stat.title}</h4>
@@ -86,9 +86,9 @@ export default function ChessPage() {
           {/* Program Details */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {[
-              { icon: <Users />, label: "Target Age", value: "6 Years & Above" },
-              { icon: <Clock />, label: "Duration", value: "3-6 Months per Level" },
-              { icon: <Target />, label: "Focus", value: "Strategy & Tactics" },
+              { icon: <Users />, label: "Target Age", value: "8 Years & Above" },
+              { icon: <Clock />, label: "Duration", value: "3-6 Months" },
+              { icon: <BookOpen />, label: "Format", value: "Interactive Group Classes" },
             ].map((detail, i) => (
               <div key={i} className="flex flex-col items-center p-8 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all">
                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-primary">
@@ -102,18 +102,18 @@ export default function ChessPage() {
 
           {/* What You'll Learn */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">Curriculum</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">Curriculum Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                "Chess Rules & Piece Movements",
-                "Opening Principles",
-                "Tactical Patterns & Combinations",
-                "Endgame Techniques",
-                "Positional Play",
-                "Tournament Preparation",
-                "Time Management",
-                "Psychology of Chess",
-                "Game Analysis & Review"
+                "Classical Postures & Stances",
+                "Basic Mudras (Hand Gestures)",
+                "Footwork matching modern beats",
+                "Facial Expression Exercises",
+                "Choreography to Sufi & Ghazals",
+                "Choreography to Melodic Film Songs",
+                "Fluid transitions and spins",
+                "Understanding Rhythm & Laya",
+                "Stage Presentation"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 p-5 bg-white border border-gray-50 rounded-2xl shadow-sm text-left">
                   <CheckCircle2 className="text-secondary shrink-0" size={20} />
