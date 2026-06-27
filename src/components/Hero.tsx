@@ -81,18 +81,9 @@ export default function Hero() {
       style={{
         backgroundImage: `url(${heroBgImage.src})`,
         backgroundSize: "cover",
-        backgroundPosition: "left center"
+        backgroundPosition: "right center"
       }}
     >
-      {/* ── Background decoration (Right Half colorful mandala cropped at the center) ── */}
-      <div 
-        className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none z-0 bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroBgImage.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "right center"
-        }}
-      />
 
       {/* ── Floating particles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">

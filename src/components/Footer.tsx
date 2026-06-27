@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { MapPin, Mail, Phone, ArrowRight, Check, Send } from "lucide-react";
 
 const FacebookIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
@@ -12,26 +9,21 @@ const FacebookIcon = ({ size = 20 }: { size?: number }) => (
 const InstagramIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
 );
-const YoutubeIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z" /><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" /></svg>
+
+const MapPin = ({ size = 15 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
 );
-const LinkedinIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+const Mail = ({ size = 15 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+);
+const Phone = ({ size = 15 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+);
+const ArrowRight = ({ size = 12 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
 );
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setIsSubscribed(true);
-      setEmail("");
-      setTimeout(() => setIsSubscribed(false), 5000);
-    }
-  };
-
   return (
     <footer
       className="relative pt-20 pb-10 overflow-hidden"
@@ -45,7 +37,7 @@ export default function Footer() {
           backgroundRepeat: "repeat-x",
           backgroundSize: "auto 100%",
           backgroundPosition: "top left",
-          imageRendering: "crisp-edges" // Increases sharpness for intricate jewelry/temple patterns
+          imageRendering: "crisp-edges"
         }}
         aria-hidden="true"
       ></div>
@@ -66,7 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
 
           {/* Column 1: Logo & Mission */}
           <div className="flex flex-col items-start">
@@ -105,14 +97,14 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3">
               {[
-                { Icon: FacebookIcon, hover: "#c4882a" },
-                { Icon: InstagramIcon, hover: "#e8a020" },
-                { Icon: YoutubeIcon, hover: "#c4882a" },
-                { Icon: LinkedinIcon, hover: "#e8a020" },
-              ].map(({ Icon, hover }, i) => (
+                { Icon: FacebookIcon, hover: "#c4882a", href: "https://www.facebook.com/share/1Cc9XxUdVx/" },
+                { Icon: InstagramIcon, hover: "#e8a020", href: "https://www.instagram.com/srikalavedika?utm_source=qr&igsh=ZGJ5Y2VkdHR2a3Bp" },
+              ].map(({ Icon, hover, href }, i) => (
                 <Link
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                   style={{
                     background: "rgba(196,136,42,0.1)",
@@ -146,7 +138,7 @@ export default function Footer() {
             </h4>
             <div className="space-y-4">
               {[
-                { Icon: MapPin, text: "Delhi, India (Serving Students Worldwide)" },
+                { Icon: MapPin, text: "Delhi, India" },
                 { Icon: Mail, text: "skvonlinearts@gmail.com" },
                 { Icon: Phone, text: "+91 63027 49027" },
               ].map(({ Icon, text }, i) => (
@@ -210,61 +202,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Newsletter */}
-          <div>
-            <h4
-              className="text-sm uppercase tracking-widest mb-6"
-              style={{ fontFamily: "var(--font-cinzel)", color: "#f5c842" }}
-            >
-              Stay Connected
-            </h4>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(253,246,227,0.5)" }}>
-              Join our newsletter to receive cultural event invitations, notifications, and art updates.
-            </p>
-
-            <form onSubmit={handleSubscribe} className="relative w-full">
-              <div
-                className="relative flex items-center overflow-hidden rounded-full transition-all duration-300"
-                style={{
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(196,136,42,0.25)",
-                }}
-              >
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your Email Address"
-                  required
-                  className="w-full pl-5 pr-12 py-3.5 bg-transparent text-sm outline-none"
-                  style={{ color: "#fdf6e3" }}
-                />
-                <button
-                  type="submit"
-                  className="absolute right-1.5 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
-                  style={{
-                    background: isSubscribed
-                      ? "#16a34a"
-                      : "linear-gradient(135deg, #c4882a, #e8a020)",
-                    color: "#fff",
-                  }}
-                >
-                  {isSubscribed ? <Check size={16} /> : <Send size={16} />}
-                </button>
-              </div>
-            </form>
-            {isSubscribed && (
-              <motion.p
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-xs font-semibold mt-3 flex items-center gap-1"
-                style={{ color: "#4ade80" }}
-              >
-                <Check className="w-3.5 h-3.5" />
-                <span>Subscription successful! Thank you.</span>
-              </motion.p>
-            )}
-          </div>
         </div>
 
         {/* Gold Divider */}

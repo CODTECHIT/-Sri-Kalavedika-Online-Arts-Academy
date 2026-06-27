@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, MessageSquare, Send, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, Send, Globe, Facebook, Instagram } from "lucide-react";
 import DecorativeDivider from "@/components/ui/DecorativeDivider";
 
 export default function ContactPage() {
@@ -77,22 +77,34 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Social Media Links placeholder */}
-              <div className="bg-primary rounded-3xl p-8 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4">Join Our Community</h3>
-                  <p className="text-blue-100 text-sm mb-6 leading-relaxed">
-                    Follow us on social media to stay updated with upcoming events, competitions, and student performances.
-                  </p>
-                  <div className="flex gap-4">
-                    {/* Add social links if needed */}
-                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors cursor-pointer">
-                      <Globe size={20} />
-                    </div>
-                  </div>
-                </div>
-              </div>
+{/* Social Media Links */}
+               <div className="bg-primary rounded-3xl p-8 text-white relative overflow-hidden">
+                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+                 <div className="relative z-10">
+                   <h3 className="text-xl font-bold mb-4">Join Our Community</h3>
+                   <p className="text-blue-100 text-sm mb-6 leading-relaxed">
+                     Follow us on social media to stay updated with upcoming events, competitions, and student performances.
+                   </p>
+                   <div className="flex gap-4">
+                     <a 
+                       href="https://www.facebook.com/share/1Cc9XxUdVx/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors"
+                     >
+                       <Facebook size={20} />
+                     </a>
+                     <a 
+                       href="https://www.instagram.com/srikalavedika?utm_source=qr&igsh=ZGJ5Y2VkdHR2a3Bp" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors"
+                     >
+                       <Instagram size={20} />
+                     </a>
+                   </div>
+                 </div>
+               </div>
             </div>
 
             {/* Contact Form */}

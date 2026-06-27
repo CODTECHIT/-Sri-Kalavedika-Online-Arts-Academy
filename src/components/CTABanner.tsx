@@ -90,19 +90,19 @@ export default function CTABanner() {
           style={{ color: "rgba(253,246,227,0.85)" }}
         >
           <p className="mb-6">Join Sri Kalavedika today and learn from expert Gurus from the comfort of your home.</p>
-          
+
           <div className="flex flex-col items-center gap-3 text-base font-medium" style={{ fontFamily: "var(--font-sans)" }}>
             <div className="flex items-center gap-2">
-              <span>📞</span> <span>+91 63027 49027</span>
+              <span>+91 63027 49027</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>📧</span> <span>skvonlinearts@gmail.com</span>
+              <span>skvonlinearts@gmail.com</span>
             </div>
             <div className="flex items-center gap-2 text-center">
-              <span>🌐</span> <span>Online Classes for India & Students Worldwide 🌍</span>
+              <span>Online Classes for India & Students Worldwide </span>
             </div>
           </div>
-          
+
           <p className="mt-8 italic font-bold text-xl" style={{ fontFamily: "var(--font-playfair)", color: "#f5c842" }}>
             "Where Tradition Meets Talent."
           </p>
