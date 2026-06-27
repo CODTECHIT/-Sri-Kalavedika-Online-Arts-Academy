@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Music, Users, CheckCircle2, BookOpen, Clock } from "lucide-react";
+import { Music, BookOpen, Clock, Users, CheckCircle2, Star } from "lucide-react";
 
 export default function KeyboardPage() {
   return (
@@ -14,14 +14,14 @@ export default function KeyboardPage() {
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
                 <Music className="text-secondary" size={24} />
-                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Melodic Arts</span>
+                <span className="text-secondary font-bold uppercase tracking-widest text-sm">Keyboard & Piano Classes</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 leading-tight">
                 Keyboard <br />
                 <span className="text-secondary">& Piano Classes</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Embark on a musical journey with our comprehensive keyboard and piano training, from foundational scales to mesmerizing performances.
+                Embark on a musical journey with our comprehensive keyboard and piano training, from foundational scales to mesmerizing classical and contemporary performances.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/admissions">
@@ -48,40 +48,62 @@ export default function KeyboardPage() {
             </div>
           </div>
 
-          {/* Why Keyboard Section */}
-          <section className="bg-blue-50 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-8">
-                <Music className="text-primary" size={32} />
-                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Learn Keyboard & Piano</h2>
+          {/* Course Overview Section */}
+          <section className="bg-primary/5 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-widest">
+                  <Star size={16} />
+                  <span>Course Focus</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Keyboard & Piano Classes</h2>
+                <p className="text-xl text-secondary font-bold italic">Mastering Harmony and Rhythm</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Our Keyboard and Piano program is structured to build strong foundational playing habits. We focus on proper hand positioning, finger dexterity, rhythm synchronization, and sheet music sight-reading, bridging classical theory with modern compositions.
+                </p>
+                <div className="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm">
+                  <p className="text-primary font-bold italic">
+                    &ldquo;Develop musical literacy, structural composition skills, and performance confidence with step-by-step guidance tailored for all skill levels.&rdquo;
+                  </p>
+                </div>
               </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div className="space-y-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    The keyboard is one of the most versatile instruments, capable of producing a wide range of sounds and styles. Whether you dream of playing classical sonatas or modern pop melodies, our expert instructors will guide you every step of the way.
-                  </p>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Our curriculum combines Western music theory with practical keyboard techniques, ensuring you develop a well-rounded musical foundation.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {[
-                    { title: "All Skill Levels", desc: "From absolute beginners to advanced players." },
-                    { title: "Music Theory", desc: "Understand the language of music deeply." },
-                    { title: "Performance Ready", desc: "Learn to play confidently on stage." },
-                    { title: "Flexible Schedule", desc: "Learn at your own pace with personalized batches." },
-                  ].map((stat, i) => (
-                    <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                      <h4 className="text-xl font-bold text-primary mb-2">{stat.title}</h4>
-                      <p className="text-sm text-gray-500 leading-relaxed">{stat.desc}</p>
-                    </div>
-                  ))}
-                </div>
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { label: "All Skill Levels", value: "Beginner to Advanced" },
+                  { label: "Instruction", value: "Interactive & Live" },
+                  { label: "Core Method", value: "Western & Indian Fusion" },
+                  { label: "Key Focus", value: "Technique & Notation" },
+                ].map((stat, i) => (
+                  <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                    <h4 className="text-sm text-gray-500 font-bold uppercase tracking-widest mb-1">{stat.label}</h4>
+                    <p className="text-xl font-bold text-primary">{stat.value}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
+
+          {/* Why Learn Keyboard & Piano */}
+          <div className="mb-32">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-6">Why Choose Keyboard & Piano?</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                The keyboard is one of the most expressive and versatile instruments. It serves as the perfect foundation for learning music theory, developing motor coordination, and exploring diverse musical styles.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Cognitive Benefits", desc: "Playing the keyboard enhances spatial-temporal reasoning, concentration, and fine motor skills." },
+                { title: "Western & Indian Fusion", desc: "Learn to read Western sheet music while also understanding Indian classical chord mappings." },
+                { title: "Creative Composition", desc: "Gain the skills to arrange, compose, and improvise your own melodies and song backups." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">{item.title}</h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Program Details */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
@@ -100,20 +122,20 @@ export default function KeyboardPage() {
             ))}
           </div>
 
-          {/* What You'll Learn */}
+          {/* Curriculum */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">Curriculum</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">Curriculum Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                "Basic Finger Techniques",
-                "Scales & Arpeggios",
-                "Chord Progressions",
-                "Rhythm & Timing",
-                "Music Notation Reading",
-                "Playing by Ear",
-                "Keyboard Arrangements",
-                "Song Accompaniment",
-                "Performance Skills"
+                "Correct posture and finger positioning",
+                "Basic scales (Major, Minor, and Pentatonic)",
+                "Sight-reading Western music notation",
+                "Chords and chord progressions",
+                "Rhythm coordination and metronome training",
+                "Playing by ear (Deconstructing songs)",
+                "Keyboard arrangements and tone selection",
+                "Accompanying vocalists or other instruments",
+                "Performance confidence and repertoire building"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 p-5 bg-white border border-gray-50 rounded-2xl shadow-sm text-left">
                   <CheckCircle2 className="text-secondary shrink-0" size={20} />

@@ -5,7 +5,7 @@ import { Music, BookOpen, Clock, Users, CheckCircle2, Star } from "lucide-react"
 
 export default function GuitarPage() {
   const guitarTypes = [
-    { name: "Acoustic Guitar", desc: "The classic steel-string guitar known for its bright, ringing tone. Perfect for folk, pop, and country music." },
+    { name: "Acoustic Guitar", desc: "The classic steel-string guitar known for its bright, ringing tone. Perfect for folk, pop, and rock music." },
     { name: "Acoustic-Electric Guitar", desc: "An acoustic guitar with a built-in pickup system, allowing it to be amplified for stage performances." },
     { name: "Classical Guitar", desc: "Features nylon strings and a wider neck, producing a warm, mellow sound essential for classical and flamenco styles." },
     { name: "Electric Guitar", desc: "Relies on external amplification to produce sound, offering endless possibilities with effects and sustain." },
@@ -59,31 +59,31 @@ export default function GuitarPage() {
             </div>
           </div>
 
-          {/* Guru Feature Section */}
+          {/* Course Overview Section */}
           <section className="bg-primary/5 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="flex-1 space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-widest">
                   <Star size={16} />
-                  <span>Advanced Guru</span>
+                  <span>Course Focus</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Master Lucjan</h2>
-                <p className="text-xl text-secondary font-bold italic">Expert Instructor from Poland</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Guitar & Advanced Guitar</h2>
+                <p className="text-xl text-secondary font-bold italic">Mastering Strings and Melodic Expression</p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Learn from the best in the industry. Our Advanced Guitar program is led by <strong>Master Lucjan</strong> from Poland, bringing international expertise, unique techniques, and a global perspective to your musical journey.
+                  Our Guitar and Advanced Guitar program is structured to guide students from their very first chords to complex arrangements and solos. We cover standard strumming patterns, fretboard logic, fingerstyle techniques, scale mastery, and improvisation across genres.
                 </p>
                 <div className="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm">
                   <p className="text-primary font-bold italic">
-                    &ldquo;Experience world-class guitar training that bridges cultural boundaries and elevates your musical expression.&rdquo;
+                    &ldquo;Bridge the gap between musical theory and practical performance, exploring acoustic, classical, electric, and bass styles under structured guidance.&rdquo;
                   </p>
                 </div>
               </div>
               <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { label: "Global Expertise", value: "Poland Roots" },
-                  { label: "Level", value: "Basic to Advanced" },
-                  { label: "Style", value: "Multi-Genre" },
-                  { label: "Focus", value: "Technique & Performance" },
+                  { label: "Levels", value: "Basic to Advanced" },
+                  { label: "Focus", value: "Technique & Theory" },
+                  { label: "Instruction", value: "Structured & Practical" },
+                  { label: "Coverage", value: "Acoustic, Electric & Bass" },
                 ].map((stat, i) => (
                   <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                     <h4 className="text-sm text-gray-500 font-bold uppercase tracking-widest mb-1">{stat.label}</h4>
@@ -119,7 +119,7 @@ export default function GuitarPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {[
               { icon: <Users />, label: "Target Age", value: "8 Years & Above" },
-              { icon: <Clock />, label: "Duration", value: "Ongoing Mentorship" },
+              { icon: <Clock />, label: "Duration", value: "min. 6 months" },
               { icon: <BookOpen />, label: "Sessions", value: "Personalized Batches" },
             ].map((detail, i) => (
               <div key={i} className="flex flex-col items-center p-8 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all">

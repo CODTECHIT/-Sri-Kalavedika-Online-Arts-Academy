@@ -37,46 +37,6 @@ const blogPosts = [
     category: "Education",
     image: "/Vedic Maths.jpg",
   },
-  {
-    title: "Exploring the World of Bharatanatyam",
-    excerpt: "An introduction to one of India's most ancient and revered classical dance forms.",
-    author: "Dance Guru",
-    date: "June 10, 2026",
-    category: "Dance",
-    image: "/b1.jpeg",
-  },
-  {
-    title: "The Joy of Painting: A Creative Journey",
-    excerpt: "Discover how painting can unlock your child's imagination and artistic potential.",
-    author: "Art Instructor",
-    date: "June 12, 2026",
-    category: "Arts",
-    image: "/b2.jpeg",
-  },
-  {
-    title: "Guitar Mastery: From Basics to Brilliance",
-    excerpt: "Learn how to master the guitar with structured lessons and expert guidance.",
-    author: "Guitar Teacher",
-    date: "June 15, 2026",
-    category: "Music",
-    image: "/b3.jpeg",
-  },
-  {
-    title: "The Magic of Kathak Dance",
-    excerpt: "Experience the grace and storytelling through movement in this beautiful classical dance.",
-    author: "Kathak Expert",
-    date: "June 18, 2026",
-    category: "Dance",
-    image: "/b4.jpeg",
-  },
-  {
-    title: "Developing Your Child's Creative Skills",
-    excerpt: "Practical tips for nurturing creativity and artistic expression in young children.",
-    author: "Creative Director",
-    date: "June 20, 2026",
-    category: "Education",
-    image: "/b5.jpeg",
-  }
 ];
 
 export default function BlogPage() {
@@ -101,11 +61,6 @@ export default function BlogPage() {
                 "How Chess Improves IQ and Strategic Thinking": "/blog/chess-strategic-thinking",
                 "The Importance of Theatre for Children's Confidence": "/blog/theatre-confidence",
                 "5 Tips for Learning Vedic Maths Effectively": "/blog/vedic-maths-tips",
-                "Exploring the World of Bharatanatyam": "/blog/bharatanatyam",
-                "The Joy of Painting: A Creative Journey": "/blog/painting",
-                "Guitar Mastery: From Basics to Brilliance": "/blog/guitar",
-                "The Magic of Kathak Dance": "/blog/kathak",
-                "Developing Your Child's Creative Skills": "/blog/creative-skills",
               };
               
               return (

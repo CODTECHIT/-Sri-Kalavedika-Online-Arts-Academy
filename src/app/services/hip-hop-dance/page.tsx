@@ -87,7 +87,7 @@ export default function HipHopPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {[
               { icon: <Users />, label: "Target Age", value: "7 Years & Above" },
-              { icon: <Clock />, label: "Duration", value: "Ongoing Batches" },
+              { icon: <Clock />, label: "Duration", value: "min. 6 months" },
               { icon: <BookOpen />, label: "Format", value: "Interactive Group Classes" },
             ].map((detail, i) => (
               <div key={i} className="flex flex-col items-center p-8 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all">

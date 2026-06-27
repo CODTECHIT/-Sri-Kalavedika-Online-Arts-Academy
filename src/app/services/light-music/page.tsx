@@ -48,31 +48,31 @@ export default function LightMusicPage() {
             </div>
           </div>
 
-          {/* Featured Artist Section */}
+          {/* Course Overview Section */}
           <section className="bg-secondary/5 rounded-[4rem] p-12 md:p-20 mb-32 relative overflow-hidden">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="flex-1 space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-full text-sm font-bold uppercase tracking-widest">
                   <Star size={16} />
-                  <span>Our Featured Artist</span>
+                  <span>Course Focus</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Rahul Sukun</h2>
-                <p className="text-xl text-secondary font-bold italic">India’s Got Talent Season 11</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-primary">Light Music & Soulful Bhajans</h2>
+                <p className="text-xl text-secondary font-bold italic">Nurturing Expression and Devotion</p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Rahul Sukun is a soulful Indian singer, guitarist, and dynamic live performer known for crafting <strong>&ldquo;melodies that touch the soul.&rdquo;</strong> His voice carries a soothing charm, blending depth and clarity with effortless control.
+                  Our Light Music and Soulful Bhajans course is designed for those who wish to express their feelings through singing. We focus on breathing techniques, pitch correction, emotional delivery, and understanding the literary meaning (Sahitya) of the songs.
                 </p>
                 <div className="bg-white p-6 rounded-2xl border-l-4 border-primary shadow-sm">
                   <p className="text-gray-600 italic">
-                    &ldquo;Whether he is singing romantic Bollywood classics, heartfelt indie tracks, or soulful unplugged covers, Rahul connects instantly through his sincerity and musical honesty.&rdquo;
+                    &ldquo;Learn to sing romantic classics, devotional bhajans, soothing ghazals, and unplugged melodies with proper technique, warmth, and sincerity.&rdquo;
                   </p>
                 </div>
               </div>
               <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { title: "Soulful Identity", desc: "Blending depth and clarity with effortless vocal control." },
-                  { title: "Performance Expert", desc: "Recognized nationwide through India’s Got Talent Season 11." },
-                  { title: "Versatile Style", desc: "From Bollywood classics to heartfelt indie and Sufi tracks." },
-                  { title: "Emotional Depth", desc: "Music crafted with warmth and authenticity in its purest form." },
+                  { title: "Vocal Expression", desc: "Develop the ability to infuse rich emotions and feelings into your singing." },
+                  { title: "Breath & Pitch Control", desc: "Master the fundamental techniques of breath support and stable pitch control." },
+                  { title: "Genre Diversity", desc: "Learn a wide range of styles including Bhajans, Bollywood Unplugged, and Ghazals." },
+                  { title: "Musical Connection", desc: "Connect deeply with listeners through sincere and authentic performances." },
                 ].map((stat, i) => (
                   <div key={i} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                     <h4 className="text-xl font-bold text-primary mb-2">{stat.title}</h4>

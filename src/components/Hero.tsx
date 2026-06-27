@@ -25,23 +25,23 @@ const PHOTOS = [
 
 // Floating particle symbols (Indian classical + music)
 const PARTICLES = [
-  { symbol: "♪", x: "10%", y: "20%", dur: 5, delay: 0 },
-  { symbol: "♫", x: "85%", y: "15%", dur: 7, delay: 1 },
-  { symbol: "ॐ", x: "75%", y: "60%", dur: 6, delay: 0.5 },
-  { symbol: "♪", x: "20%", y: "70%", dur: 8, delay: 2 },
-  { symbol: "❈", x: "50%", y: "85%", dur: 5.5, delay: 1.5 },
-  { symbol: "♫", x: "30%", y: "35%", dur: 6.5, delay: 3 },
-  { symbol: "ॐ", x: "65%", y: "80%", dur: 7.5, delay: 0.8 },
-  { symbol: "♪", x: "90%", y: "45%", dur: 4.5, delay: 2.5 },
-  { symbol: "❈", x: "8%", y: "50%", dur: 9, delay: 1.2 },
-  { symbol: "♫", x: "55%", y: "25%", dur: 6, delay: 3.5 },
-  { symbol: "♬", x: "15%", y: "85%", dur: 6.2, delay: 0.3 },
-  { symbol: "♪", x: "45%", y: "10%", dur: 5.8, delay: 1.8 },
-  { symbol: "♫", x: "78%", y: "75%", dur: 7.2, delay: 2.2 },
-  { symbol: "♬", x: "60%", y: "55%", dur: 6.8, delay: 3.8 },
-  { symbol: "♪", x: "35%", y: "55%", dur: 5.2, delay: 0.9 },
-  { symbol: "♫", x: "88%", y: "88%", dur: 7.8, delay: 1.4 },
-  { symbol: "♬", x: "5%", y: "10%", dur: 6.5, delay: 2.8 },
+  { symbol: "\u266A", x: "10%", y: "20%", dur: 5, delay: 0 },
+  { symbol: "\u266B", x: "85%", y: "15%", dur: 7, delay: 1 },
+  { symbol: "\u0950", x: "75%", y: "60%", dur: 6, delay: 0.5 },
+  { symbol: "\u266A", x: "20%", y: "70%", dur: 8, delay: 2 },
+  { symbol: "\u2748", x: "50%", y: "85%", dur: 5.5, delay: 1.5 },
+  { symbol: "\u266B", x: "30%", y: "35%", dur: 6.5, delay: 3 },
+  { symbol: "\u0950", x: "65%", y: "80%", dur: 7.5, delay: 0.8 },
+  { symbol: "\u266A", x: "90%", y: "45%", dur: 4.5, delay: 2.5 },
+  { symbol: "\u2748", x: "8%", y: "50%", dur: 9, delay: 1.2 },
+  { symbol: "\u266B", x: "55%", y: "25%", dur: 6, delay: 3.5 },
+  { symbol: "\u266C", x: "15%", y: "85%", dur: 6.2, delay: 0.3 },
+  { symbol: "\u266A", x: "45%", y: "10%", dur: 5.8, delay: 1.8 },
+  { symbol: "\u266B", x: "78%", y: "75%", dur: 7.2, delay: 2.2 },
+  { symbol: "\u266C", x: "60%", y: "55%", dur: 6.8, delay: 3.8 },
+  { symbol: "\u266A", x: "35%", y: "55%", dur: 5.2, delay: 0.9 },
+  { symbol: "\u266B", x: "88%", y: "88%", dur: 7.8, delay: 1.4 },
+  { symbol: "\u266C", x: "5%", y: "10%", dur: 6.5, delay: 2.8 },
 ];
 
 const container = {
@@ -81,13 +81,23 @@ export default function Hero() {
       style={{
         backgroundImage: `url(${heroBgImage.src})`,
         backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundPosition: "left center"
       }}
     >
+      {/* ── Background decoration (Right Half colorful mandala cropped at the center) ── */}
+      <div 
+        className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none z-0 bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBgImage.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "right center"
+        }}
+      />
+
       {/* ── Floating particles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         {PARTICLES.map((p, i) => {
-          const isMusicalNote = ["♪", "♫", "♬"].includes(p.symbol);
+          const isMusicalNote = ["\u266A", "\u266B", "\u266C"].includes(p.symbol);
           return (
             <span
               key={i}
@@ -101,7 +111,7 @@ export default function Hero() {
                 animationDelay: `${p.delay}s`,
                 animationTimingFunction: "ease-in-out",
                 animationIterationCount: "infinite",
-                fontSize: p.symbol === "ॐ" ? "2rem" : "1.5rem",
+                fontSize: p.symbol === "\u0950" ? "2rem" : "1.5rem",
               }}
             >
               {p.symbol}
@@ -150,7 +160,7 @@ export default function Hero() {
                   border: "1px solid rgba(196,136,42,0.6)",
                 }}
               >
-                ✦ Where Tradition Meets Creativity
+                \u2726 Where Tradition Meets Creativity
               </span>
             </motion.div>
 
@@ -241,7 +251,7 @@ export default function Hero() {
               />
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <span key={s} style={{ color: "#c4882a", fontSize: "0.9rem" }}>★</span>
+                  <span key={s} style={{ color: "#c4882a", fontSize: "0.9rem" }}>{"\u2605"}</span>
                 ))}
                 <span className="text-xs ml-1 font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
                   Top Rated

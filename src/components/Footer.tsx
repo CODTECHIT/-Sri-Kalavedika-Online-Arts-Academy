@@ -181,6 +181,7 @@ export default function Footer() {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
+                { label: "Gallery", href: "/gallery" },
                 { label: "Blog", href: "/blog" },
                 { label: "Admissions", href: "/admissions" },
                 { label: "Contact Us", href: "/contact" },

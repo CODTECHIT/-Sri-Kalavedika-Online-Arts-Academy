@@ -21,7 +21,7 @@ const GURUS = [
   { name: "Smt. Shubha Dixit", specialty: "Hindustani Vocal", src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg" },
   { name: "Smt. Vyshnavi Nambiar", specialty: "Kuchipudi", src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg" },
   { name: "Kum. Aditi Saha", specialty: "Bharatanatyam", src: "/photos/kum aditi saha , bharatnatyam.jpeg" },
-  { name: "Nilanjana Malkhandi", specialty: "Bharatanatyam", src: "/photos/Nilanjana Malkhandi, Bharatnatyam.jpeg" },
+  { name: "Smt. Nilanjana Malkhandi", specialty: "Bharatanatyam", src: "/photos/Nilanjana Malkhandi, Bharatnatyam.jpeg" },
   { name: "Shri Arnab Basak", specialty: "Guitar", src: "/photos/Shri Arnab Basak, Guitar.jpeg" },
   { name: "Shri Lucjan (Poland)", specialty: "Advanced Guitar", src: "/photos/Shri Lucjan, Poland - Adcanced Guitar.jpeg" },
 ];
@@ -180,7 +180,7 @@ export default function ExpertGurus() {
           ref={scrollRef}
           onMouseEnter={() => { isHoveredRef.current = true; }}
           onMouseLeave={() => { isHoveredRef.current = false; }}
-          className="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-10 pt-4 px-4 sm:px-6 lg:px-8 -mx-4 sm:-mx-6 lg:-mx-8 scroll-smooth"
+          className="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-10 pt-4 px-4 sm:px-6 lg:px-8 -mx-4 sm:-mx-6 lg:-mx-8"
           style={{ 
             scrollbarWidth: 'none', 
             msOverflowStyle: 'none' 
