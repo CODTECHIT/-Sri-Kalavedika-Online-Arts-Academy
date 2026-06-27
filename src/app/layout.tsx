@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Cinzel } from "next/font/google";
+import { Playfair_Display, Inter, Cinzel, Great_Vibes, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import bgImage from "../../background-template-with-mandala-designs/kvtx_cz5f_191104.jpg";
@@ -16,6 +16,20 @@ const cinzel = Cinzel({
   variable: "--font-cinzel",
   display: "swap",
   weight: ["400", "600", "700", "900"],
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  display: "swap",
+  weight: ["400"],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant-garamond",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
@@ -43,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${playfair.variable} ${cinzel.variable} ${inter.variable}`}
+      className={`h-full antialiased ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} ${cormorantGaramond.variable} ${inter.variable}`}
     >
       <body
         className="min-h-full flex flex-col font-inter text-[#1a0a2e]"

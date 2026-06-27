@@ -35,6 +35,13 @@ const PARTICLES = [
   { symbol: "♪", x: "90%", y: "45%", dur: 4.5, delay: 2.5 },
   { symbol: "❈", x: "8%", y: "50%", dur: 9, delay: 1.2 },
   { symbol: "♫", x: "55%", y: "25%", dur: 6, delay: 3.5 },
+  { symbol: "♬", x: "15%", y: "85%", dur: 6.2, delay: 0.3 },
+  { symbol: "♪", x: "45%", y: "10%", dur: 5.8, delay: 1.8 },
+  { symbol: "♫", x: "78%", y: "75%", dur: 7.2, delay: 2.2 },
+  { symbol: "♬", x: "60%", y: "55%", dur: 6.8, delay: 3.8 },
+  { symbol: "♪", x: "35%", y: "55%", dur: 5.2, delay: 0.9 },
+  { symbol: "♫", x: "88%", y: "88%", dur: 7.8, delay: 1.4 },
+  { symbol: "♬", x: "5%", y: "10%", dur: 6.5, delay: 2.8 },
 ];
 
 const container = {
@@ -79,25 +86,28 @@ export default function Hero() {
     >
       {/* ── Floating particles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        {PARTICLES.map((p, i) => (
-          <span
-            key={i}
-            className="absolute select-none text-2xl"
-            style={{
-              left: p.x,
-              top: p.y,
-              color: i % 3 === 0 ? "#f5c842" : i % 3 === 1 ? "#e8a020" : "rgba(253,246,227,0.5)",
-              animationName: "float-particle",
-              animationDuration: `${p.dur}s`,
-              animationDelay: `${p.delay}s`,
-              animationTimingFunction: "ease-in-out",
-              animationIterationCount: "infinite",
-              fontSize: p.symbol === "ॐ" ? "2rem" : "1.5rem",
-            }}
-          >
-            {p.symbol}
-          </span>
-        ))}
+        {PARTICLES.map((p, i) => {
+          const isMusicalNote = ["♪", "♫", "♬"].includes(p.symbol);
+          return (
+            <span
+              key={i}
+              className="absolute select-none text-2xl"
+              style={{
+                left: p.x,
+                top: p.y,
+                color: i % 3 === 0 ? "#f5c842" : i % 3 === 1 ? "#e8a020" : "rgba(253,246,227,0.5)",
+                animationName: isMusicalNote ? "float-particle, note-shine" : "float-particle",
+                animationDuration: isMusicalNote ? `${p.dur}s, 2s` : `${p.dur}s`,
+                animationDelay: `${p.delay}s`,
+                animationTimingFunction: "ease-in-out",
+                animationIterationCount: "infinite",
+                fontSize: p.symbol === "ॐ" ? "2rem" : "1.5rem",
+              }}
+            >
+              {p.symbol}
+            </span>
+          );
+        })}
       </div>
 
       {/* ── Subtle glow blobs ── */}

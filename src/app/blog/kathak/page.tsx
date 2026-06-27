@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Calendar, User, ArrowLeft, Share2, Heart } from "lucide-react";
 
-export default function TheatreConfidence() {
+export default function Kathak() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden relative">
       <Header />
@@ -18,19 +18,19 @@ export default function TheatreConfidence() {
           {/* Article Header */}
           <div className="mb-12">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest rounded-full mb-6">
-              Arts
+              Dance
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary mb-6 leading-tight">
-              The Importance of Theatre for Children&apos;s Confidence
+              The Magic of Kathak Dance
             </h1>
             <div className="flex items-center gap-6 text-gray-500">
               <div className="flex items-center gap-2">
                 <User size={18} />
-                <span className="font-medium">Theatre Coach</span>
+                <span className="font-medium">Kathak Expert</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
-                <span>May 28, 2026</span>
+                <span>June 18, 2026</span>
               </div>
             </div>
           </div>
@@ -38,8 +38,8 @@ export default function TheatreConfidence() {
           {/* Featured Image */}
           <div className="rounded-[2rem] overflow-hidden mb-12 shadow-xl">
             <img 
-              src="/theaters.jpg" 
-              alt="Theatre acting" 
+              src="/b4.jpeg" 
+              alt="Kathak dance" 
               className="w-full h-auto"
             />
           </div>
@@ -47,37 +47,32 @@ export default function TheatreConfidence() {
           {/* Article Content */}
           <article className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Theatre training is one of the most effective ways to build confidence in children. At Sri Kalavedika, our theatre program transforms shy children into confident performers who can express themselves clearly and connect with any audience.
+              Kathak, the classical dance of North India, is known for its graceful spins, intricate footwork, and beautiful storytelling. At Sri Kalavedika, we bring this magical art form to our students.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">Overcoming Stage Fright</h2>
+            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">A Rich Cultural Heritage</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Many adults still struggle with public speaking. Theatre training at a young age helps children overcome the fear of being watched and judged, giving them an unfair advantage in interviews, presentations, and leadership roles throughout their lives.
+              Kathak evolved in the courts of North Indian kings, blending Hindu and Muslim cultural influences. It tells stories from Indian epics through movement and expression.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">Body Language Mastery</h2>
+            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">The Beauty of Spins</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Acting teaches children to use their bodies expressively. From hand gestures to facial expressions, they learn to communicate without words—a skill that enhances all human interactions.
+              The signature spins (chakkars) of Kathak require incredible balance and control, creating a mesmerizing visual effect that captivates audiences.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">Empathy and Emotional Intelligence</h2>
+            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">Rhythm and Expression</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              To play a character, actors must understand emotions deeply. This practice of putting oneself in another&apos;s shoes develops remarkable empathy and emotional intelligence in young learners.
-            </p>
-
-            <h2 className="text-2xl font-bold text-primary mt-10 mb-4">Creative Problem Solving</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Theatre presents constant challenges—memorizing lines, adapting to unexpected situations, collaborating with cast members. These experiences build creative problem-solving skills that serve children in every area of life.
+              Kathak dancers master complex rhythmic patterns (tala) and express emotions through facial expressions and hand gestures.
             </p>
 
             <div className="bg-primary/5 rounded-[2rem] p-8 mt-12">
-              <h3 className="text-xl font-bold text-primary mb-4">Build Your Child&apos;s Confidence</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Experience Kathak</h3>
               <p className="text-gray-600 mb-6">
-                At Sri Kalavedika, our theatre and acting program is designed to bring out the best in every child. Whether your child dreams of the stage or simply needs to be more confident, our expert coaches provide a supportive environment.
+                Join our Kathak classes at Sri Kalavedika and discover the grace and beauty of this timeless dance form.
               </p>
-              <Link href="/services/theatre">
+              <Link href="/services/kathak">
                 <button className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg">
-                  Explore Theatre Classes
+                  Explore Kathak Classes
                 </button>
               </Link>
             </div>

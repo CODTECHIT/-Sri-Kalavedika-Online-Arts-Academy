@@ -38,7 +38,7 @@ export default function VedicMathsTips() {
           {/* Featured Image */}
           <div className="rounded-[2rem] overflow-hidden mb-12 shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=1200" 
+              src="/Vedic Maths.jpg" 
               alt="Mathematics learning" 
               className="w-full h-auto"
             />
