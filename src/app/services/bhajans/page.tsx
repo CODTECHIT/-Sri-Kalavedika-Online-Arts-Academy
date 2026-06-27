@@ -37,11 +37,11 @@ export default function BhajansPage() {
               </div>
             </div>
             <div className="flex-1 relative w-full max-w-xl">
-              <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white animate-float">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-float bg-white">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/04/Navaratri_Bajan.jpg"
+                  src="/devotional bhajans.jpeg" 
                   alt="Devotional Music and Bhajans" 
-                  className="w-full h-full object-cover object-top aspect-[4/3]"
+                  className="w-full h-auto block"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10 opacity-30 blur-2xl"></div>

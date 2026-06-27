@@ -47,13 +47,7 @@ const testimonials = [
     text: "India's Got Talent Season 11 performer. Crafting melodies that touch the soul through sincere and honest musical performances. The academy has been instrumental in refining my craft.",
     initials: "RS",
   },
-  {
-    name: "Arnob Basak",
-    course: "Guitar & Music Director",
-    rating: 5,
-    text: "M.Phil in Comparative Literature, Music Director with 16+ years experience. Anandalok Puraskar winner and Mirchi Music Awards nominee. Kalavedika's teaching methodology is world-class.",
-    initials: "AB",
-  },
+
 ];
 
 export default function Testimonials() {
