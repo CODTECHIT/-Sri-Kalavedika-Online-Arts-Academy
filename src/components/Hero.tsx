@@ -77,13 +77,27 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-20 bg-cover bg-[position:20%_center] lg:bg-[position:right_center]"
       style={{
         backgroundImage: `url(${heroBgImage.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "right center"
       }}
     >
+      {/* Readability overlay for mobile/tablet screens */}
+      <div className="absolute inset-0 bg-[#faf6eb]/75 lg:bg-transparent pointer-events-none z-0 backdrop-blur-[1px] lg:backdrop-blur-none transition-all duration-300" />
+
+      {/* Mobile-only soft rotating mandala watermark */}
+      <div
+        className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[480px] lg:hidden aspect-square opacity-[0.08] pointer-events-none z-0"
+        aria-hidden="true"
+      >
+        <img
+          src="/mandalas/hero-mandala.svg"
+          alt=""
+          className="w-full h-full object-contain animate-[spin_180s_linear_infinite]"
+          style={{ filter: "sepia(1) saturate(3) hue-rotate(15deg)" }}
+        />
+      </div>
+
 
       {/* ── Floating particles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
@@ -151,7 +165,7 @@ export default function Hero() {
                   border: "1px solid rgba(196,136,42,0.6)",
                 }}
               >
-                \u2726 Where Tradition Meets Creativity
+                ✦ Where Tradition Meets Creativity
               </span>
             </motion.div>
 
@@ -159,7 +173,7 @@ export default function Hero() {
             <div className="space-y-1 mb-8">
               <motion.h1
                 variants={item}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Nurturing{" "}
@@ -167,7 +181,7 @@ export default function Hero() {
               </motion.h1>
               <motion.h1
                 variants={item}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Preserving{" "}
@@ -175,7 +189,7 @@ export default function Hero() {
               </motion.h1>
               <motion.h1
                 variants={item}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
                 Inspiring{" "}
