@@ -373,3 +373,17 @@ body {
 .animate-shimmer-gold {
   animation: shimmer-gold 4s infinite ease-in-out;
 }
+
+/* Loading bar shimmer animation */
+@keyframes shimmer-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer-bar {
+  animation: shimmer-bar 1.5s infinite linear;
+}

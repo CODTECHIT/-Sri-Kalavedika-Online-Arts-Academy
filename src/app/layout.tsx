@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter, Cinzel, Great_Vibes, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import Preloader from "@/components/Preloader";
 import bgImage from "../../background-template-with-mandala-designs/kvtx_cz5f_191104.jpg";
 
 const playfair = Playfair_Display({
@@ -70,9 +71,11 @@ export default function RootLayout({
         }}
         suppressHydrationWarning
       >
+        <Preloader />
         {children}
         <FloatingWhatsAppButton />
       </body>
     </html>
   );
 }
+
