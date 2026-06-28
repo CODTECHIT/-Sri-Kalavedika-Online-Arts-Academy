@@ -20,7 +20,7 @@ const TESTIMONIALS = [
     initials: "A",
   },
   {
-    name: "Praveen Ji",
+    name: "preetham",
     course: "Carnatic Music",
     rating: 5,
     text: "Guru Chembai Srinivas is a repository of knowledge with rich experience. He teaches patiently and keeps the students' spirits high by motivating them constantly. Students from ages 20 to 60 are treated with equal respect.",
@@ -41,7 +41,7 @@ const TESTIMONIALS = [
     initials: "SK",
   },
   {
-    name: "Rahul Sukun",
+    name: "jeevan",
     course: "Featured Guitarist",
     rating: 5,
     text: "India's Got Talent Season 11 performer. Crafting melodies that touch the soul through sincere and honest musical performances. The academy has been instrumental in refining my craft.",
@@ -212,7 +212,8 @@ export default function Testimonials() {
         </div>
 
         {/* CSS for hiding scrollbar while preserving scroll functionality */}
-        <style dangerouslySetInnerHTML={{ __html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           .no-scrollbar::-webkit-scrollbar {
             display: none;
           }
