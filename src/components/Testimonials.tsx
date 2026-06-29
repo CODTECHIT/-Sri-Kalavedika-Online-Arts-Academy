@@ -40,13 +40,7 @@ const TESTIMONIALS = [
     text: "A valuable teacher who makes us know what we should truly know before we can sing. Chembai sir has all the efficiencies in his teachings where a student is guided with his full potential.",
     initials: "SK",
   },
-  {
-    name: "jeevan",
-    course: "Featured Guitarist",
-    rating: 5,
-    text: "India's Got Talent Season 11 performer. Crafting melodies that touch the soul through sincere and honest musical performances. The academy has been instrumental in refining my craft.",
-    initials: "RS",
-  },
+
 ];
 
 const DISPLAY_TESTIMONIALS = [...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS];
