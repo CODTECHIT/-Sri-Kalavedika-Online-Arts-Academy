@@ -83,7 +83,7 @@ export default function Hero() {
       }}
     >
       {/* Readability overlay for mobile/tablet screens */}
-      <div className="absolute inset-0 bg-[#faf6eb]/75 lg:bg-transparent pointer-events-none z-0 backdrop-blur-[1px] lg:backdrop-blur-none transition-all duration-300" />
+      <div className="absolute inset-0 bg-[#faf6eb]/85 lg:bg-transparent pointer-events-none z-0 transition-all duration-300" />
 
       {/* Mobile-only soft rotating mandala watermark */}
       <div
@@ -93,8 +93,7 @@ export default function Hero() {
         <img
           src="/mandalas/hero-mandala.svg"
           alt=""
-          className="w-full h-full object-contain animate-[spin_180s_linear_infinite]"
-          style={{ filter: "sepia(1) saturate(3) hue-rotate(15deg)" }}
+          className="w-full h-full object-contain opacity-40 animate-[spin_180s_linear_infinite]"
         />
       </div>
 
