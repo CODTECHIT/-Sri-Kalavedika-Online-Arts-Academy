@@ -3,7 +3,19 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Award, Shield, Users, History, Globe, Sparkles, BookOpen, Youtube, Instagram, Star, Music } from "lucide-react";
+import {
+  Award,
+  Shield,
+  Users,
+  History,
+  Globe,
+  Sparkles,
+  BookOpen,
+  Youtube,
+  Instagram,
+  Star,
+  Music,
+} from "lucide-react";
 import DecorativeDivider from "@/components/ui/DecorativeDivider";
 import pageBgImage from "../../../background-template-with-mandala-pattern-design/43584.jpg";
 
@@ -11,50 +23,57 @@ export default function AboutPage() {
   const values = [
     {
       title: "Excellence in Teaching",
-      description: "Delivering high-quality arts instruction through experienced and passionate Gurus.",
+      description:
+        "Delivering high-quality arts instruction through experienced and passionate Gurus.",
       icon: <Award className="w-6 h-6" />,
     },
     {
       title: "Respect for Tradition",
-      description: "Honoring traditional Guru-Shishya values while adapting to contemporary digital platforms.",
+      description:
+        "Honoring traditional Guru-Shishya values while adapting to contemporary digital platforms.",
       icon: <History className="w-6 h-6" />,
     },
     {
       title: "Student-Centered Learning",
-      description: "Fostering individualized learning speeds and personal artistic pathways.",
+      description:
+        "Fostering individualized learning speeds and personal artistic pathways.",
       icon: <Users className="w-6 h-6" />,
     },
     {
       title: "Cultural Preservation",
-      description: "Nurturing classical and cultural roots to pass India's rich heritage down to future generations.",
+      description:
+        "Nurturing classical and cultural roots to pass India's rich heritage down to future generations.",
       icon: <Shield className="w-6 h-6" />,
     },
     {
       title: "Inclusivity & Global Reach",
-      description: "Providing seamless global access to traditional Indian arts training for learners worldwide.",
+      description:
+        "Providing seamless global access to traditional Indian arts training for learners worldwide.",
       icon: <Globe className="w-6 h-6" />,
     },
   ];
 
   return (
-    <div 
+    <div
       className="min-h-screen flex flex-col overflow-x-hidden relative"
-      style={{ 
+      style={{
         backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.85), rgba(253, 246, 227, 0.95)), url(${pageBgImage.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
       }}
     >
       {/* Background blobs for premium depth */}
       <div className="absolute top-20 right-0 w-[40vw] h-[40vw] bg-secondary/5 rounded-full blur-[120px] -z-10 animate-blob"></div>
-      <div className="absolute top-1/2 left-0 w-[35vw] h-[35vw] bg-primary/5 rounded-full blur-[100px] -z-10 animate-blob" style={{ animationDelay: "2s" }}></div>
+      <div
+        className="absolute top-1/2 left-0 w-[35vw] h-[35vw] bg-primary/5 rounded-full blur-[100px] -z-10 animate-blob"
+        style={{ animationDelay: "2s" }}
+      ></div>
 
       <Header />
-      
+
       <main className="flex-grow pt-32 pb-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Section title */}
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
             <motion.div
@@ -66,7 +85,7 @@ export default function AboutPage() {
               <Sparkles className="w-3.5 h-3.5 text-secondary" />
               <span>Who We Are</span>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,13 +110,22 @@ export default function AboutPage() {
                 <span className="absolute bottom-[-6px] left-0 w-12 h-1 bg-secondary rounded-full" />
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed font-medium pt-2">
-                Founded with a vision to make Indian arts accessible to learners across the globe, Sri Kalavedika has been nurturing talent and fostering artistic excellence for the past five years.
+                Founded with a vision to make Indian arts accessible to learners
+                across the globe, Sri Kalavedika has been nurturing talent and
+                fostering artistic excellence for the past five years.
               </p>
               <p className="text-gray-655 text-base leading-relaxed">
-                Our academy serves as a bridge between traditional Guru-Shishya learning and modern online education, enabling students to learn from accomplished teachers regardless of geographical boundaries.
+                Our academy serves as a bridge between traditional Guru-Shishya
+                learning and modern online education, enabling students to learn
+                from accomplished teachers regardless of geographical
+                boundaries.
               </p>
               <p className="text-gray-655 text-base leading-relaxed">
-                We believe that Indian classical and cultural arts are not merely skills but a way of life that enriches character, creativity, and cultural understanding. Through dedicated mentorship and structured training, we strive to inspire a lifelong appreciation for the arts.
+                We believe that Indian classical and cultural arts are not
+                merely skills but a way of life that enriches character,
+                creativity, and cultural understanding. Through dedicated
+                mentorship and structured training, we strive to inspire a
+                lifelong appreciation for the arts.
               </p>
             </motion.div>
 
@@ -110,9 +138,9 @@ export default function AboutPage() {
               className="relative w-full max-w-md mx-auto lg:max-w-none"
             >
               <div className="rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(11,31,94,0.15)] border-8 border-white bg-white aspect-[4/3]">
-                <img 
-                  src="/about us.jpg" 
-                  alt="Traditional Indian Arts Learning" 
+                <img
+                  src="/about us.jpg"
+                  alt="Traditional Indian Arts Learning"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -124,7 +152,6 @@ export default function AboutPage() {
 
           {/* Vision & Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-32">
-            
             {/* Our Vision */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -134,14 +161,18 @@ export default function AboutPage() {
               className="glass-panel border-white/40 p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(11,31,94,0.06)] transition-all duration-500"
             >
               <div className="absolute top-0 right-0 -translate-y-4 translate-x-4 w-24 h-24 bg-gradient-to-br from-primary/10 to-primary/0 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-              
+
               <div className="w-12 h-12 rounded-xl bg-primary/5 text-primary flex items-center justify-center mb-6">
                 <BookOpen className="w-6 h-6" />
               </div>
-              
-              <h3 className="text-2xl font-extrabold text-primary mb-4">Our Vision</h3>
+
+              <h3 className="text-2xl font-extrabold text-primary mb-4">
+                Our Vision
+              </h3>
               <p className="text-gray-655 text-base leading-relaxed">
-                To become a globally recognized platform for Indian arts education, preserving cultural traditions while empowering future generations of artists and enthusiasts.
+                To become a globally recognized platform for Indian arts
+                education, preserving cultural traditions while empowering
+                future generations of artists and enthusiasts.
               </p>
             </motion.div>
 
@@ -154,27 +185,31 @@ export default function AboutPage() {
               className="glass-panel border-white/40 p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(11,31,94,0.06)] transition-all duration-500"
             >
               <div className="absolute top-0 right-0 -translate-y-4 translate-x-4 w-24 h-24 bg-gradient-to-br from-secondary/10 to-primary/0 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-              
+
               <div className="w-12 h-12 rounded-xl bg-secondary/5 text-secondary flex items-center justify-center mb-6">
                 <Sparkles className="w-6 h-6" />
               </div>
-              
-              <h3 className="text-2xl font-extrabold text-primary mb-4">Our Mission</h3>
+
+              <h3 className="text-2xl font-extrabold text-primary mb-4">
+                Our Mission
+              </h3>
               <ul className="space-y-4">
                 {[
                   "To provide quality arts education through experienced and passionate Gurus.",
                   "To make Indian cultural learning accessible to students worldwide.",
                   "To nurture confidence, creativity, discipline, and artistic excellence.",
-                  "To preserve and promote India's rich artistic heritage."
+                  "To preserve and promote India's rich artistic heritage.",
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-655 text-sm md:text-base leading-relaxed">
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-gray-655 text-sm md:text-base leading-relaxed"
+                  >
                     <span className="w-2 h-2 rounded-full bg-secondary mt-2.5 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
-
           </div>
 
           <DecorativeDivider />
@@ -192,7 +227,7 @@ export default function AboutPage() {
                 <Sparkles className="w-3.5 h-3.5 text-secondary" />
                 <span>Leadership</span>
               </motion.div>
-              
+
               <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-4">
                 Meet the Founder
               </h2>
@@ -209,7 +244,6 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 -translate-y-4 translate-x-4 w-32 h-32 bg-secondary/5 rounded-full blur-3xl -z-10 animate-blob"></div>
 
               <div className="flex flex-col lg:flex-row gap-12 items-start">
-                
                 {/* Founder Info & Narrative */}
                 <div className="flex-grow space-y-6">
                   <div>
@@ -217,26 +251,43 @@ export default function AboutPage() {
                       Mrs. Praveen Mehera
                     </h3>
                     <p className="text-secondary font-bold text-sm uppercase tracking-wider">
-                      Founder, Sri Kalavedika • Devotional Singer • Public Figure
+                      Founder, Sri Kalavedika • Devotional Singer •Acting and
+                      Voice-over Artist
                     </p>
                   </div>
 
                   <p className="text-gray-750 text-base md:text-lg leading-relaxed font-medium">
-                    Mrs. Praveen Mehera is the Founder of Sri Kalavedika, an initiative dedicated to promoting Indian arts and culture among learners across the world. A Consultant with the Government and a Cyber Law enthusiast, she is also a passionate learner of Carnatic Music and an active participant in cultural and artistic activities.
+                    Mrs. Praveen Mehera is the Founder of Sri Kalavedika, an
+                    initiative dedicated to promoting Indian arts and culture
+                    among learners across the world. A Consultant with the
+                    Government and a Cyber Law enthusiast, she is also a
+                    passionate learner of Carnatic Music and an active
+                    participant in cultural and artistic activities.
                   </p>
 
                   <div className="pt-4 space-y-4">
                     <p className="text-sm text-gray-655 leading-relaxed">
-                      She has performed as a devotional singer during Ugadi and Sri Rama Navami celebrations at AP Bhavan in 2026 and portrayed DSP Sheetal Batra in the Cyber Crime Ki Duniya. She is actively associated with various cultural and community organizations as a singer, anchor, voice-over artist, and cultural coordinator.
+                      She has performed as a devotional singer during Ugadi and
+                      Sri Rama Navami celebrations at AP Bhavan in 2026 and
+                      portrayed DSP Sheetal Batra in the Cyber Crime Ki Duniya.
+                      She is actively associated with various cultural and
+                      community organizations as a singer, anchor, voice-over
+                      artist, and cultural coordinator.
                     </p>
                     <p className="text-sm text-gray-655 leading-relaxed">
-                      Fluent in Telugu, Hindi, and English, she enjoys connecting with people through art, culture, and education. Through Sri Kalavedika, she aims to create a platform where students and Gurus come together to learn, preserve, and celebrate India's rich artistic heritage.
+                      Fluent in Telugu, Hindi, and English, she enjoys
+                      connecting with people through art, culture, and
+                      education. Through Sri Kalavedika, she aims to create a
+                      platform where students and Gurus come together to learn,
+                      preserve, and celebrate India's rich artistic heritage.
                     </p>
                   </div>
 
                   {/* YouTube & Instagram Handles */}
                   <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-primary/5">
-                    <span className="text-sm font-bold text-primary">Connect with the Founder:</span>
+                    <span className="text-sm font-bold text-primary">
+                      Connect with the Founder:
+                    </span>
                     <a
                       href="https://youtube.com/@goodvibesbypraveenmehera"
                       target="_blank"
@@ -257,7 +308,6 @@ export default function AboutPage() {
                     </a>
                   </div>
                 </div>
-
               </div>
             </motion.div>
 
@@ -275,7 +325,14 @@ export default function AboutPage() {
                     Family & Musical Foundation
                   </h4>
                   <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">
-                    Mrs. Praveen Mehera is supported by her husband, <span className="text-primary font-bold">Ivaturi Veerendranadha Kasyap</span>, an Advocate practicing before the Supreme Court of India and a State-Level Gold Medalist in Mridangam. Their shared passion for culture and excellence continues to inspire the vision of Sri Kalavedika.
+                    Mrs. Praveen Mehera is supported by her husband,{" "}
+                    <span className="text-primary font-bold">
+                      Ivaturi Veerendranadha Kasyap
+                    </span>
+                    , an Advocate practicing before the Hon'ble Supreme Court of
+                    India and a State-Level Gold Medalist in Mridangam. Their
+                    shared passion for culture and excellence continues to
+                    inspire the vision of Sri Kalavedika.
                   </p>
                 </div>
                 <div className="flex items-center gap-2.5 px-4 py-2 bg-secondary text-white rounded-full text-xs font-bold uppercase tracking-widest shrink-0 shadow-sm">
@@ -307,7 +364,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-gray-650 text-base leading-relaxed"
               >
-                These core principles shape our teaching methodologies, Guru selections, and student mentoring guidelines.
+                These core principles shape our teaching methodologies, Guru
+                selections, and student mentoring guidelines.
               </motion.p>
             </div>
 
@@ -337,7 +395,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-
         </div>
       </main>
 

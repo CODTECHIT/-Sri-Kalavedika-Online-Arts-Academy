@@ -7,23 +7,91 @@ import { Star, Music, ChevronLeft, ChevronRight } from "lucide-react";
 import bgMandala from "../../background-template-with-mandala-designs/kvtx_cz5f_191104.jpg";
 
 const GURUS = [
-  { name: "Dr. Devagupthapu Sai Lahari", specialty: "Kuchipudi", src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg" },
-  { name: "Kum. Pakhi", specialty: "Kathak", src: "/photos/Kum. Pakhi, Kathak.jpeg" },
-  { name: "Kum. Pragya Tyagi", specialty: "Kathak", src: "/photos/Kum. Pragya Tyagi, Kathak.jpeg" },
-  { name: "Kum. Riya", specialty: "Bollywood & Zumba", src: "/photos/Kum. Riya, Bollywood dance & Zumba.jpeg" },
-  { name: "Shri Chembai Srinivas", specialty: "Carnatic Violin", src: "/photos/Shri Chembai Srinivas, Carnatic Violin Keerthanams.jpeg" },
-  { name: "Shri Dhruval Shah", specialty: "Chess", src: "/photos/Shri Dhruval Shah, Chess.jpeg" },
-  { name: "Shri Ganesh Singh", specialty: "Flute", src: "/photos/Shri Ganesh Singh, Flute.jpeg" },
-  { name: "Shri Joel Mathew", specialty: "Hip-hop & Beatboxing", src: "/photos/Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing.jpeg" },
-  { name: "Shri Venkat Narayana", specialty: "Carnatic Vocal & Keyboard", src: "/photos/Shri Venkat Narayana, Carnatic Vocal Keyboard.jpeg" },
-  { name: "Shri. Rahul Sukun", specialty: "Guitar", src: "/photos/Shri. Rahul Sukun, Guitar.jpeg" },
-  { name: "Smt. Sandhya Saki", specialty: "Kuchipudi", src: "/photos/Smt. Sandhya Saki, Kuchipudi.jpeg" },
-  { name: "Smt. Shubha Dixit", specialty: "Hindustani Vocal", src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg" },
-  { name: "Smt. Vyshnavi Nambiar", specialty: "Kuchipudi", src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg" },
-  { name: "Kum. Aditi Saha", specialty: "Bharatanatyam", src: "/photos/kum aditi saha , bharatnatyam.jpeg" },
-  { name: "Smt. Nilanjana Malkhandi", specialty: "Bharatanatyam", src: "/photos/Nilanjana Malkhandi, Bharatnatyam.jpeg" },
-  { name: "Shri Arnab Basak", specialty: "Guitar", src: "/photos/Shri Arnab Basak, Guitar.jpeg" },
-  { name: "Shri Lucjan (Poland)", specialty: "Advanced Guitar", src: "/photos/Shri Lucjan, Poland - Adcanced Guitar.jpeg" },
+  {
+    name: "Dr. Devagupthapu Sai Lahari",
+    specialty: "Kuchipudi",
+    src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg",
+  },
+  {
+    name: "Kum. Pakhi",
+    specialty: "Kathak",
+    src: "/photos/Kum. Pakhi, Kathak.jpeg",
+  },
+  {
+    name: "Kum. Pragya Tyagi",
+    specialty: "Kathak",
+    src: "/photos/Kum. Pragya Tyagi, Kathak.jpeg",
+  },
+  {
+    name: "Kum. Riya",
+    specialty: "Bollywood & Zumba",
+    src: "/photos/Kum. Riya, Bollywood dance & Zumba.jpeg",
+  },
+  {
+    name: "Shri Chembai Srinivas",
+    specialty: "Carnatic Violin",
+    src: "/photos/Shri Chembai Srinivas, Carnatic Violin Keerthanams.jpeg",
+  },
+  {
+    name: "Shri Dhruval Shah",
+    specialty: "Chess",
+    src: "/photos/Shri Dhruval Shah, Chess.jpeg",
+  },
+  {
+    name: "Shri Ganesh Singh",
+    specialty: "Flute",
+    src: "/photos/Shri Ganesh Singh, Flute.jpeg",
+  },
+  {
+    name: "Shri Joel Mathew",
+    specialty: "Hip-hop & Beatboxing",
+    src: "/photos/Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing.jpeg",
+  },
+  {
+    name: "Shri Venkat Narayana",
+    specialty: "Carnatic Vocal & Keyboard",
+    src: "/photos/Shri Venkat Narayana, Carnatic Vocal Keyboard.jpeg",
+  },
+  {
+    name: "Shri. Rahul Sukun",
+    specialty: "Guitar",
+    src: "/photos/Shri. Rahul Sukun, Guitar.jpeg",
+  },
+  {
+    name: "Smt. Sandhya Saki",
+    specialty: "Kuchipudi",
+    src: "/photos/Smt. Sandhya Saki, Kuchipudi.jpeg",
+  },
+  {
+    name: "Smt. Shubha Dixit",
+    specialty: "Hindustani Vocal",
+    src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg",
+  },
+  {
+    name: "Smt. Vyshnavi Nambiar",
+    specialty: "Kuchipudi",
+    src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg",
+  },
+  {
+    name: "Kum. Aditi Saha",
+    specialty: "Bharatanatyam",
+    src: "/photos/kum aditi saha , bharatnatyam.jpeg",
+  },
+  {
+    name: "Smt. Nilanjana Malkhandi",
+    specialty: "Bharatanatyam",
+    src: "/photos/Nilanjana Malkhandi, Bharatnatyam.jpeg",
+  },
+  {
+    name: "Shri Arnab Basak",
+    specialty: "Guitar",
+    src: "/photos/Shri Arnab Basak, Guitar.jpeg",
+  },
+  {
+    name: "Shri Lucjan (Poland)",
+    specialty: "Advanced Guitar",
+    src: "/photos/Shri Lucjan, Poland - Adcanced Guitar.jpeg",
+  },
 ];
 
 // Triplicate the list for seamless infinite marquee scrolling
@@ -111,19 +179,18 @@ export default function ExpertGurus() {
   return (
     <section className="relative py-24 bg-gradient-to-b from-[#FAF3E7] to-[#ffffff] overflow-hidden">
       {/* Background Mandala */}
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-[0.06]" 
-        style={{ 
-          backgroundImage: `url(${bgMandala.src})`, 
-          backgroundSize: "cover", 
-          backgroundPosition: "center", 
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.06]"
+        style={{
+          backgroundImage: `url(${bgMandala.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           mixBlendMode: "multiply",
-          filter: "grayscale(30%)"
-        }} 
+          filter: "grayscale(30%)",
+        }}
       />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -137,7 +204,7 @@ export default function ExpertGurus() {
               <span>Master Teachers</span>
             </motion.div>
 
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -145,7 +212,10 @@ export default function ExpertGurus() {
               className="text-[40px] md:text-[56px] font-extrabold text-[#2D1436] leading-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Our Eminent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C89B3C] to-[#d6a94a]">Gurus</span>
+              Our Eminent{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C89B3C] to-[#d6a94a]">
+                Gurus
+              </span>
             </motion.h2>
           </div>
 
@@ -169,21 +239,29 @@ export default function ExpertGurus() {
         </div>
 
         {/* CSS for hiding scrollbar while preserving scroll functionality */}
-        <style dangerouslySetInnerHTML={{ __html: `
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
           .no-scrollbar::-webkit-scrollbar {
             display: none;
           }
-        `}} />
+        `,
+          }}
+        />
 
         {/* Guru Slider */}
-        <div 
+        <div
           ref={scrollRef}
-          onMouseEnter={() => { isHoveredRef.current = true; }}
-          onMouseLeave={() => { isHoveredRef.current = false; }}
+          onMouseEnter={() => {
+            isHoveredRef.current = true;
+          }}
+          onMouseLeave={() => {
+            isHoveredRef.current = false;
+          }}
           className="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-10 pt-4 px-4 sm:px-6 lg:px-8 -mx-4 sm:-mx-6 lg:-mx-8"
-          style={{ 
-            scrollbarWidth: 'none', 
-            msOverflowStyle: 'none' 
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
         >
           {DISPLAY_GURUS.map((guru, idx) => (
@@ -214,22 +292,29 @@ export default function ExpertGurus() {
 
               {/* Discipline Badge (Overlapping) */}
               <div className="relative z-10 -mt-5 mb-6 bg-gradient-to-r from-[#2D1436] to-[#4A1D5A] text-white px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg border border-[#C89B3C]/30 flex items-center gap-2">
-                <Music className="w-3.5 h-3.5 text-[#C89B3C]" />
+                {guru.specialty === "Chess" ? (
+                  <span
+                    className="w-3.5 h-3.5 flex items-center justify-center text-[#C89B3C] text-[11px] leading-none"
+                    aria-hidden="true"
+                  >
+                    ♟
+                  </span>
+                ) : (
+                  <Music className="w-3.5 h-3.5 text-[#C89B3C]" />
+                )}
                 {guru.specialty}
               </div>
 
               {/* Name */}
-              <h3 
+              <h3
                 className="text-xl md:text-2xl font-extrabold text-[#2D1436] text-center group-hover:text-[#C89B3C] transition-colors"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 {guru.name}
               </h3>
-
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
