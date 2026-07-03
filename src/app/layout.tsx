@@ -1,41 +1,23 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Cinzel, Great_Vibes, Cormorant_Garamond } from "next/font/google";
+import { Varela_Round, Open_Sans } from "next/font/google";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import Preloader from "@/components/Preloader";
 import bgImage from "../../background-template-with-mandala-designs/kvtx_cz5f_191104.jpg";
 
-const playfair = Playfair_Display({
+// Rounded bold font for headings
+const varelaRound = Varela_Round({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  variable: "--font-cinzel",
-  display: "swap",
-  weight: ["400", "600", "700", "900"],
-});
-
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  variable: "--font-great-vibes",
-  display: "swap",
+  variable: "--font-heading",
   weight: ["400"],
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant-garamond",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
+// Clean font for body content
+const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -58,16 +40,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${playfair.variable} ${cinzel.variable} ${greatVibes.variable} ${cormorantGaramond.variable} ${inter.variable}`}
+      className={`${varelaRound.variable} ${openSans.variable} h-full antialiased`}
     >
       <body
-        className="min-h-full flex flex-col font-inter text-[#1a0a2e]"
-        style={{ 
+        className="min-h-full flex flex-col text-[#1a0a2e]"
+        style={{
+          fontFamily: "var(--font-body)",
           backgroundImage: `linear-gradient(rgba(253, 246, 227, 0.88), rgba(253, 246, 227, 0.88)), url(${bgImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          backgroundColor: "#fdf6e3"
+          backgroundColor: "#fdf6e3",
         }}
         suppressHydrationWarning
       >
@@ -78,4 +61,3 @@ export default function RootLayout({
     </html>
   );
 }
-

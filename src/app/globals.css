@@ -7,20 +7,20 @@
 
 :root {
   /* Core palette - Premium Indian Aesthetics */
-  --indigo-deep: #6A1B1A;
+  --indigo-deep: #6a1b1a;
   /* Primary: Deep Maroon */
   --indigo-mid: #541514;
   /* Slightly darker maroon for depth */
   --navy-dark: #3f0f0e;
   /* Darkest maroon */
-  --maroon: #6A1B1A;
-  --saffron: #D4AF37;
+  --maroon: #6a1b1a;
+  --saffron: #d4af37;
   /* Secondary: Temple Gold */
-  --marigold: #0F4C5C;
+  --marigold: #0f4c5c;
   /* Accent: Peacock Blue */
-  --ivory: #FFF8E7;
+  --ivory: #fff8e7;
   /* Background: Ivory */
-  --gold-text: #D4AF37;
+  --gold-text: #d4af37;
   --gold-muted: #b8962c;
   --white: #ffffff;
 
@@ -50,11 +50,11 @@
   --color-ivory: var(--ivory);
   --color-gold-text: var(--gold-text);
 
-  --font-playfair: var(--font-playfair), Georgia, serif;
-  --font-cinzel: var(--font-cinzel), "Times New Roman", serif;
-  --font-great-vibes: var(--font-great-vibes), cursive;
-  --font-cormorant-garamond: var(--font-cormorant-garamond), Georgia, serif;
-  --font-inter: var(--font-inter), sans-serif;
+  --font-playfair: var(--font-heading), "Varela Round", sans-serif;
+  --font-cinzel: var(--font-heading), "Varela Round", sans-serif;
+  --font-great-vibes: cursive;
+  --font-cormorant-garamond: var(--font-body), "Open Sans", sans-serif;
+  --font-inter: var(--font-body), "Open Sans", sans-serif;
 }
 
 /* ===========================
@@ -64,11 +64,10 @@
 body {
   background: var(--ivory);
   color: var(--foreground);
-  font-family: var(--font-inter);
+  font-family: var(--font-body);
 }
 
 @layer base {
-
   h1,
   h2,
   h3,
@@ -86,7 +85,6 @@ body {
    =========================== */
 
 @layer utilities {
-
   /* Glass panel — updated to ivory tint */
   .glass-panel {
     background: rgba(255, 248, 231, 0.7);
@@ -111,7 +109,7 @@ body {
 
   /* Gold gradient text */
   .text-gold-gradient {
-    background: linear-gradient(135deg, #e6c86e 0%, #D4AF37 50%, #b8962c 100%);
+    background: linear-gradient(135deg, #e6c86e 0%, #d4af37 50%, #b8962c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -168,7 +166,8 @@ body {
 
 /* Shine effect for musical notes */
 @keyframes note-shine {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1);
   }
   50% {
@@ -193,7 +192,6 @@ body {
 
 /* Floating particle for hero */
 @keyframes float-particle {
-
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
@@ -245,7 +243,6 @@ body {
 
 /* Float (reused) */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
@@ -260,7 +257,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.visible {
@@ -292,14 +291,22 @@ body {
 
 /* Gold shimmer primary CTA */
 .btn-shimmer {
-  background: linear-gradient(90deg, #D4AF37 0%, #e6c86e 40%, #D4AF37 60%, #b8962c 100%);
+  background: linear-gradient(
+    90deg,
+    #d4af37 0%,
+    #e6c86e 40%,
+    #d4af37 60%,
+    #b8962c 100%
+  );
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
   color: #fff;
   font-weight: 700;
   border-radius: 999px;
   padding: 0.875rem 2rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
@@ -315,8 +322,8 @@ body {
 /* Ghost gold button */
 .btn-ghost-gold {
   background: transparent;
-  color: #D4AF37;
-  border: 2px solid #D4AF37;
+  color: #d4af37;
+  border: 2px solid #d4af37;
   font-weight: 700;
   border-radius: 999px;
   padding: 0.875rem 2rem;
@@ -339,10 +346,13 @@ body {
    =========================== */
 
 .course-card-gold {
-  border-top: 3px solid #D4AF37;
+  border-top: 3px solid #d4af37;
   background: #ffffff;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .course-card-gold:hover {
@@ -365,9 +375,15 @@ body {
 }
 
 @keyframes shimmer-gold {
-  0% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1); }
-  50% { filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) brightness(1.15); }
-  100% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1); }
+  0% {
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) brightness(1.15);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3)) brightness(1);
+  }
 }
 
 .animate-shimmer-gold {

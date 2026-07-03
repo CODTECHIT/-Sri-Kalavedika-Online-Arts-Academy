@@ -3,24 +3,65 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import heroBgImage from "../../background-template-with-mandala-pattern-design/43584.jpg";
 
 const PHOTOS = [
-  { src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg", name: "Dr. Devagupthapu Sai Lahari, Kuchipudi" },
+  {
+    src: "/photos/Dr. Devagupthapu Sai Lahari, Kuchipudi.jpeg",
+    name: "Dr. Devagupthapu Sai Lahari, Kuchipudi",
+  },
   { src: "/photos/Kum. Pakhi, Kathak.jpeg", name: "Kum. Pakhi, Kathak" },
-  { src: "/photos/Kum. Pragya Tyagi, Kathak.jpeg", name: "Kum. Pragya Tyagi, Kathak" },
-  { src: "/photos/Kum. Riya, Bollywood dance & Zumba.jpeg", name: "Kum. Riya, Bollywood dance & Zumba" },
-  { src: "/photos/Shri Chembai Srinivas, Carnatic Violin Keerthanams.jpeg", name: "Shri Chembai Srinivas, Carnatic Violin Keerthanams" },
-  { src: "/photos/Shri Dhruval Shah, Chess.jpeg", name: "Shri Dhruval Shah, Chess" },
-  { src: "/photos/Shri Ganesh Singh, Flute.jpeg", name: "Shri Ganesh Singh, Flute" },
-  { src: "/photos/Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing.jpeg", name: "Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing" },
-  { src: "/photos/Shri Venkat Narayana, Carnatic Vocal Keyboard.jpeg", name: "Shri Venkat Narayana, Carnatic Vocal Keyboard" },
-  { src: "/photos/Shri. Rahul Sukun, Guitar.jpeg", name: "Shri. Rahul Sukun, Guitar" },
-  { src: "/photos/Smt. Sandhya Saki, Kuchipudi.jpeg", name: "Smt. Sandhya Saki, Kuchipudi" },
-  { src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg", name: "Smt. Shubha Dixit, Hindustani Vocal" },
-  { src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg", name: "Smt. Vyshnavi Nambiar, Kuchipudi" },
+  {
+    src: "/photos/Kum. Pragya Tyagi, Kathak.jpeg",
+    name: "Kum. Pragya Tyagi, Kathak",
+  },
+  {
+    src: "/photos/Kum. Riya, Bollywood dance & Zumba.jpeg",
+    name: "Kum. Riya, Bollywood dance & Zumba",
+  },
+  {
+    src: "/photos/Shri Chembai Srinivas, Carnatic Violin Keerthanams.jpeg",
+    name: "Shri Chembai Srinivas, Carnatic Violin Keerthanams",
+  },
+  {
+    src: "/photos/Shri Dhruval Shah, Chess.jpeg",
+    name: "Shri Dhruval Shah, Chess",
+  },
+  {
+    src: "/photos/Shri Ganesh Singh, Flute.jpeg",
+    name: "Shri Ganesh Singh, Flute",
+  },
+  {
+    src: "/photos/Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing.jpeg",
+    name: "Shri Joel Mathew, Bollywood dance Hip-hop Locking Beatboxing",
+  },
+  {
+    src: "/photos/Shri Venkat Narayana, Carnatic Vocal Keyboard.jpeg",
+    name: "Shri Venkat Narayana, Carnatic Vocal Keyboard",
+  },
+  {
+    src: "/photos/Shri. Rahul Sukun, Guitar.jpeg",
+    name: "Shri. Rahul Sukun, Guitar",
+  },
+  {
+    src: "/photos/Smt. Sandhya Saki, Kuchipudi.jpeg",
+    name: "Smt. Sandhya Saki, Kuchipudi",
+  },
+  {
+    src: "/photos/Smt. Shubha Dixit, Hindustani Vocal.jpeg",
+    name: "Smt. Shubha Dixit, Hindustani Vocal",
+  },
+  {
+    src: "/photos/Smt. Vyshnavi Nambiar, Kuchipudi.jpeg",
+    name: "Smt. Vyshnavi Nambiar, Kuchipudi",
+  },
 ];
 
 // Floating particle symbols (Indian classical + music)
@@ -97,11 +138,15 @@ export default function Hero() {
         />
       </div>
 
-
       {/* ── Floating particles ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden="true"
+      >
         {PARTICLES.map((p, i) => {
-          const isMusicalNote = ["\u266A", "\u266B", "\u266C"].includes(p.symbol);
+          const isMusicalNote = ["\u266A", "\u266B", "\u266C"].includes(
+            p.symbol,
+          );
           return (
             <span
               key={i}
@@ -109,9 +154,18 @@ export default function Hero() {
               style={{
                 left: p.x,
                 top: p.y,
-                color: i % 3 === 0 ? "#f5c842" : i % 3 === 1 ? "#e8a020" : "rgba(253,246,227,0.5)",
-                animationName: isMusicalNote ? "float-particle, note-shine" : "float-particle",
-                animationDuration: isMusicalNote ? `${p.dur}s, 2s` : `${p.dur}s`,
+                color:
+                  i % 3 === 0
+                    ? "#f5c842"
+                    : i % 3 === 1
+                      ? "#e8a020"
+                      : "rgba(253,246,227,0.5)",
+                animationName: isMusicalNote
+                  ? "float-particle, note-shine"
+                  : "float-particle",
+                animationDuration: isMusicalNote
+                  ? `${p.dur}s, 2s`
+                  : `${p.dur}s`,
                 animationDelay: `${p.delay}s`,
                 animationTimingFunction: "ease-in-out",
                 animationIterationCount: "infinite",
@@ -128,7 +182,8 @@ export default function Hero() {
       <div
         className="absolute w-[40vw] h-[40vw] rounded-full blur-[120px] -z-0"
         style={{
-          background: "radial-gradient(circle, rgba(196,136,42,0.12) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(196,136,42,0.12) 0%, transparent 70%)",
           top: "20%",
           left: "-10%",
         }}
@@ -136,7 +191,8 @@ export default function Hero() {
       <div
         className="absolute w-[30vw] h-[30vw] rounded-full blur-[100px] -z-0"
         style={{
-          background: "radial-gradient(circle, rgba(92,26,26,0.3) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(92,26,26,0.3) 0%, transparent 70%)",
           bottom: "10%",
           right: "5%",
         }}
@@ -145,7 +201,6 @@ export default function Hero() {
       {/* ── Main content ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center min-h-[80vh]">
-
           {/* Left — Text */}
           <motion.div
             variants={container}
@@ -154,7 +209,10 @@ export default function Hero() {
             className="flex flex-col items-center lg:items-start text-center lg:text-left pt-10 lg:pt-0"
           >
             {/* Eyebrow */}
-            <motion.div variants={item} className="mb-6 inline-flex items-center gap-2">
+            <motion.div
+              variants={item}
+              className="mb-6 inline-flex items-center gap-2"
+            >
               <span
                 className="text-xs tracking-[0.22em] uppercase px-4 py-2 rounded-full font-bold"
                 style={{
@@ -169,30 +227,27 @@ export default function Hero() {
             </motion.div>
 
             {/* Headlines */}
-            <div className="space-y-1 mb-8">
+            <div className="flex flex-col lg:flex-row lg:gap-3 lg:flex-wrap lg:items-start items-center justify-center lg:justify-start mb-8 gap-4 lg:gap-3">
               <motion.h1
                 variants={item}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Nurturing{" "}
-                <span className="text-gold-gradient">Talent</span>
+                Nurturing <span className="text-gold-gradient">Talent</span>
               </motion.h1>
               <motion.h1
                 variants={item}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Preserving{" "}
-                <span style={{ color: "#c4882a" }}>Tradition</span>
+                Preserving <span style={{ color: "#c4882a" }}>Tradition</span>
               </motion.h1>
               <motion.h1
                 variants={item}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold leading-[1.08]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Inspiring{" "}
-                <span className="text-gold-gradient">Excellence</span>
+                Inspiring <span className="text-gold-gradient">Excellence</span>
               </motion.h1>
             </div>
 
@@ -231,20 +286,32 @@ export default function Hero() {
             </motion.div>
 
             {/* Trust badges */}
-            <motion.div variants={item} className="flex items-center gap-6 mt-10 flex-wrap justify-center lg:justify-start">
+            <motion.div
+              variants={item}
+              className="flex items-center gap-6 mt-10 flex-wrap justify-center lg:justify-start"
+            >
               {[
                 { value: "500+", label: "Learners" },
                 { value: "25+", label: "Expert Gurus" },
                 { value: "15+", label: "Art Forms" },
               ].map((badge) => (
-                <div key={badge.label} className="flex flex-col items-center lg:items-start">
+                <div
+                  key={badge.label}
+                  className="flex flex-col items-center lg:items-start"
+                >
                   <span
                     className="text-xl font-extrabold"
-                    style={{ fontFamily: "var(--font-playfair)", color: "#c4882a" }}
+                    style={{
+                      fontFamily: "var(--font-playfair)",
+                      color: "#c4882a",
+                    }}
                   >
                     {badge.value}
                   </span>
-                  <span className="text-[11px] font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
+                  <span
+                    className="text-[11px] font-bold"
+                    style={{ color: "rgba(26,10,46,0.6)" }}
+                  >
                     {badge.label}
                   </span>
                 </div>
@@ -255,9 +322,17 @@ export default function Hero() {
               />
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <span key={s} style={{ color: "#c4882a", fontSize: "0.9rem" }}>{"\u2605"}</span>
+                  <span
+                    key={s}
+                    style={{ color: "#c4882a", fontSize: "0.9rem" }}
+                  >
+                    {"\u2605"}
+                  </span>
                 ))}
-                <span className="text-xs ml-1 font-bold" style={{ color: "rgba(26,10,46,0.6)" }}>
+                <span
+                  className="text-xs ml-1 font-bold"
+                  style={{ color: "rgba(26,10,46,0.6)" }}
+                >
                   Top Rated
                 </span>
               </div>
@@ -278,7 +353,10 @@ export default function Hero() {
       >
         <span
           className="text-[10px] uppercase tracking-[0.25em]"
-          style={{ fontFamily: "var(--font-cinzel)", color: "rgba(245,200,66,0.5)" }}
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            color: "rgba(245,200,66,0.5)",
+          }}
         >
           Scroll
         </span>
