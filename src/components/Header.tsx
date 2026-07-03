@@ -66,6 +66,7 @@ export default function Header() {
                 src="/logo/logo.jpeg"
                 alt="Sri Kalavedika Logo"
                 fill
+                sizes="(max-width: 768px) 48px, 56px"
                 style={{ objectFit: "contain" }}
                 className="rounded-full relative z-10"
                 priority
@@ -150,7 +151,10 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed inset-0 z-[100] flex flex-col h-screen w-screen"
-            style={{ background: "rgba(26, 10, 46, 0.98)", backdropFilter: "blur(16px)" }}
+            style={{
+              background: "rgba(26, 10, 46, 0.98)",
+              backdropFilter: "blur(16px)",
+            }}
           >
             {/* Menu Header */}
             <div
@@ -163,7 +167,11 @@ export default function Header() {
                     src="/logo/logo.jpeg"
                     alt="Sri Kalavedika Logo"
                     fill
-                    style={{ objectFit: "contain", border: "2px solid rgba(196,136,42,0.5)" }}
+                    sizes="40px"
+                    style={{
+                      objectFit: "contain",
+                      border: "2px solid rgba(196,136,42,0.5)",
+                    }}
                     className="rounded-full"
                   />
                 </div>

@@ -31,7 +31,9 @@ export default function Preloader() {
   return (
     <div
       className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fdf6e3] transition-all duration-300 ease-in-out ${
-        isFading ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+        isFading
+          ? "opacity-0 pointer-events-none"
+          : "opacity-100 pointer-events-auto"
       }`}
     >
       {/* Background mandala watermark */}
@@ -53,19 +55,16 @@ export default function Preloader() {
         {/* Logo container with spinning gold ring */}
         <div className="relative w-28 h-28 flex items-center justify-center">
           {/* Spinning decorative border */}
-          <div
-            className="absolute inset-0 rounded-full border-2 border-dashed border-[#c4882a]/50 animate-[spin_20s_linear_infinite]"
-          />
+          <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#c4882a]/50 animate-[spin_20s_linear_infinite]" />
           {/* Inner solid border */}
-          <div
-            className="absolute inset-2 rounded-full border border-[#c4882a]/30"
-          />
+          <div className="absolute inset-2 rounded-full border border-[#c4882a]/30" />
           {/* Actual Logo */}
           <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#c4882a]">
             <Image
               src="/logo/logo.jpeg"
               alt="Sri Kalavedika Logo"
               fill
+              sizes="80px"
               style={{ objectFit: "contain" }}
               priority
             />
