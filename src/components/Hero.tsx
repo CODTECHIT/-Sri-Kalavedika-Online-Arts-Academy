@@ -233,21 +233,21 @@ export default function Hero() {
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Nurturing <span className="text-gold-gradient">Talent</span>
+                Nurturing <span className="text-gold-gradient" style={{ WebkitTextStroke: "0.5px rgba(0, 0, 0, 0.5)" }}>Talent</span>
               </motion.h1>
               <motion.h1
                 variants={item}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Preserving <span style={{ color: "#c4882a" }}>Tradition</span>
+                Preserving <span style={{ color: "#c4882a", WebkitTextStroke: "0.5px rgba(0, 0, 0, 0.5)" }}>Tradition</span>
               </motion.h1>
               <motion.h1
                 variants={item}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08]"
                 style={{ fontFamily: "var(--font-playfair)", color: "#1a0a2e" }}
               >
-                Inspiring <span className="text-gold-gradient">Excellence</span>
+                Inspiring <span className="text-gold-gradient" style={{ WebkitTextStroke: "0.5px rgba(0, 0, 0, 0.5)" }}>Excellence</span>
               </motion.h1>
             </div>
 
