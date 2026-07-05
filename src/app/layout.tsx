@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Varela_Round, Open_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import Preloader from "@/components/Preloader";
@@ -50,6 +51,21 @@ export default function RootLayout({
       lang="en"
       className={`${varelaRound.variable} ${openSans.variable} h-full antialiased`}
     >
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4KLDCEC4NH"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4KLDCEC4NH');
+          `}
+        </Script>
+      </head>
       <body
         className="min-h-full flex flex-col text-[#1a0a2e]"
         style={{
