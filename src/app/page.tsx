@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Statistics from "@/components/Statistics";
@@ -10,6 +11,12 @@ import CTABanner from "@/components/CTABanner";
 import CulturalHeritage from "@/components/CulturalHeritage";
 import Footer from "@/components/Footer";
 import DecorativeDivider from "@/components/ui/DecorativeDivider";
+
+export const metadata: Metadata = {
+  title: "Sri Kalavedika | Online Arts Academy - Indian Classical Music, Dance & Chess",
+  description: "Learn Indian classical music, dance, chess, Vedic Maths & more from expert gurus. Live online classes for all ages. Book a free demo today!",
+  keywords: "online music classes, online dance classes, Carnatic vocal, Hindustani vocal, Bharatanatyam, Kathak, Kuchipudi, chess coaching, Vedic Maths, flute, guitar, keyboard, online courses",
+};
 
 export default function Home() {
   return (

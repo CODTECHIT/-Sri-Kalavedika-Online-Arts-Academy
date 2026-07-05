@@ -22,13 +22,21 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Kalavedika | Online Arts Academy — Indian Classical Arts",
+  title: "Sri Kalavedika | Online Arts Academy — Indian Classical Arts, Music, Dance & Chess",
   description:
-    "Nurturing Talent, Preserving Tradition, Inspiring Excellence. Expert-led online training in Indian Classical Music, Dance, Fine Arts & Cognitive Skills.",
+    "Nurturing Talent, Preserving Tradition, Inspiring Excellence. Expert-led online training in Indian Classical Music, Dance, Fine Arts, Chess, Vedic Maths & Cognitive Skills for all ages.",
   keywords:
-    "Indian classical music, Carnatic vocal, Bharatanatyam, Kathak, online arts academy, Kalavedika",
+    "Indian classical music, Carnatic vocal, Hindustani vocal, Bharatanatyam, Kathak, Kuchipudi, online arts academy, Kalavedika, online music classes, online dance classes, chess coaching, Vedic Maths, flute classes, guitar classes, keyboard classes, mridangam, violin, drawing, painting, theatre, online courses India",
   icons: {
     icon: "/logo/logo.jpeg",
+  },
+  openGraph: {
+    title: "Sri Kalavedika | Online Arts Academy",
+    description: "Expert-led online training in Indian Classical Music, Dance, Fine Arts & Cognitive Skills.",
+    url: "https://www.srikalavedika.com",
+    siteName: "Sri Kalavedika",
+    locale: "en_US",
+    type: "website",
   },
 };
 

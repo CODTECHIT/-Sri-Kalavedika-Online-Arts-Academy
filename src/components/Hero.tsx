@@ -180,16 +180,16 @@ export default function Hero() {
 
       {/* ── Subtle glow blobs ── */}
       <div
-        className="absolute w-[40vw] h-[40vw] rounded-full blur-[120px] -z-0"
+        className="absolute w-[40vw] h-[40vw] rounded-full blur-[120px] -z-0 overflow-hidden"
         style={{
           background:
-            "radial-gradient(circle, rgba(196,136,42,0.12) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(196,136,42,0.15) 0%, transparent 70%)",
           top: "20%",
           left: "-10%",
         }}
       />
       <div
-        className="absolute w-[30vw] h-[30vw] rounded-full blur-[100px] -z-0"
+        className="absolute w-[30vw] h-[30vw] rounded-full blur-[100px] -z-0 overflow-hidden"
         style={{
           background:
             "radial-gradient(circle, rgba(92,26,26,0.3) 0%, transparent 70%)",
